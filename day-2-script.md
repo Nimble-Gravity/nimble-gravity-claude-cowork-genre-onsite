@@ -32,7 +32,8 @@ If you teach anatomy first, the rest of the day is a features tour.
    [`escape-room/README.md`](escape-room/README.md).
 5. **Download the vault file pack** and have it on a USB stick as well as in the chat — six files, linked from
    the [Day 2 hub §Materials](pages/workshops/module-2-workshop.html#materials).
-6. **Name your moderator** for the hybrid PSA: `[FILL IN]`.
+6. **Name your moderator** for the hybrid PSA. Fill `[MODERATOR]` here and it is filled everywhere in this
+   script: `[MODERATOR]` = `[FILL IN]`.
 7. **Have a Day 1 rescue plan.** Anyone whose personalization didn't take is a spectator today. Decide before
    the session which facilitator fixes them during the manual walk.
 
@@ -64,7 +65,7 @@ why second. Tangents to the parking list.
 
 **[SAY] — hybrid PSA, verbatim, again:**
 > *"Same as yesterday and I'll say it every day: the audio in this room does not carry the people on the call
-> — **they cannot speak to us.** Remote, type your question in the chat. [NAME] is watching it and will
+> — **they cannot speak to us.** Remote, type your question in the chat. [MODERATOR] is watching it and will
 > interrupt me to read them in. In the room: when I ask for questions, I'm going to wait, because one might be
 > arriving in writing."*
 
@@ -175,7 +176,7 @@ repeatable, and that's the part worth writing down."*
 ## Teach · 0:35–0:55 (20 min) — What a skill is
 *Follow along: [Lesson 2](pages/training/09-anatomy-of-a-skill.html).*
 
-**[SAY] — mode:** *"Hands off for fifteen minutes, then back on."*
+**[SAY] — mode:** *"Hands off for twenty minutes, then back on."*
 
 **[SAY] — lead with what, then why:** *"A skill is those five steps, written into a file, that Cowork reads
 and follows on its own. You don't invoke it by name. You ask for a status report the way you'd ask a
@@ -299,15 +300,28 @@ four."*
 
 **[SAY] — mode:** *"Hands off. Screens down, actually — I want you listening."*
 
-**[DO]** One share per team, ninety seconds each, in this format — say the format before the first team goes,
-and hold them to it:
+### The shares · 1:35–1:44
+**[NOTE] — cap it at FIVE shares, and say the cap out loud.** Thirty people in teams of two or three is ten to
+fifteen teams; ninety seconds each is fifteen to twenty minutes and it eats the comparison below, which is the
+point of the day. **Five shares × 90 seconds ≈ 8 minutes (1:35–1:44)**, leaving 1:44–1:50 for the comparison.
+
+**[DO] — pick the five while you are roaming, not by asking for volunteers.** Selection rule, in this order:
+1. One team that **finished all four rooms** — the target.
+2. One team whose **Room 2 description fix** finally made it fire — the day's core lesson, discovered.
+3. One team that **got stuck and knows why** — more useful than a success, and say so.
+4. One **remote** team or attendee, read in by the moderator — take them **second or third in the order**,
+   never last, because late shares get cut.
+5. One **wildcard** — whatever you saw at a table that the room should hear.
+
+**[SAY] — the cap, so nobody feels skipped:** *"Five teams are going to share, I picked them while I was
+walking around, and it is not a ranking. **Everybody else: paste your skill's description line into the
+chat** — that's the one line that decides whether a skill fires, and I want to see fifteen of them."*
+
+**[DO]** Each share in this format — say the format before the first team goes, and hold them to it:
 > **What the skill does · what you had to change to make it fire · one thing you'd fix if you had another ten
 > minutes.**
 
-**[NOTE]** Ask the moderator to read remote teams' shares in from the chat, and do it **early in the order**,
-not last. Remote attendees who go last get skipped when the block runs over.
-
-### The comparison that matters · ~1:44–1:50
+### The comparison that matters · 1:44–1:50
 **[SAY] — set it up:** *"Now the point of the whole day. Everybody built something that technically worked.
 Some of those will still be working in a month and some won't. Here's the difference."*
 

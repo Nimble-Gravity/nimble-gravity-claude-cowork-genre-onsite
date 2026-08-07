@@ -21,18 +21,41 @@ underwriters, claims, finance. Speed is not the pitch. Verification is.
 
 ## Pre-session prep
 
-1. **Stage `cowork-workshop` on the presenter machine.** Unzip `assets/workshop-folder.zip` to
-   `Desktop\cowork-workshop` on the machine that will be on the projector — same path, same name the room
-   has. Every prompt you paste points at that path.
+1. **Stage TWO folders on the presenter machine. This is the mechanism the whole day runs on** — the demo
+   has to be **cold at 0:50** and **personalized at 1:50**, on one machine, in front of the room. You get
+   that from two folders, not two laptops:
+
+   - **`Desktop\cowork-workshop`** — the **cold** folder. Extract `assets/workshop-folder.zip` **to the
+     Desktop**. The zip's own root folder is already named `cowork-workshop`, so pick **Desktop** as the
+     destination and let it create the folder; do **not** type the folder name into the extract path or you
+     get `Desktop\cowork-workshop\cowork-workshop` and every prompt in the room is wrong. Leave it exactly
+     as it ships — the thin `claude.md`, the template-only `about-me/`. **Never run a personalization
+     session against this folder.**
+   - **`Desktop\cowork-workshop-after`** — the **personalized** folder. Copy the whole folder, then drop
+     your own real `claude.md` and `about-me/` files into the copy (yours need a `writing-rules.md` that
+     says something like *never state a figure you can't source*, or the after-run has nothing to do). Build
+     this **before Tuesday**, not live.
+
+   **How you switch, and it is the only move:** the folder picker, plus a **fresh session**. Cowork reads
+   `claude.md` and `about-me/` **from the folder you granted, at session start** — not mid-conversation. So
+   same machine, same sign-in, same app: cold or personalized depends purely on which folder you pointed it
+   at and whether you opened a new session. Rehearse the switch until it takes you fifteen seconds, because
+   you do it live at 1:50.
+
+   **One thing defeats all of the above:** any **global instructions** of your own in Settings apply to every
+   session regardless of folder. Clear them before Tuesday and put them back afterwards.
+
 2. **Test the whole demo at 1366×768.** Set your own display to it and dry-run both demo runs. Two windows
    maximum — Claude Desktop and File Explorer, snapped with `Win`+`←` / `Win`+`→`. No demo may need a
    third pane, a second monitor, or your native font size. This is an open item on Nimble Gravity.
-3. **Rehearse the cold run on a clean profile.** See the [🧊 note](#the-cold-run) below — this is the single
-   highest-value fifteen minutes of prep in the three days.
+3. **Rehearse the cold run against the cold folder, and keep the output.** See the [🧊 note](#the-cold-run)
+   below — the single highest-value fifteen minutes of prep in the three days. **Print the rehearsal's cold
+   summary and bring it in the folder with you.** You need a paper copy at 1:50 for the side-by-side, and
+   the rehearsal copy is your insurance for the day the live save doesn't happen.
 4. **Confirm the zip link works** from the [pre-work page](pages/workshops/pre-work.html#day-1) *on the Gen Re
    network*, and have `workshop-folder.zip` on a USB stick as well. Somebody will arrive without it.
-5. **Name your moderator.** One person, named out loud at the open, watching chat for remote questions.
-   Write the name here before Tuesday: `[FILL IN]`.
+5. **Name your moderator** — one person, named out loud at the open, watching chat for remote questions.
+   Fill it in here before Tuesday and it is filled everywhere in this script: `[MODERATOR]` = `[FILL IN]`.
 6. **`TODO` — swap the demo document.** `demo/treaty-layer-summary.docx` is a stand-in. Gen Re owes us a real
    genericized document (open item: *Gen Re to source; Nimble Gravity to genericize*). When it lands, swap it
    in, **re-plant the two defects or find the ones already there**, and re-run both prompts against it before
@@ -68,7 +91,7 @@ back to you."*
 **[SAY] — the hybrid PSA, verbatim, at the top of every session:**
 > *"Before we start: some of you are in this room and some of you are dialled in. The audio in here does not
 > carry the people on the call — **they cannot speak to us.** So: if you're remote, type your question in the
-> chat. Don't wait for a gap, there won't be one. [NAME] is watching the chat and will interrupt me to read
+> chat. Don't wait for a gap, there won't be one. [MODERATOR] is watching the chat and will interrupt me to read
 > them in. If you're in the room, that means when I ask 'any questions?' I'm going to wait — because the
 > question might be arriving in writing."*
 
@@ -217,8 +240,9 @@ at.** If you take one thing out of today it is that sentence."*
 something from the Teach block, not this.
 
 ### (b) The cold ask · ~10 min
-**[DO]** Fresh Cowork session on `cowork-workshop`, **on a machine with no personalization loaded**. Paste
-the ask exactly as it appears in Lesson 4:
+**[DO]** **Fresh** Cowork session granted the **cold** folder — `Desktop\cowork-workshop`, the one you have
+never personalized (prep item 1). Say the folder name out loud as you pick it; the room needs to see that
+nothing is up your sleeve. Paste the ask exactly as it appears in Lesson 4:
 
 > *Read `demo/treaty-layer-summary.docx` and write me a one-page summary I can take into the quarterly
 > review. Cover what the treaty covers, how the layers sit, how the quarter went, and anything I should raise
@@ -237,6 +261,10 @@ loss ratio in the narrative is calculated off the wrong one. **Two: the renewal 
 the Article 14 notice date is the second of October. Next steps say issue renewal terms by the fifteenth of
 October, 'per the Article 14 notice date.' Both cannot be true."*
 
+**[DO] — before you move on, keep the cold output.** Save it (or print it) now, while it's on screen. You
+need it at 1:50 for the side-by-side and you will not have time to re-run it. If saving fails, you still have
+the printed rehearsal copy from prep item 3.
+
 **[SAY]** *"Now look at the summary again. It repeated both of them, in confident prose, and told you
 nothing. Not because it's stupid — because **nobody asked it to check.** It was asked to summarize, and it
 summarized beautifully."*
@@ -251,9 +279,10 @@ what changes."*
 The payoff depends on Cowork *not* checking. The `claude.md` shipped in the workshop folder was
 **deliberately stripped of any verification instruction** — it describes who the user is and how they write,
 and says nothing about totalling columns or cross-checking dates. **Do not add one.** And do not run the cold
-pass on a machine you have already personalized: either one pre-loads the checking behaviour and the demo
-lands flat in front of the room. **Model behaviour varies run to run** — some runs will catch the arithmetic
-unprompted. Dry-run it on a clean profile at least twice before Tuesday so you know what you're likely to get,
+pass against `cowork-workshop-after`, or against a folder you once ran the interview in: either one
+pre-loads the checking behaviour and the demo lands flat in front of the room. **Model behaviour varies run to
+run** — some runs will catch the arithmetic unprompted. Dry-run it against the cold folder at least twice
+before Tuesday so you know what you're likely to get,
 and have the line ready if it *does* catch one: *"It caught one of two — and it stayed quiet about the other.
 Which is worse than catching neither, because now you'd trust it."*
 
@@ -283,19 +312,34 @@ with the Copy button. Show where that button is. Show it twice.
 **[SAY]** *"Fresh session. Nothing from the demo still in play — everything in your files should come from
 your answers, not from a treaty summary it read ten minutes ago."*
 
-### Step 3 — the silent block · 1:15–1:35 (two × ~5 min, explicitly announced)
-**[SAY]** *"**Five minutes. No talking from me.** It's going to ask you one question at a time in a popup.
-Answer as yourself — your real role, your real reviewers, the phrases you actually refuse to sign off on. If
-a question needs a document you don't have, say **skip**; it leaves a marker and moves on. Facilitators are
-walking around — put a hand up rather than turning to your neighbour, because the person next to you is in the
-middle of their own interview."*
+### Step 3 — the silent blocks · 1:15–1:35 (three × ~5 min silent, two × 2-min checks)
+**[NOTE] — the clock, so you don't drift.** Three announced silent periods with a short check between each:
+**1:15–1:20 silent · 1:20–1:22 check · 1:22–1:27 silent · 1:27–1:29 check · 1:29–1:35 silent (six).**
+Twenty minutes, all of it assigned. The checks are 120 seconds — a hand count and one sentence, not a
+discussion.
+
+**[SAY] — opening the first block (1:15):** *"**Five minutes. No talking from me.** It's going to ask you one
+question at a time in a popup. Answer as yourself — your real role, your real reviewers, the phrases you
+actually refuse to sign off on. If a question needs a document you don't have, say **skip**; it leaves a
+marker and moves on. Facilitators are walking around — put a hand up rather than turning to your neighbour,
+because the person next to you is in the middle of their own interview."*
 
 **[NOTE]** Mean it. Do not fill the silence with commentary. Circulate and answer one-to-one, quietly. This is
 the client's explicit ask and it is the part most facilitators break.
 
-**[SAY]** at five minutes: *"That's five. Quick temperature check — hands up if it's still asking you
-questions. Good. Another five, same rules."* **[NOTE]** The second silent block is where the depth comes
-from. Do not collapse it into a Q&A.
+**[SAY] — check 1 (1:20, 2 min):** *"That's five. Hands up if it's still asking you questions. Hands up if it
+has stopped."* **[NOTE]** Anyone whose session has stopped early has a stalled or errored interview — that is
+the one thing worth fixing on the spot. **[SAY]** *"Another five, same rules."*
+
+**[SAY] — check 2 (1:27, 2 min):** *"Ten minutes in. One sentence from me and then the last block: the
+questions it is asking you **now** are the ones worth answering properly — voice and writing style. If you
+have been giving it one-word answers, give this bit real ones."*
+
+**[SAY] — the last block (1:29, six minutes):** *"**Six minutes, last silent block.** Get as far as you can.
+When I call time you're writing the files with whatever you've got."*
+
+**[NOTE]** The second and third blocks are where the depth comes from. Do not let either collapse into a
+room-wide Q&A — that is what the two-minute checks are for.
 
 **[NOTE] — remote attendees during silent work.** They cannot put a hand up. Ask the moderator to explicitly
 prompt the chat at the start of each silent block: *"remote — type here if you're stuck."*
@@ -330,15 +374,20 @@ demo; catch the rest at the Day 2 open.
 
 **[SAY] — mode change:** *"Hands off again. Last ten minutes."*
 
-**[DO]** Go back to `demo\treaty-layer-summary.docx` on a **personalized** machine — yours, with a real
-profile whose writing rules say *never state a figure you can't source*. Paste the **identical** prompt from
-the cold run. Say out loud that it is identical.
+**[DO]** **Fresh** session, and this time grant **`Desktop\cowork-workshop-after`** — the copy carrying your
+own `claude.md` and `about-me/` (prep item 1). Same document, `demo\treaty-layer-summary.docx`. **Say the
+folder name out loud** so the room sees the only thing that changed. Paste the **identical** prompt from the
+cold run and say out loud that it is identical.
+
+**[NOTE]** Fresh session is not optional — Cowork reads those files when the session opens. Reusing the
+morning's session, or forgetting to switch folders, reproduces the cold output and the day's payoff
+collapses. Check the folder name in the app **before** you paste.
 
 **[SAY]** while it runs — then stop and let it run: *"Same document. Same sentence. The only thing that
 changed in this room in the last hour is a handful of text files describing who I am."*
 
 **[DO]** Put the two outputs side by side if the screen allows at 1366×768; if it doesn't, read the cold one
-out from a printout rather than shrinking the fonts.
+out from the copy you saved at 1:03 or the printed rehearsal copy, rather than shrinking the fonts.
 
 **[SAY] — what changed:** *"Bottom line first, in my register, at the length I said I write. And it went back
 to the premium column and re-added it, and it flagged the date pair as a question rather than a sentence.
@@ -349,8 +398,11 @@ not a signature. It will still miss things — including, some days, both of the
 the summary that goes into the review. What personalization buys you is that the work moves from *rewrite
 this* to *check this*. That's the whole gain, and it's a big one."*
 
-**[NOTE]** If the after-run does **not** flag either defect, do not pretend. Say: *"It didn't catch them this
-time. That is real and you should see it. What that tells you is that my `writing-rules.md` isn't specific
+**[NOTE]** If the after-run does **not** flag either defect: **first check the setup, not the model.** Is the
+granted folder `cowork-workshop-after`? Is this a fresh session? Are your own global instructions still
+cleared? An output identical to the cold run is a setup failure, not model variance — and if you narrate it
+as variance you will never diagnose it. Once you have ruled that out, do not pretend. Say: *"It didn't catch
+them this time. That is real and you should see it. What that tells you is that my `writing-rules.md` isn't specific
 enough — and that's the homework: where yours stays quiet, that's a line missing from your file."* This is a
 stronger ending than a lucky run, and it is the honest one.
 

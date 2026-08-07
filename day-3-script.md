@@ -37,7 +37,8 @@ break**.
    have not re-checked them, say so in the room rather than presenting stale facts as current.
 6. **Test at 1366×768. Two windows.** A live build with a file tree, a skill file and a chat pane will not fit
    three ways. Decide in advance which two windows you drive and stick to them.
-7. **Name your moderator:** `[FILL IN]`. And for Block B, **get the invitation list** (Gen Re open item,
+7. **Name your moderator.** Fill `[MODERATOR]` here and it is filled everywhere in this script:
+   `[MODERATOR]` = `[FILL IN]`. And for Block B, **get the invitation list** (Gen Re open item,
    Chris) so you know how many cases you're sizing 45 minutes for.
 8. **Confirm the room and the break.** Fifteen minutes, laptops down, and somebody has to have arranged
    coffee. This is the item that gets forgotten and it is the one the room will remember.
@@ -90,9 +91,9 @@ rather than the break or the build. If we're running long I'll shorten the share
 
 ## Open · 0:00–0:15 (15 min) — Connect & frame
 
-**[SAY] — hybrid PSA, verbatim, third and last time:**
+**[SAY] — hybrid PSA, verbatim (third of four today — Block B opens with a shortened one):**
 > *"Same rule as Tuesday and Wednesday: the audio in this room does not carry the people on the call — **they
-> cannot speak to us.** Remote, type in the chat, [NAME] is watching it and will read your questions in. And
+> cannot speak to us.** Remote, type in the chat, [MODERATOR] is watching it and will read your questions in. And
 > for the second block this afternoon, that matters more than it has all week, because that block is entirely
 > people asking questions."*
 
@@ -204,7 +205,11 @@ Anthropic's skill-creator **can** auto-tune a description with its `run_loop` op
 a raw `ANTHROPIC_API_KEY`** — anyone signed in through SSO cannot run it. Answer: *"There's an automatic
 optimizer, but it needs a raw API key and SSO sign-in doesn't provide one. You tune by hand instead, exactly
 the way we just did — and honestly, on your first few skills you learn more doing it by hand."* **Do not raise
-this unprompted.** It was cut from the lesson for being too technical and it is a five-minute detour.
+this unprompted** — it is a five-minute detour into a step nobody in Block A needs.
+It was cut from **Lesson 2 (Skill Anatomy)** for being too technical, **not from the site**: if somebody looks
+it up they will find it live at
+[Make It a Skill §The optimizer needs a raw API key](pages/training/10-make-it-a-skill.html#caveat) and
+answered on the [FAQ](pages/workshops/faq.html). Point them there rather than contradicting the portal.
 
 ---
 
@@ -221,6 +226,15 @@ room cues and will otherwise sit and wait.
 
 **[NOTE]** Use the break to check the Block B invitation list against who is actually in the room, and to
 confirm the room is set for the clinic.
+
+**[SAY] — coming back from the break, repeat the PSA. This is the only break in the three days, so this is
+the only place the repeat happens:** *"Welcome back — and for anyone who has joined us over the break: the
+audio in this room does not carry the people on the call, **they cannot speak to us.** Remote, type in the
+chat; [MODERATOR] is watching it and will read your questions in."*
+
+**[NOTE]** `facilitator-guide.html#hybrid` is explicit that the PSA is repeated after the first break —
+*"the people who join late are the ones who most need to hear it."* On Day 3 the post-break arrivals are
+often the Block B invitees turning up early, and they are precisely the people who will have questions.
 
 ---
 
@@ -275,9 +289,15 @@ stay where they are — the **reading** doesn't. Content goes to Anthropic to be
 here is the uncomfortable one, and I'd rather you heard it from me: **Cowork activity is not in Anthropic's
 centralized audit logs today, and your session history is local to your machine.** No date has been published
 for closing that. What covers it in the meantime is exactly what we've been doing all week — narrow folder
-grants, approvals on, and the admin dashboard. And **work that genuinely needs centralized audit or zero
-retention routes to Anthropic's audited surfaces — the API or Claude Code Enterprise — not to this
-interface.**"*
+grants and approvals on. What your admins run is **three planes of monitoring, and no single one is enough**
+— the **Compliance API** for organization-level administrative activity, **OpenTelemetry** for session-level
+visibility, which emits nothing until an admin configures an endpoint, and an on-device **proxy or LLM
+gateway** at the network boundary. And **work that genuinely needs centralized audit or zero retention routes
+to Anthropic's audited surfaces — the API or Claude Code Enterprise — not to this interface.**"*
+
+**[NOTE]** Those are the three planes named in
+[§Data, item 04](pages/training/17-governance-snapshot.html#data). Say all three. "The admin dashboard" is not
+one of them and is not a sufficient answer in this room.
 
 **[NOTE]** Name the gap yourself before somebody else does. Do not overstate it and do not soften it, and do
 not imply a fix date — none has been published. **Date-sensitive:** these facts were verified 2026-07-21;
@@ -297,8 +317,9 @@ using your personalization — it decays if you never touch it. **Two:** take th
 half page, and run it on next week's real version of that work. **Three:** the canvas we didn't pick is first
 in the queue at office hours."*
 
-**[SAY] — who to contact:** *"For anything Cowork-shaped: `[FILL IN]`. For anything licence-, connector- or
-access-shaped: `[FILL IN]` at Gen Re. Office hours are `[FILL IN]` — bring the thing that didn't work, not
+**[SAY] — who to contact:** *"For anything Cowork-shaped: **Derrikk Broughton at Nimble Gravity —
+derrikk.broughton@nimblegravity.com**. For anything licence-, connector- or access-shaped: `[FILL IN]` at
+Gen Re. Office hours are `[FILL IN]` — bring the thing that didn't work, not
 the thing that did."*
 
 **[SAY] — the close of the week:** *"Three days, and the sentence I'd want you to leave with is the same one
@@ -329,7 +350,7 @@ make that working time land on the right things.
 ## Open · 0:00–0:15 (15 min) — Level-set expectations
 
 **[SAY] — hybrid PSA, shortened but say it:** *"Remote attendees can't be heard in this room — chat only,
-[NAME] is reading it in. In a session that is entirely questions, that matters more than usual, so I'll be
+[MODERATOR] is reading it in. In a session that is entirely questions, that matters more than usual, so I'll be
 checking the chat myself as well."*
 
 **[SAY] — what this is:** *"This is a clinic. There is no deck. You brought something that isn't working or
@@ -393,8 +414,10 @@ have the same problem** — fix it once, in front of everybody. Otherwise stay o
 **[NOTE]** Anything governance-shaped: give the Block A answer, precisely, and route the rest. Do not
 improvise. The audit-coverage gap answer is the same in this room as in the last one.
 
-**[NOTE]** Watch the clock hard. At 1:15 stop working and start writing — the close is the deliverable and it
-is the first thing to get squeezed.
+**[NOTE]** Watch the clock hard. The row runs to 1:20, but **stop working at 1:15 — the last five minutes are
+a deliberate buffer**, not spare working time. People need to save what they were mid-way through, and the
+close is the deliverable and the first thing to get squeezed. If everyone is at a clean stopping point at
+1:15, use the buffer to start the follow-up list early.
 
 ## Close · 1:20–1:30 (10 min) — recap & follow-up actions
 
@@ -444,9 +467,13 @@ bringing real cases; a clinic only works when people are willing to show somethi
 ### Script ↔ hub sync notes
 - **Block A agenda** matches `pages/workshops/module-3-workshop.html#agenda` row for row: 0:00–0:15 /
   0:15–0:35 / 0:35–1:15 / 1:15–1:30 / 1:30–1:50 / 1:50–2:00 / 2:00–2:10. **Those rows total 2:10 against a
-  2-hour block** — the hub says so in its own facilitator cue, `client-notes/onsite-agenda.md` is where it
-  originates, and the cut order above is this script's answer to it. If the client re-times the block, all
-  three change together.
+  2-hour block** — the hub flags the overrun in its own facilitator cue, `client-notes/onsite-agenda.md` is
+  where it originates, and the cut order above is this script's answer to it. If the client re-times the
+  block, all three change together.
+- **The break is not flex.** `facilitator-guide.html#workshop-3` ("if you're behind, take the time from the
+  share-out — not the break") and this script agree; the Day 3 hub's agenda cue was corrected to name only
+  the share-out as the flex, because it previously said "the break and the share-out" and participants read
+  the hub first.
 - **Block B agenda** matches `pages/workshops/module-4-workshop.html#agenda`: 0:00–0:15 / 0:15–0:35 /
   0:35–1:20 / 1:20–1:30 = 1:30.
 - **Selection criteria** = `pages/training/04-use-cases-by-industry.html#selection`; the canvas =
