@@ -25,7 +25,7 @@
 <div class="page-header" id="intro">
   <div class="eyebrow">Gen Re · Cowork Program</div>
   <h1 class="title">Cowork <em>Quick Reference</em></h1>
-  <p class="subtitle">Everything you need to remember on one page — model defaults, permission modes, the five prompt principles, session hygiene, and the /schedule constraint.</p>
+  <p class="subtitle">Everything you need to remember on one page — model defaults, permission modes, the five prompt principles, the /schedule constraint, session hygiene, and the three governance rules: the folder rule, the verification habit, and where work goes when it needs a central audit trail.</p>
   <div class="header-phase">
     <div class="header-phase-dot"></div>
     Print-friendly · keep it handy
@@ -176,9 +176,38 @@
   </div>
 </div>
 
+<!-- GOVERNANCE -->
+<div class="section section--off" id="governance">
+  <div class="sec-eyebrow">06 — Governance</div>
+  <h2 class="sec-title">Three rules to keep <em>straight</em></h2>
+  <p class="sec-sub">The folder rule, the verification habit, and where work goes when it needs a central audit trail. Facts verified 21 July 2026 — treat the date as part of the fact.</p>
+  <div class="bp-grid--light" style="margin-top:28px;">
+    <div class="bp-item">
+      <div class="bp-num">01</div>
+      <div class="bp-title">The folder rule</div>
+      <div class="bp-body">Cowork reads and writes only in the folders you grant. There are no per-file permissions — granting a folder grants everything under it, and granting a drive root grants the drive. Point it at the narrowest folder that holds the job, and add a second one explicitly on the day it's genuinely needed.</div>
+    </div>
+    <div class="bp-item">
+      <div class="bp-num">02</div>
+      <div class="bp-title">"Local" is only half true</div>
+      <div class="bp-body">The files stay on your machine and code runs in an isolated VM on it — but the model call goes to Anthropic's API, so whatever Cowork reads from a granted folder leaves the machine to be processed. Scope the folder as though everything inside it is being sent out, because functionally it is.</div>
+    </div>
+    <div class="bp-item">
+      <div class="bp-num">03</div>
+      <div class="bp-title">The verification habit</div>
+      <div class="bp-body">It drafts, you verify, you sign. Read the output back against the source before it goes anywhere: every claim traceable to a file, gaps flagged rather than filled. Whoever was accountable for the work before is accountable for it now.</div>
+    </div>
+    <div class="bp-item">
+      <div class="bp-num">04</div>
+      <div class="bp-title">The audit-gap routing rule</div>
+      <div class="bp-body">Claude Cowork activity is not captured in Anthropic's Audit Logs, Compliance API, or Data Exports on any plan tier, and conversation history lives locally on your machine. So work that needs centralized audit or zero retention runs on Anthropic's audited surfaces — the API or Claude Code Enterprise — not in the Cowork interface. Where a given piece of work falls is a call for the program team and IT: ask rather than assume.</div>
+    </div>
+  </div>
+</div>
+
 <!-- GET HELP -->
-<div class="section section--off" id="help">
-  <div class="sec-eyebrow">06 — Get help</div>
+<div class="section" id="help">
+  <div class="sec-eyebrow">07 — Get help</div>
   <h2 class="sec-title">Who to ask when you're <em>stuck</em></h2>
   <p class="sec-sub">You're not on your own. Use these channels when a session goes sideways or a question comes up between workshops.</p>
   <div class="insight-grid" style="margin-top:28px;">

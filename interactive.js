@@ -47,8 +47,14 @@
   function clearAck(id)         { var s = getStore(); if (s.ack) { delete s.ack[id]; setStore(s); } }
   function resetAll()           { try { window.localStorage.removeItem(LS_KEY); } catch (e) {} }
 
-  var MODULE_LABELS = { m1: 'Day 1 · Foundations & Personal Value', m2: 'Day 2 · Skills & Everyday Workflows', m3: 'Day 3 · Use Cases + Governance', m4: 'Advanced · Build Your Own' };
-  function passedCount() { var s = getStore(); var q = s.quiz || {}; var n = 0; ['m1','m2','m3','m4'].forEach(function (m) { if (q[m] && q[m].passed) n++; }); return n; }
+  // The three-day spine: one knowledge check per day (m1 on the Day 1 lab lesson,
+  // m2 on Skill Anatomy, m3 on Governance Snapshot). The Advanced block is a clinic
+  // with no lessons and no check, so it is not in this list and does not gate the
+  // certificate. Add an id here and the progress bar, readout and certificate follow.
+  var MODULE_IDS = ['m1', 'm2', 'm3'];
+  var MODULE_LABELS = { m1: 'Day 1 · Foundations & Personal Value', m2: 'Day 2 · Skills & Everyday Workflows', m3: 'Day 3 · Use Cases + Governance' };
+  var MODULE_SHORT = { m1: 'Day 1', m2: 'Day 2', m3: 'Day 3' };
+  function passedCount() { var s = getStore(); var q = s.quiz || {}; var n = 0; MODULE_IDS.forEach(function (m) { if (q[m] && q[m].passed) n++; }); return n; }
   function fmtDate(ts) { var d = ts ? new Date(ts) : new Date(); var m = ['January','February','March','April','May','June','July','August','September','October','November','December']; return m[d.getMonth()] + ' ' + d.getDate() + ', ' + d.getFullYear(); }
 
   // ── Content config (questions live here, not in lesson HTML) ────────────────
@@ -120,13 +126,6 @@
           options: ['On the Claude Cowork interface — its controls are enough', 'On Anthropic’s audited surfaces — the API or Claude Code Enterprise — not the Cowork interface', 'Anywhere — the audit gap does not matter for regulated work'],
           answer: 1 }
       ]
-    },
-    // Advanced has no lessons and no knowledge check under the three-day spine.
-    // The key stays because the progress readout and the certificate in
-    // pages/workshops/my-progress.html iterate m1..m4. Never mounted.
-    m4: {
-      label: 'Advanced · Build Your Own',
-      questions: []
     }
   };
 
@@ -503,10 +502,10 @@
     card.appendChild(el('p', 'ix-card-sub', 'A snapshot of your own progress on this device.'));
 
     var grid = el('div', 'ix-readout-grid');
-    ['m1', 'm2', 'm3', 'm4'].forEach(function (m, i) {
+    MODULE_IDS.forEach(function (m) {
       var passed = quiz[m] && quiz[m].passed;
       var pill = el('span', 'ix-pill' + (passed ? ' on' : ''));
-      pill.appendChild(el('span', null, (passed ? '✓ ' : '○ ') + 'Workshop ' + (i + 1)));
+      pill.appendChild(el('span', null, (passed ? '✓ ' : '○ ') + MODULE_SHORT[m]));
       grid.appendChild(pill);
     });
     card.appendChild(grid);
@@ -566,9 +565,9 @@
     var card = el('div', 'ix-card');
     card.appendChild(el('div', 'ix-kicker', 'Your progress'));
     card.appendChild(el('div', 'ix-card-title', (prof && prof.name) ? (prof.name + "'s progress") : 'Your progress'));
-    card.appendChild(el('p', 'ix-card-sub', 'Module quizzes you have passed, on this device.'));
+    card.appendChild(el('p', 'ix-card-sub', 'Knowledge checks you have passed, on this device.'));
     var rows = el('div', 'ix-prog');
-    ['m1', 'm2', 'm3', 'm4'].forEach(function (m) {
+    MODULE_IDS.forEach(function (m) {
       var q = quiz[m];
       var passed = q && q.passed;
       var row = el('div', 'ix-prog-row' + (passed ? ' on' : ''));
@@ -581,10 +580,10 @@
     var n = passedCount();
     var bar = el('div', 'ix-bar');
     var fill = el('div', 'ix-bar-fill');
-    fill.style.width = (n / 4 * 100) + '%';
+    fill.style.width = (n / MODULE_IDS.length * 100) + '%';
     bar.appendChild(fill);
     card.appendChild(bar);
-    card.appendChild(el('p', 'ix-prog-summary', n + ' of 4 workshops complete' + (n === 4 ? ' — certificate unlocked below.' : '.')));
+    card.appendChild(el('p', 'ix-prog-summary', n + ' of ' + MODULE_IDS.length + ' days complete' + (n === MODULE_IDS.length ? ' — certificate unlocked below.' : '.')));
     var actions = el('div', 'ix-actions');
     var reset = el('button', 'ix-btn ix-btn--ghost', 'Clear my data');
     reset.type = 'button';
@@ -594,7 +593,7 @@
     mount.appendChild(card);
   }
 
-  // ── Certificate (client-only; gated on all four module quizzes passed) ──────
+  // ── Certificate (client-only; gated on every MODULE_IDS check being passed) ─
   function buildCertNode() {
     var prof = getProfile();
     var name = (prof && prof.name) ? prof.name : '';
@@ -603,7 +602,7 @@
     cert.appendChild(el('div', 'ix-cert-title', 'Certificate of Completion'));
     cert.appendChild(el('div', 'ix-cert-line', 'This certifies that'));
     cert.appendChild(el('div', 'ix-cert-name', name || 'Your name'));
-    cert.appendChild(el('div', 'ix-cert-line', 'completed the four-module Cowork Enablement Program.'));
+    cert.appendChild(el('div', 'ix-cert-line', 'completed the three-day Cowork Enablement Program.'));
     var d = new Date();
     var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
     cert.appendChild(el('div', 'ix-cert-meta', months[d.getMonth()] + ' ' + d.getDate() + ', ' + d.getFullYear()));
@@ -614,11 +613,11 @@
   function renderCertificate(mount) {
     mount.innerHTML = '';
     var n = passedCount();
-    if (n < 4) {
+    if (n < MODULE_IDS.length) {
       var locked = el('div', 'ix-locked');
       locked.appendChild(el('div', 'ix-locked-icon', '🔒'));
       locked.appendChild(el('div', 'ix-locked-title', 'Certificate locked'));
-      locked.appendChild(el('div', 'ix-locked-sub', 'Pass all four module quizzes to unlock your certificate — ' + n + ' of 4 done. Each one is the Knowledge check stage on its workshop hub.'));
+      locked.appendChild(el('div', 'ix-locked-sub', 'Pass all ' + MODULE_IDS.length + ' knowledge checks to unlock your certificate — ' + n + ' of ' + MODULE_IDS.length + ' done. Each one is at the end of that day’s last lesson.'));
       mount.appendChild(locked);
       return;
     }
