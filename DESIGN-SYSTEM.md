@@ -85,8 +85,11 @@ What the engine extracts from each lesson:
   4-bullets-per-slide pool. Each card gets its own slide: heading = `Step N` (`.step-num`) + the first
   sentence of `.step-do`; subtitle = the rest of `.step-do` + `.step-why`; `.step-verify` (if present)
   rides along as that same slide's callout, styled amber, the same representation `.tip-trick` uses.
-  A section's step slides sit before or after its other content slides, matching whichever came first
-  in the markup.
+  The section's other cards are split into what's authored *before* the step list and what's authored
+  *after* it (each chunked 4-per-slide as usual), so the slide order is: before-chunks → step slides →
+  after-chunks. A closing tip written after a step list stays after the steps instead of jumping in
+  front of them; a section with no other cards still opens with its own (bullet-less) intro slide
+  before the steps.
 
 `.step-card` markup contract (numbered "do this, and here's why" steps, added for onsite delivery):
 a `.step-list` wrapper holds `.step-card` children, each with a `.step-num` (integer), a `.step-do`
