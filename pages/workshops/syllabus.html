@@ -9,7 +9,7 @@
 .syllabus-print{display:inline-flex;align-items:center;gap:6px;padding:10px 18px;background:var(--teal);color:#fff;border:none;border-radius:8px;font-weight:600;font-size:14px;font-family:inherit;cursor:pointer;}
 .syllabus-print:hover{background:var(--mint);}
 .sched{margin-top:24px;border:1px solid var(--border);border-radius:14px;overflow:hidden;}
-.sched-row{display:grid;grid-template-columns:160px 1fr auto;gap:18px;align-items:center;padding:16px 22px;border-top:1px solid var(--border);}
+.sched-row{display:grid;grid-template-columns:190px 1fr auto;gap:18px;align-items:center;padding:16px 22px;border-top:1px solid var(--border);}
 .sched-row:first-child{border-top:none;}
 .sched-w{font-weight:700;color:var(--navy);}
 .sched-name{color:var(--slate);}
@@ -31,12 +31,12 @@
 <script src="../../nav.js"></script>
 
 <div class="page-header" id="intro">
-  <div class="eyebrow">Gen Re · Cowork Program</div>
+  <div class="eyebrow">Gen Re · Cowork Onsite</div>
   <h1 class="title">Program <em>Syllabus</em></h1>
-  <p class="subtitle">The whole program on one page: four 2-hour, hands-on workshops, with the run of show for each. Use it to plan, to brief stakeholders, or to print and hand out.</p>
+  <p class="subtitle">The whole onsite on one page: three days, the objective and agenda for each, what you do beforehand, and what you leave with. Use it to plan, to brief a manager, or to print and hand out.</p>
   <div class="header-phase">
     <div class="header-phase-dot"></div>
-    4 workshops · 2 hours each · 8 hours total
+    3 days · 5.5 hours in the room · pre-work required
   </div>
 </div>
 
@@ -46,82 +46,190 @@
     <button class="syllabus-print" type="button" onclick="window.print()">⎙ Print syllabus</button>
   </div>
   <div class="sec-eyebrow">Schedule</div>
-  <h2 class="sec-title">When each workshop <em>runs</em></h2>
-  <p class="sec-sub">The four workshops run over 2 to 4 weeks — about one a week, or two a week for a two-week intensive — with optional prep before and an optional follow-up task after each. Set your cohort's dates below.</p>
+  <h2 class="sec-title">When each session <em>runs</em></h2>
+  <p class="sec-sub">Three consecutive days, week of 17 August. Tuesday and Wednesday are two hours each. Thursday afternoon runs three and a half hours in total: the 2-hour Day 3 session everyone attends, then a 1.5-hour Advanced clinic for a named group. Every day has required pre-work — all of it on the <a href="pre-work.html">pre-work page</a>.</p>
 
   <div class="sched" data-client-slot="schedule-dates">
-    <div class="sched-row"><div class="sched-w">Workshop 1</div><div class="sched-name">Setup &amp; Foundations</div><div class="sched-when">Date &amp; time — TBD</div></div>
-    <div class="sched-row"><div class="sched-w">Workshop 2</div><div class="sched-name">Use Cowork</div><div class="sched-when">Date &amp; time — TBD</div></div>
-    <div class="sched-row"><div class="sched-w">Workshop 3</div><div class="sched-name">Build a Skill</div><div class="sched-when">Date &amp; time — TBD</div></div>
-    <div class="sched-row"><div class="sched-w">Workshop 4</div><div class="sched-name">Govern &amp; Roll Out</div><div class="sched-when">Date &amp; time — TBD</div></div>
+    <div class="sched-row"><div class="sched-w">Day 1 · Tuesday</div><div class="sched-name">Foundations &amp; Personal Value</div><div class="sched-when">2 hours — time TBD</div></div>
+    <div class="sched-row"><div class="sched-w">Day 2 · Wednesday</div><div class="sched-name">Skills &amp; Everyday Workflows</div><div class="sched-when">2 hours — time TBD</div></div>
+    <div class="sched-row"><div class="sched-w">Day 3 · Thursday</div><div class="sched-name">Gen Re Use Cases + Governance Snapshot</div><div class="sched-when">2 hours — afternoon, TBD</div></div>
+    <div class="sched-row"><div class="sched-w">Day 3 · Thursday</div><div class="sched-name">Advanced — Build Your Own (by invitation)</div><div class="sched-when">1.5 hours — follows Day 3</div></div>
   </div>
 </div>
 
-<!-- WORKSHOP 1 -->
-<div class="section section--off" id="w1">
-  <div class="sec-eyebrow">Workshop 1 · 2 hours</div>
-  <h2 class="sec-title">Setup &amp; <em>Foundations</em></h2>
-  <p class="sec-sub">Delegation vs chat, the Claude Code engine, the co-setup interview, and a first real delegation. <a href="module-1-workshop.html">Open the hub →</a></p>
-  <div class="agenda">
-    <div class="agenda-row"><div class="agenda-time">0:00–0:10</div><div class="agenda-tag">Open</div><div class="agenda-body"><strong>Welcome, objectives, maturity poll</strong></div></div>
-    <div class="agenda-row"><div class="agenda-time">0:10–0:35</div><div class="agenda-tag agenda-tag--teach">Teach</div><div class="agenda-body"><strong>What Is Cowork? · Get Set Up</strong></div></div>
-    <div class="agenda-row"><div class="agenda-time">0:35–0:55</div><div class="agenda-tag agenda-tag--demo">Demo</div><div class="agenda-body"><strong>Summarize a legacy model</strong></div></div>
-    <div class="agenda-row"><div class="agenda-time">0:55–1:05</div><div class="agenda-tag agenda-tag--discuss">Discuss</div><div class="agenda-body"><strong>One task you'd hand off</strong></div></div>
-    <div class="agenda-row"><div class="agenda-time">1:05–1:10</div><div class="agenda-tag agenda-tag--break">Break</div><div class="agenda-body"><strong>Break</strong></div></div>
-    <div class="agenda-row"><div class="agenda-time">1:10–1:50</div><div class="agenda-tag agenda-tag--lab">Lab</div><div class="agenda-body"><strong>Your first Cowork session</strong></div></div>
-    <div class="agenda-row"><div class="agenda-time">1:50–1:58</div><div class="agenda-tag">Debrief</div><div class="agenda-body"><strong>Debrief + Workshop 1 quiz</strong></div></div>
-    <div class="agenda-row"><div class="agenda-time">1:58–2:00</div><div class="agenda-tag">Close</div><div class="agenda-body"><strong>Optional follow-up + what's next</strong></div></div>
+<!-- DAY 1 -->
+<div class="section section--off" id="day-1">
+  <div class="sec-eyebrow">Day 1 · Tuesday · 2 hours</div>
+  <h2 class="sec-title">Foundations &amp; <em>Personal Value</em></h2>
+  <p class="sec-sub">Welcome to Workshop 1 of the Claude Cowork onsite series for Gen Re business leaders. <a href="module-1-workshop.html">Open the hub →</a></p>
+
+  <div class="insight-grid" style="margin-top:24px;">
+    <div class="insight-card">
+      <div class="sec-eyebrow" style="margin-bottom:6px;">Objective</div>
+      <p style="font-size:15px;color:var(--slate);line-height:1.65;margin:0;">By the end of this session, every participant will have set up their own Claude personalization and seen it work on a real, genericized Gen Re document — and will know how to verify Claude's output.</p>
+    </div>
+    <div class="insight-card">
+      <div class="sec-eyebrow" style="margin-bottom:6px;">Pre-work required · 30–45 min</div>
+      <p style="font-size:15px;color:var(--slate);line-height:1.65;margin:0;">Have Claude Desktop installed and ready to go. Read "What is Claude Cowork and why is Gen Re using it?", review the Rules of the Road, and download and unzip the workshop folder. Come ready to participate — this is a lab, not a lecture. <a href="pre-work.html#day-1">Full pre-work →</a></p>
+    </div>
+  </div>
+
+  <div class="agenda" style="margin-top:28px;">
+    <div class="agenda-row"><div class="agenda-time">0:00–0:15<small>15 min</small></div><div class="agenda-tag">Open</div><div class="agenda-body"><strong>Why Gen Re is investing in Cowork and what it means for your daily work</strong></div></div>
+    <div class="agenda-row"><div class="agenda-time">0:15–0:30<small>15 min</small></div><div class="agenda-tag agenda-tag--teach">Teach</div><div class="agenda-body"><strong>Rules of the road: what's safe, what isn't, and how to work confidently</strong></div></div>
+    <div class="agenda-row"><div class="agenda-time">0:30–0:50<small>20 min</small></div><div class="agenda-tag agenda-tag--teach">Teach</div><div class="agenda-body"><strong>Chat vs. Cowork: what each is for and when to use it</strong></div></div>
+    <div class="agenda-row"><div class="agenda-time">0:50–1:05<small>15 min</small></div><div class="agenda-tag agenda-tag--demo">Demo</div><div class="agenda-body"><strong>Live demo: Gen Re document before lab</strong></div></div>
+    <div class="agenda-row"><div class="agenda-time">1:05–1:50<small>45 min</small></div><div class="agenda-tag agenda-tag--lab">Lab</div><div class="agenda-body"><strong>Hands-on lab: set up your personalization (About Me and folder structure)</strong></div></div>
+    <div class="agenda-row"><div class="agenda-time">1:50–2:00<small>10 min</small></div><div class="agenda-tag agenda-tag--demo">Demo</div><div class="agenda-body"><strong>Live demo: Gen Re document post lab</strong></div></div>
+  </div>
+
+  <div class="tip-trick" style="margin-top:24px;">
+    <div class="tip-trick-icon">✓</div>
+    <div class="tip-trick-copy">
+      <div class="tip-trick-label">What you'll leave with</div>
+      <p>Your own personalization set up and working on a real Gen Re document — and a way to check whether what Claude hands back is actually supported by the source it read.</p>
+    </div>
   </div>
 </div>
 
-<!-- WORKSHOP 2 -->
-<div class="section" id="w2">
-  <div class="sec-eyebrow">Workshop 2 · 2 hours</div>
-  <h2 class="sec-title">Use <em>Cowork</em></h2>
-  <p class="sec-sub">Reinsurance use cases, working effectively, and a real task end to end. <a href="module-2-workshop.html">Open the hub →</a></p>
-  <div class="agenda">
-    <div class="agenda-row"><div class="agenda-time">0:00–0:20</div><div class="agenda-tag">Open</div><div class="agenda-body"><strong>Setup recap</strong></div></div>
-    <div class="agenda-row"><div class="agenda-time">0:20–0:40</div><div class="agenda-tag agenda-tag--teach">Teach</div><div class="agenda-body"><strong>Use cases · Working effectively</strong></div></div>
-    <div class="agenda-row"><div class="agenda-time">0:40–0:58</div><div class="agenda-tag agenda-tag--demo">Demo</div><div class="agenda-body"><strong>Solution profile + architecture diagram from a handover folder</strong></div></div>
-    <div class="agenda-row"><div class="agenda-time">0:58–1:06</div><div class="agenda-tag agenda-tag--discuss">Discuss</div><div class="agenda-body"><strong>Shortlist your use cases</strong></div></div>
-    <div class="agenda-row"><div class="agenda-time">1:06–1:11</div><div class="agenda-tag agenda-tag--break">Break</div><div class="agenda-body"><strong>Break</strong></div></div>
-    <div class="agenda-row"><div class="agenda-time">1:11–1:51</div><div class="agenda-tag agenda-tag--lab">Lab</div><div class="agenda-body"><strong>Use Cowork Lab → a deliverable</strong></div></div>
-    <div class="agenda-row"><div class="agenda-time">1:51–1:57</div><div class="agenda-tag">Debrief</div><div class="agenda-body"><strong>Debrief + Workshop 2 quiz</strong></div></div>
-    <div class="agenda-row"><div class="agenda-time">1:57–2:00</div><div class="agenda-tag">Close</div><div class="agenda-body"><strong>Optional follow-up + what's next</strong></div></div>
+<!-- DAY 2 -->
+<div class="section" id="day-2">
+  <div class="sec-eyebrow">Day 2 · Wednesday · 2 hours</div>
+  <h2 class="sec-title">Skills &amp; Everyday <em>Workflows</em></h2>
+  <p class="sec-sub">From personal setup to everyday workflows. <a href="module-2-workshop.html">Open the hub →</a></p>
+
+  <div class="insight-grid" style="margin-top:24px;">
+    <div class="insight-card">
+      <div class="sec-eyebrow" style="margin-bottom:6px;">Objective</div>
+      <p style="font-size:15px;color:var(--slate);line-height:1.65;margin:0;">Building on Day 1, this session moves from personal setup to everyday workflows — and introduces skills as a way to package what you already do well. We'll work through a real business workflow manually first, then show how to turn it into a reusable skill.</p>
+    </div>
+    <div class="insight-card">
+      <div class="sec-eyebrow" style="margin-bottom:6px;">Pre-work required · 30–45 min, via the portal</div>
+      <p style="font-size:15px;color:var(--slate);line-height:1.65;margin:0;">Review the Day 2 lessons on the portal. Confirm your everyday workflow (for example, inbox triage or status reporting). Bring your Day 1 personalization results — we'll check in on them together. <a href="pre-work.html#day-2">Full pre-work →</a></p>
+    </div>
+  </div>
+
+  <div class="agenda" style="margin-top:28px;">
+    <div class="agenda-row"><div class="agenda-time">Connect &amp; frame<small>10 min</small></div><div class="agenda-tag">Open</div><div class="agenda-body"><strong>Recap Day 1, objectives for today</strong></div></div>
+    <div class="agenda-row"><div class="agenda-time">Do it manually<small>25 min</small></div><div class="agenda-tag">Manual</div><div class="agenda-body"><strong>Walk a real business workflow (e.g., status reporting)</strong></div></div>
+    <div class="agenda-row"><div class="agenda-time">Teach &amp; demo<small>20 min</small></div><div class="agenda-tag agenda-tag--teach">Teach</div><div class="agenda-body"><strong>What a skill is and how a few stack together</strong></div></div>
+    <div class="agenda-row"><div class="agenda-time">Guided lab<small>40 min</small></div><div class="agenda-tag agenda-tag--lab">Lab</div><div class="agenda-body"><strong>Skill Room — the Skill Vault</strong></div></div>
+    <div class="agenda-row"><div class="agenda-time">Share-out<small>15 min</small></div><div class="agenda-tag agenda-tag--discuss">Debrief</div><div class="agenda-body"><strong>Show results, discuss good vs. so-so skill</strong></div></div>
+    <div class="agenda-row"><div class="agenda-time">Homework &amp; close<small>10 min</small></div><div class="agenda-tag">Close</div><div class="agenda-body"><strong>Applied task, office hours, preview of Day 3</strong></div></div>
+  </div>
+
+  <div class="tip-trick" style="margin-top:24px;">
+    <div class="tip-trick-icon">✓</div>
+    <div class="tip-trick-copy">
+      <div class="tip-trick-label">What you'll leave with</div>
+      <p>A working skill built from a real business workflow, plus a feel for when packaging something as a skill is worth it.</p>
+    </div>
   </div>
 </div>
 
-<!-- WORKSHOP 3 -->
-<div class="section section--off" id="w3">
-  <div class="sec-eyebrow">Workshop 3 · 2 hours</div>
-  <h2 class="sec-title">Build a <em>Skill</em></h2>
-  <p class="sec-sub">Decompose a workflow, learn the authoring standards, and ship a working <code>.skill</code>. <a href="module-3-workshop.html">Open the hub →</a></p>
-  <div class="agenda">
-    <div class="agenda-row"><div class="agenda-time">0:00–0:15</div><div class="agenda-tag">Open</div><div class="agenda-body"><strong>Workshop 1 + 2 quizzes live + skill seeds</strong></div></div>
-    <div class="agenda-row"><div class="agenda-time">0:15–0:35</div><div class="agenda-tag agenda-tag--teach">Teach</div><div class="agenda-body"><strong>What a skill is + filing system · Decompose · Anatomy</strong></div></div>
-    <div class="agenda-row"><div class="agenda-time">0:35–0:52</div><div class="agenda-tag agenda-tag--demo">Demo</div><div class="agenda-body"><strong>Turn yesterday's demo prompt into a skill, then schedule it</strong></div></div>
-    <div class="agenda-row"><div class="agenda-time">0:52–1:04</div><div class="agenda-tag agenda-tag--discuss">Discuss</div><div class="agenda-body"><strong>Skill-idea brainstorm + vault team formation</strong></div></div>
-    <div class="agenda-row"><div class="agenda-time">1:04–1:10</div><div class="agenda-tag agenda-tag--break">Break</div><div class="agenda-body"><strong>Break + breakout rooms open</strong></div></div>
-    <div class="agenda-row"><div class="agenda-time">1:10–1:50</div><div class="agenda-tag agenda-tag--lab">Lab</div><div class="agenda-body"><strong>The Skill Vault — four-room escape lab, in teams</strong></div></div>
-    <div class="agenda-row"><div class="agenda-time">1:50–1:57</div><div class="agenda-tag">Debrief</div><div class="agenda-body"><strong>Debrief + Workshop 3 quiz (runs now)</strong></div></div>
-    <div class="agenda-row"><div class="agenda-time">1:57–2:00</div><div class="agenda-tag">Close</div><div class="agenda-body"><strong>Optional follow-up — invite IT to W4 · cheat sheet</strong></div></div>
+<!-- DAY 3 -->
+<div class="section section--off" id="day-3">
+  <div class="sec-eyebrow">Day 3 · Thursday afternoon · 2 hours</div>
+  <h2 class="sec-title">Gen Re Use Cases + <em>Governance Snapshot</em></h2>
+  <p class="sec-sub">The first of Thursday's two blocks, and the one everyone attends. <a href="module-3-workshop.html">Open the hub →</a></p>
+
+  <div class="insight-grid" style="margin-top:24px;">
+    <div class="insight-card">
+      <div class="sec-eyebrow" style="margin-bottom:6px;">Objective</div>
+      <p style="font-size:15px;color:var(--slate);line-height:1.65;margin:0;">In this session, you'll bring your own use case. The team will select a set of use cases to build into a working skill live using a real Gen Re workflow, and leave with a trimmed governance and rollout snapshot to take back to your team.</p>
+    </div>
+    <div class="insight-card">
+      <div class="sec-eyebrow" style="margin-bottom:6px;">Pre-work required · 15 min</div>
+      <p style="font-size:15px;color:var(--slate);line-height:1.65;margin:0;">Pre-fill the use-case canvas (link on the portal) with the workflow you'd like to build. No other prep needed. <a href="pre-work.html#day-3">Full pre-work →</a></p>
+    </div>
+  </div>
+
+  <div class="agenda" style="margin-top:28px;">
+    <div class="agenda-row"><div class="agenda-time">Connect &amp; frame<small>15 min</small></div><div class="agenda-tag">Open</div><div class="agenda-body"><strong>Recap Days 1–2; review submitted use-case canvases</strong></div></div>
+    <div class="agenda-row"><div class="agenda-time">Teach &amp; demo<small>20 min</small></div><div class="agenda-tag agenda-tag--teach">Teach</div><div class="agenda-body"><strong>Ideate and agree on an actual Gen Re workflow for the lab</strong></div></div>
+    <div class="agenda-row"><div class="agenda-time">Guided lab<small>40 min</small></div><div class="agenda-tag agenda-tag--lab">Lab</div><div class="agenda-body"><strong>Build a skill from Gen Re selected use case</strong></div></div>
+    <div class="agenda-row"><div class="agenda-time">Break<small>15 min</small></div><div class="agenda-tag agenda-tag--break">Break</div><div class="agenda-body"><strong>Break</strong></div></div>
+    <div class="agenda-row"><div class="agenda-time">Share-out<small>20 min</small></div><div class="agenda-tag agenda-tag--discuss">Debrief</div><div class="agenda-body"><strong>Results sharing &amp; discussion</strong></div></div>
+    <div class="agenda-row"><div class="agenda-time">Governance snapshot<small>10 min</small></div><div class="agenda-tag agenda-tag--teach">Teach</div><div class="agenda-body"><strong>What's already connected, roles at a glance, data retention basics</strong></div></div>
+    <div class="agenda-row"><div class="agenda-time">Close<small>10 min</small></div><div class="agenda-tag">Close</div><div class="agenda-body"><strong>Next steps, who to contact, office hours</strong></div></div>
+  </div>
+
+  <div class="tip-trick" style="margin-top:24px;">
+    <div class="tip-trick-icon">✓</div>
+    <div class="tip-trick-copy">
+      <div class="tip-trick-label">What you'll leave with</div>
+      <p>A working skill built from a Gen Re workflow. A clear picture of what's connected, who can do what, and how data is handled in the Gen Re environment. Concrete next steps for using Cowork day to day.</p>
+    </div>
   </div>
 </div>
 
-<!-- WORKSHOP 4 -->
-<div class="section" id="w4">
-  <div class="sec-eyebrow">Workshop 4 · 2 hours</div>
-  <h2 class="sec-title">Plugins &amp; <em>Rollout</em></h2>
-  <p class="sec-sub">Team plugins, governance for a reinsurer, and a sponsor-ready rollout one-pager. Bring IT/compliance. <a href="module-4-workshop.html">Open the hub →</a></p>
-  <div class="agenda">
-    <div class="agenda-row"><div class="agenda-time">0:00–0:10</div><div class="agenda-tag">Open</div><div class="agenda-body"><strong>Recap + welcome IT</strong></div></div>
-    <div class="agenda-row"><div class="agenda-time">0:10–0:35</div><div class="agenda-tag agenda-tag--teach">Teach</div><div class="agenda-body"><strong>Plugins · Deploy · Governance for IT</strong></div></div>
-    <div class="agenda-row"><div class="agenda-time">0:35–0:55</div><div class="agenda-tag agenda-tag--demo">Demo</div><div class="agenda-body"><strong>Govern by workload + the dashboard</strong></div></div>
-    <div class="agenda-row"><div class="agenda-time">0:55–1:05</div><div class="agenda-tag agenda-tag--discuss">Discuss</div><div class="agenda-body"><strong>Which skills are team plugins?</strong></div></div>
-    <div class="agenda-row"><div class="agenda-time">1:05–1:10</div><div class="agenda-tag agenda-tag--break">Break</div><div class="agenda-body"><strong>Break</strong></div></div>
-    <div class="agenda-row"><div class="agenda-time">1:10–1:50</div><div class="agenda-tag agenda-tag--lab">Lab</div><div class="agenda-body"><strong>Capstone → the rollout one-pager</strong></div></div>
-    <div class="agenda-row"><div class="agenda-time">1:50–1:58</div><div class="agenda-tag">Debrief</div><div class="agenda-body"><strong>Debrief + Workshop 4 quiz + readout</strong></div></div>
-    <div class="agenda-row"><div class="agenda-time">1:58–2:00</div><div class="agenda-tag">Close</div><div class="agenda-body"><strong>Wrap-up + next steps</strong></div></div>
+<!-- ADVANCED -->
+<div class="section" id="advanced">
+  <div class="sec-eyebrow">Day 3 · Thursday · Advanced · 1.5 hours</div>
+  <h2 class="sec-title">Advanced — Build Your <em>Own</em></h2>
+  <p class="sec-sub">The second Thursday block, by invitation, for experienced Cowork users. <a href="module-4-workshop.html">Open the hub →</a></p>
+
+  <div class="insight-grid" style="margin-top:24px;">
+    <div class="insight-card">
+      <div class="sec-eyebrow" style="margin-bottom:6px;">Objective</div>
+      <p style="font-size:15px;color:var(--slate);line-height:1.65;margin:0;">In this session, Claude Cowork experienced users are invited to bring your own use case for live engagement with the Nimble Gravity team. The team will help you solve any challenges or roadblocks you are experiencing.</p>
+    </div>
+    <div class="insight-card">
+      <div class="sec-eyebrow" style="margin-bottom:6px;">Pre-work required · 15–30 min</div>
+      <p style="font-size:15px;color:var(--slate);line-height:1.65;margin:0;">Come prepared with use case examples or questions that need resolved. No other prep needed. <a href="pre-work.html#advanced">Full pre-work →</a></p>
+    </div>
+  </div>
+
+  <div class="agenda" style="margin-top:28px;">
+    <div class="agenda-row"><div class="agenda-time">Connect &amp; frame<small>15 min</small></div><div class="agenda-tag">Open</div><div class="agenda-body"><strong>Level set session expectations</strong></div></div>
+    <div class="agenda-row"><div class="agenda-time">Review<small>20 min</small></div><div class="agenda-tag agenda-tag--discuss">Review</div><div class="agenda-body"><strong>Review individual use cases</strong></div></div>
+    <div class="agenda-row"><div class="agenda-time">Guided engagement<small>45 min</small></div><div class="agenda-tag agenda-tag--lab">Work</div><div class="agenda-body"><strong>Resolve questions and support use case implementation across Gen Re advanced user team</strong></div></div>
+    <div class="agenda-row"><div class="agenda-time">Recap<small>10 min</small></div><div class="agenda-tag">Close</div><div class="agenda-body"><strong>Follow up actions to resolve outstanding user issues</strong></div></div>
+  </div>
+
+  <div class="tip-trick" style="margin-top:24px;">
+    <div class="tip-trick-icon">✓</div>
+    <div class="tip-trick-copy">
+      <div class="tip-trick-label">What you'll leave with</div>
+      <p>A deeper understanding and resolution of issues with individual use cases.</p>
+    </div>
+  </div>
+</div>
+
+<!-- OPEN ITEMS -->
+<div class="section section--off" id="open-items">
+  <div class="sec-eyebrow">Before the week starts</div>
+  <h2 class="sec-title">Open items and who <em>owns them</em></h2>
+  <p class="sec-sub">The things that still have to land before Tuesday, and the name against each. Kept here so nobody has to go looking for the list.</p>
+
+  <div style="margin-top:24px;overflow-x:auto;">
+    <table style="border-collapse:collapse;font-size:14px;color:var(--slate);min-width:560px;width:100%;">
+      <thead><tr>
+        <th style="text-align:left;padding:8px 16px 8px 0;border-bottom:1px solid var(--border);">Open item</th>
+        <th style="text-align:left;padding:8px 0;border-bottom:1px solid var(--border);white-space:nowrap;">Owner</th>
+      </tr></thead>
+      <tbody>
+        <tr><td style="padding:8px 16px 8px 0;border-bottom:1px solid var(--border);">Confirm Claude on desktop for all attendees</td><td style="padding:8px 0;border-bottom:1px solid var(--border);">Gen Re</td></tr>
+        <tr><td style="padding:8px 16px 8px 0;border-bottom:1px solid var(--border);">Convert the Cowork microsite to slide view (one step at a time)</td><td style="padding:8px 0;border-bottom:1px solid var(--border);">Nimble Gravity</td></tr>
+        <tr><td style="padding:8px 16px 8px 0;border-bottom:1px solid var(--border);">Pre-send the zipped workshop folder to attendees; include instructions for those who may not know how to unzip a file</td><td style="padding:8px 0;border-bottom:1px solid var(--border);">Nimble Gravity</td></tr>
+        <tr><td style="padding:8px 16px 8px 0;border-bottom:1px solid var(--border);">Push to get the M365 connector live before Day 1 (Charles)</td><td style="padding:8px 0;border-bottom:1px solid var(--border);">Gen Re</td></tr>
+        <tr><td style="padding:8px 16px 8px 0;border-bottom:1px solid var(--border);">Get the attendee list with roles/titles to tailor use cases and messaging (Days 1–3)</td><td style="padding:8px 0;border-bottom:1px solid var(--border);">Gen Re</td></tr>
+        <tr><td style="padding:8px 16px 8px 0;border-bottom:1px solid var(--border);">Identify users attending the advanced workshop on Day 3</td><td style="padding:8px 0;border-bottom:1px solid var(--border);">Gen Re (Chris)</td></tr>
+        <tr><td style="padding:8px 16px 8px 0;border-bottom:1px solid var(--border);">Confirm hybrid logistics; assign moderators to manage airtime for remote attendees</td><td style="padding:8px 0;border-bottom:1px solid var(--border);">Nimble Gravity &amp; Gen Re</td></tr>
+        <tr><td style="padding:8px 16px 8px 0;border-bottom:1px solid var(--border);">Test the demo setup on a 14" laptop screen, not just the presenter's display</td><td style="padding:8px 0;border-bottom:1px solid var(--border);">Nimble Gravity</td></tr>
+        <tr><td style="padding:8px 16px 8px 0;border-bottom:1px solid var(--border);">Source and genericize a real Gen Re document for the Day 1 demo</td><td style="padding:8px 0;border-bottom:1px solid var(--border);">Gen Re to source; Nimble Gravity to genericize</td></tr>
+        <tr><td style="padding:8px 16px 8px 0;border-bottom:1px solid var(--border);">Confirm the Day 3 workflow example for the live skill build</td><td style="padding:8px 0;border-bottom:1px solid var(--border);">Gen Re (Chris sourcing)</td></tr>
+        <tr><td style="padding:8px 16px 8px 0;">Validate Day 3 use cases with Chris/Charles before the session</td><td style="padding:8px 0;">Nimble Gravity</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="tip-trick" style="margin-top:28px;">
+    <div class="tip-trick-icon">✉️</div>
+    <div class="tip-trick-copy">
+      <div class="tip-trick-label">Questions</div>
+      <p>Derrikk Broughton, Nimble Gravity — <a href="mailto:derrikk.broughton@nimblegravity.com">derrikk.broughton@nimblegravity.com</a>. All materials are on this portal; the required pre-work for every day is on the <a href="pre-work.html">pre-work page</a>.</p>
+    </div>
   </div>
 </div>
 
