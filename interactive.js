@@ -94,8 +94,7 @@
           answer: 0 }
       ]
     },
-    // Day 3 governance bank. Not mounted yet — the Day 3 governance lesson
-    // (17-governance-snapshot.html) mounts it with data-ix-pass="4".
+    // Mounted at the end of 17-governance-snapshot.html (data-ix-pass="5").
     m3: {
       label: 'Day 3 · Use Cases + Governance',
       questions: [
