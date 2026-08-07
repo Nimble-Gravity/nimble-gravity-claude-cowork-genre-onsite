@@ -47,14 +47,14 @@
   function clearAck(id)         { var s = getStore(); if (s.ack) { delete s.ack[id]; setStore(s); } }
   function resetAll()           { try { window.localStorage.removeItem(LS_KEY); } catch (e) {} }
 
-  var MODULE_LABELS = { m1: 'Workshop 1 · Setup & Foundations', m2: 'Workshop 2 · Use Cowork', m3: 'Workshop 3 · Build a Skill', m4: 'Workshop 4 · Govern & Roll Out' };
+  var MODULE_LABELS = { m1: 'Day 1 · Foundations & Personal Value', m2: 'Day 2 · Skills & Everyday Workflows', m3: 'Day 3 · Use Cases + Governance', m4: 'Advanced · Build Your Own' };
   function passedCount() { var s = getStore(); var q = s.quiz || {}; var n = 0; ['m1','m2','m3','m4'].forEach(function (m) { if (q[m] && q[m].passed) n++; }); return n; }
   function fmtDate(ts) { var d = ts ? new Date(ts) : new Date(); var m = ['January','February','March','April','May','June','July','August','September','October','November','December']; return m[d.getMonth()] + ' ' + d.getDate() + ', ' + d.getFullYear(); }
 
   // ── Content config (questions live here, not in lesson HTML) ────────────────
   var QUIZZES = {
     m1: {
-      label: 'Workshop 1 · Setup & Foundations',
+      label: 'Day 1 · Foundations & Personal Value',
       questions: [
         { q: 'How is Cowork different from a chat?',
           options: ['It writes longer answers, but you still copy them out and do the work yourself', 'You delegate a multi-step job and supervise while it works across your files', 'It is the same as chat, just renamed'],
@@ -71,7 +71,7 @@
       ]
     },
     m2: {
-      label: 'Workshop 2 · Use Cowork',
+      label: 'Day 2 · Skills & Everyday Workflows',
       questions: [
         { q: 'What is the safe default model for everyday work?',
           options: ['Opus for everything — it is the most capable', 'Sonnet by default, stepping up to Opus only for hard reasoning', 'Haiku for everything, to minimize cost'],
@@ -88,7 +88,7 @@
       ]
     },
     m3: {
-      label: 'Workshop 3 · Build a Skill',
+      label: 'Day 3 · Use Cases + Governance',
       questions: [
         { q: 'What comes first when authoring a skill, per Anthropic?',
           options: ['Polished, exhaustive documentation', 'The evaluations — evals before docs', 'A long list of rules in ALL-CAPS'],
@@ -105,7 +105,7 @@
       ]
     },
     m4: {
-      label: 'Workshop 4 · Govern & Roll Out',
+      label: 'Advanced · Build Your Own',
       questions: [
         { q: 'A colleague needs to pull usage reports for the steering committee — nothing else. What should they get?',
           options: ['The Owner role, so they are not blocked', 'A Custom role with the Analytics admin area', 'A shared login with an existing Owner'],

@@ -59,8 +59,8 @@
     <div class="step-card">
       <div class="step-num">3</div>
       <div>
-        <div class="step-do">Confirm the extracted folder is named <code>cowork-workshop</code> and sits on your Desktop, so the path reads <code>Desktop\cowork-workshop</code>. Rename it if Windows added anything.</div>
-        <div class="step-why">Windows likes to nest the contents inside a second folder of the same name, or append a number. Every instruction for the next three days uses this exact path, so a mismatch here becomes ten minutes of confusion later.</div>
+        <div class="step-do">Make the path read exactly <code>Desktop\cowork-workshop</code>.</div>
+        <div class="step-why">Windows likes to nest the contents inside a second folder of the same name, or append a number — rename or move things until it doesn't. Every instruction for the next three days uses this exact path, so a mismatch here becomes ten minutes of confusion later.</div>
         <div class="step-verify">Explorer's address bar reads <code>…\Desktop\cowork-workshop</code>, and you can see the files immediately inside it — not another folder of the same name.</div>
       </div>
     </div>
@@ -69,13 +69,13 @@
       <div>
         <div class="step-do">In Cowork, open the folder picker and select <code>Desktop\cowork-workshop</code>.</div>
         <div class="step-why">This is the whole data-access model: Cowork reads and writes inside the folders you hand it and nowhere else. Handing it one folder is how you keep a capable agent scoped to the job.</div>
-        <div class="step-verify">The folder name shows in the session, and Cowork can name a file that's in it.</div>
+        <div class="step-verify">Ask <em>"Which folder are you working in?"</em> — it answers with a path ending in <code>cowork-workshop</code>, not "I don't have access to a folder".</div>
       </div>
     </div>
     <div class="step-card">
       <div class="step-num">5</div>
       <div>
-        <div class="step-do">Ask Cowork: <em>"List everything in this folder."</em> Compare what comes back against <code>README.docx</code>.</div>
+        <div class="step-do">Ask Cowork to list everything in the folder. Compare what comes back against <code>README.docx</code>.</div>
         <div class="step-why">This is the first and smallest version of the habit the whole program is built on — you check the output against the source rather than taking it on trust. It also proves the grant actually worked before you depend on it.</div>
         <div class="step-verify">You see <code>about-me/</code>, <code>demo/</code>, <code>day-2/</code>, <code>README.docx</code> and a <code>claude.md</code>. Anything missing means the extract didn't finish — flag a facilitator.</div>
       </div>
