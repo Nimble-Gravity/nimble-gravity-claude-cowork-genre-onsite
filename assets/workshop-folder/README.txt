@@ -10,7 +10,7 @@ WHAT IS IN HERE
 - demo/ — the document used for the Day 1 demonstration. One file.
 - day-2/ — the three source documents for the Day 2 status-report exercise.
 
-Every document in here ships twice: a .docx you open in Word, and a .txt containing the same words. Work from the .docx. The .txt is there so the file is still readable if Word is unavailable, and so facilitators can edit the source. The one exception is claude.md, which is a plain text file on purpose — that file is part of what Day 1 teaches.
+That is everything: this file, claude.md, and three folders holding five documents between them. If you can see all of it, you are ready.
 
 THE THREE DAYS
 
@@ -30,5 +30,4 @@ Open the folder in File Explorer and compare it against the list above. If a fol
 
 If it still does not match, say so before the session rather than during it.
 
-Facilitator: [FILL IN — facilitator name and email before this pack is distributed]
-Nimble Gravity
+Facilitator: Derrikk Broughton, Nimble Gravity — derrikk.broughton@nimblegravity.com

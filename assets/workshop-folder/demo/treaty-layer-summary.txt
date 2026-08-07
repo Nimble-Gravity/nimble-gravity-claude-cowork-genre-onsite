@@ -1,6 +1,6 @@
-[STAND-IN — swap for the genericized Gen Re source document when received; see facilitator guide TODO]
+Quarterly Treaty-Layer Summary — Larkspur Mutual Insurance Company
 
-Quarterly Treaty-Layer Summary — Meridian Mutual Insurance Company
+[STAND-IN — swap for the genericized Gen Re source document when received; see facilitator guide TODO]
 
 Property Catastrophe Excess of Loss, 2026 treaty year
 Prepared by: D. Kim, P&C Treaty Operations
@@ -13,11 +13,11 @@ KEY DATES
 - Treaty expiry: 31 December 2026
 - Reporting period covered: 1 April 2026 to 30 June 2026
 - Loss and premium data as at: 30 June 2026
-- Renewal notice date under Article 14 (90 days prior to expiry): 1 October 2026
+- Renewal notice date under Article 14 (90 days prior to expiry): 2 October 2026
 
 THE PROGRAMME
 
-Meridian Mutual is a mutual property and casualty writer operating across seven midwestern states, with a book weighted towards homeowners and small commercial property. This is the fourth consecutive year we have participated on their catastrophe programme.
+Larkspur Mutual is a mutual property and casualty writer operating across seven midwestern states, with a book weighted towards homeowners and small commercial property. This is the fourth consecutive year we have participated on their catastrophe programme.
 
 The 2026 placement is a four-layer property catastrophe excess-of-loss treaty attaching at $2,500,000, with total programme limit of $32,500,000 above the retention. Our signed share is 22.5% across all four layers, unchanged from 2025. Reinstatement provisions are one paid reinstatement on Layers 1 and 2, and free reinstatement on Layers 3 and 4. All figures below are 100% of the treaty, not our share.
 
@@ -36,7 +36,7 @@ LOSS ACTIVITY IN THE QUARTER
 
 Two events were notified in the period, both convective storm.
 
-The first, a severe thunderstorm and hail outbreak across the Missouri valley on 14 April 2026, was advised at $6,400,000 gross to the cedent as at 30 June. That takes the retention in full, exhausts Layer 1, and puts $1,400,000 into Layer 2. Meridian's adjusters had closed roughly 60% of the claim count by the end of the quarter, and the reserve has moved twice since first advice, both times upwards. We should expect further development here.
+The first, a severe thunderstorm and hail outbreak across the Missouri valley on 14 April 2026, was advised at $6,400,000 gross to the cedent as at 30 June. That takes the retention in full, exhausts Layer 1, and puts $1,400,000 into Layer 2. Larkspur's adjusters had closed roughly 60% of the claim count by the end of the quarter, and the reserve has moved twice since first advice, both times upwards. We should expect further development here.
 
 The second, a hail event across the northern portion of the book on 27 May 2026, is advised at $2,180,000 gross. That sits inside the $2,500,000 retention and produces no recovery under the treaty unless it develops. Movement to date has been modest.
 
@@ -49,11 +49,11 @@ POINTS FOR THE REVIEW
 - Layer 1 is exhausted, so the single paid reinstatement on that layer is now triggered. Treaty Accounting is calculating the reinstatement premium; it is not in the figures above and will need to be before the year-end position is struck.
 - The April reserve has moved upwards twice on partial claim closure. Any further development goes straight into Layer 2, which has $3,600,000 of unused limit.
 - The cedent's advice on both events came through later than the 30-day notification standard in Article 9. Not material this quarter, but it is the second year running.
-- Meridian Mutual has told the broker they are considering raising their retention to $5,000,000 at renewal. That would remove Layer 1 from the programme, which is where the premium is.
+- Larkspur Mutual has told the broker they are considering raising their retention to $5,000,000 at renewal. That would remove Layer 1 from the programme, which is where the premium is.
 - Aggregate exposure across our midwestern cedents is close to the level that triggers a monitoring review. S. Okafor is running the test for the Q3 cycle.
 
 NEXT STEPS
 
 - Confirm the April reserve position with the cedent at the end of August, once claim closure passes 80%.
-- Issue renewal terms to Meridian Mutual by 15 October 2026, per the Article 14 notice date.
+- Issue renewal terms to Larkspur Mutual by 15 October 2026, per the Article 14 notice date.
 - Bring the retention question to the underwriting committee before terms are issued, not after.

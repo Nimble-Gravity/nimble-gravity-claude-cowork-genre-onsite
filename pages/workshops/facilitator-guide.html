@@ -152,6 +152,22 @@
       <p><strong>Owner: Gen Re to source; Nimble Gravity to genericize.</strong> The Day 1 demo needs a real Gen Re document, genericized. Until it lands, the placeholder in <code>demo/</code> stands in — but the demo is materially weaker with a generic document, because the whole argument is "this is your work, not a sample." Chase it, swap it in, and re-run both prompts against the real one before Tuesday. This is a deliverable owed to us, not a placeholder to leave.</p>
     </div>
   </div>
+
+  <div class="tip-trick" style="margin-top:20px;">
+    <div class="tip-trick-icon">🧊</div>
+    <div class="tip-trick-copy">
+      <div class="tip-trick-label">The cold run only works if the folder stays cold — rehearse it</div>
+      <p>The payoff of the before/after pair is that a cold Cowork repeats both planted problems in confident prose, because nobody asked it to check. The <code>claude.md</code> shipped in the workshop folder is descriptive only on purpose — who the user is, how they write — and says nothing about verifying figures or citing sources. Don't add that instruction to the shipped folder, and don't run the cold demo on a machine you've already personalized: either one pre-loads the verification and the demo lands flat in front of the room. Dry-run the cold pass on a clean profile before Tuesday so you know what they'll see.</p>
+    </div>
+  </div>
+
+  <div class="tip-trick" style="margin-top:20px;">
+    <div class="tip-trick-icon">📦</div>
+    <div class="tip-trick-copy">
+      <div class="tip-trick-label">Editing the pack — the zip does not rebuild itself</div>
+      <p><code>assets/workshop-folder.zip</code> is a committed binary built from <code>assets/workshop-folder/</code>. The <code>.txt</code> files in there are the editable source; the <code>.docx</code> participants open are generated from them with <code>python escape-room/tools/convert-lab-files.py assets/workshop-folder</code>, and only the <code>.docx</code> plus <code>claude.md</code> are staged into the zip. Edit a <code>.txt</code> and you must regenerate and rebuild both — otherwise the download people already have quietly disagrees with the repo, and you find out mid-exercise.</p>
+    </div>
+  </div>
 </div>
 
 <!-- DAY 2 -->
@@ -188,6 +204,14 @@
     <div class="tip-trick-copy">
       <div class="tip-trick-label">The OneDrive / SharePoint gotcha — flag it before it bites</div>
       <p>Sync is not instant. A file somebody just saved may not be on disk when Cowork goes looking for it, and it looks exactly like Cowork failing. If the demo or a lab task touches a shared file, say this out loud before it happens and keep everyone working from a local folder. Diagnosing it live in front of the room costs ten minutes and some confidence.</p>
+    </div>
+  </div>
+
+  <div class="tip-trick" style="margin-top:20px;">
+    <div class="tip-trick-icon">🪤</div>
+    <div class="tip-trick-copy">
+      <div class="tip-trick-label">The date the <code>day-2/</code> documents disagree on is deliberate</div>
+      <p>The vendor email puts the UAT environment handover on Friday 21 August. The status note and the open-items list both say Monday 24 August. That is planted, not a typo — two sources against one, so most drafts will quietly settle on 24 August and say nothing about it. That is exactly what step 4 of <a href="../training/05-working-effectively.html#walk">Walk a Workflow</a> asks the room to catch: the draft picked a side. Do not "correct" it in the source files, and do not give it away before people have read their own draft.</p>
     </div>
   </div>
 </div>
