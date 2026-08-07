@@ -39,7 +39,7 @@
 <div class="section" id="name">
   <div class="sec-eyebrow">01 — Name the steps you just did</div>
   <h2 class="sec-title">Get the job out of your head and onto a <em>page</em></h2>
-  <p class="sec-sub">Before any file format, write down what you actually did in Lesson 1. Three things, half a page. Everything after this is just that half page in the shape Cowork reads, and a skill can only be as good as this list — a vague step in, a vague draft out.</p>
+  <p class="sec-sub">Before any file format, write down what you actually did in Lesson 1. Three things, half a page. <strong>Do this now, at your desk — five minutes, on paper or in a file, and you'll build on it in the vault this afternoon.</strong> Everything after this is just that half page in the shape Cowork reads, and a skill can only be as good as this list — a vague step in, a vague draft out.</p>
 
   <div class="insight-grid" style="margin-top:28px;">
     <div class="insight-card">
@@ -60,7 +60,7 @@
     <div class="tip-trick-icon">🍳</div>
     <div class="tip-trick-copy">
       <div class="tip-trick-label">Skills vs. agents vs. connectors — skip the taxonomy</div>
-      <p>A skill is a recipe Cowork follows. That's all you need today. There is a whole vocabulary underneath — agents, connectors, plugins, MCP servers — and none of it changes what you're about to write. If it comes up, ask; otherwise leave it to Day 3, where the only part that matters to you is how a skill gets distributed and approved.</p>
+      <p>A skill is a recipe Cowork follows. That's all you need today. There is a whole vocabulary underneath, and none of it changes what you're about to write. If it comes up, ask; otherwise leave it to Day 3, where the only part that matters to you is how a skill gets distributed and approved.</p>
     </div>
   </div>
 </div>
@@ -74,7 +74,7 @@
   <div class="insight-grid" style="margin-top:28px;">
     <div class="insight-card">
       <div class="sec-eyebrow" style="margin-bottom:6px;">name</div>
-      <p style="font-size:15px;color:var(--slate);line-height:1.65;margin:0;">Up to 64 characters, lowercase letters, numbers, and hyphens, and no reserved words like "anthropic" or "claude." Anthropic suggests the gerund form, such as <code>processing-pdfs</code> or <code>drafting-status-reports</code>.</p>
+      <p style="font-size:15px;color:var(--slate);line-height:1.65;margin:0;">Up to 64 characters, lowercase letters, numbers, and hyphens, and no reserved words like "anthropic" or "claude." Anthropic suggests the gerund form, such as <code>processing-pdfs</code> or <code>analyzing-spreadsheets</code>. Yours would be <code>drafting-status-reports</code>.</p>
     </div>
     <div class="insight-card">
       <div class="sec-eyebrow" style="margin-bottom:6px;">description</div>
@@ -120,7 +120,7 @@
     <div class="bp-item">
       <div class="bp-num">02</div>
       <div class="bp-title">Test across models</div>
-      <div class="bp-body">Run your tests on Haiku, Sonnet, and Opus. A skill that only works on the largest model isn't finished, and your colleagues will not all be on the same one.</div>
+      <div class="bp-body">Run your tests on Haiku, Sonnet, and Opus. A skill that only works on the largest model isn't finished, and your colleagues will not all be on the same one. This is the one time you move off Sonnet deliberately — you're testing the skill, not doing the work — and you set the selector back afterwards.</div>
     </div>
     <div class="bp-item">
       <div class="bp-num">03</div>
@@ -133,7 +133,7 @@
     <div class="tip-trick-icon">📐</div>
     <div class="tip-trick-copy">
       <div class="tip-trick-label">Use the doc as your rubric</div>
-      <p>Every standard on this page comes from Anthropic's skill-authoring best-practices doc on platform.claude.com, current as of June 2026. Use it as the grading rubric for every skill you ship, and check it again before each cohort, since it changes.</p>
+      <p>The frontmatter, body, and evals rules on this page come from Anthropic's skill-authoring best-practices doc on platform.claude.com, current as of June 2026. Use it as the grading rubric for every skill you ship, and check it again before each cohort, since it changes.</p>
     </div>
   </div>
 </div>
@@ -142,46 +142,38 @@
 <div class="section section--off" id="loop">
   <div class="sec-eyebrow">05 — Getting from a walk to a file</div>
   <h2 class="sec-title">You don't write it from a blank <em>page</em></h2>
-  <p class="sec-sub">Most first skills start as text that already works — the ask you pasted in Lesson 1, refined once. Hand that to Claude and ask it to make it reusable, then harden it. Four steps, and the third is the one people skip.</p>
+  <p class="sec-sub">Most first skills start as text that already works — the ask you pasted in Lesson 1, refined once. Hand that to Claude and ask it to make it reusable, then harden it. <strong>Read these four now; you run them in the vault, not at your desk</strong> — they are the loop you'll be inside for the whole forty minutes, so it's worth knowing them before the clock starts. The third is the one people skip.</p>
 
   <div class="step-list">
     <div class="step-card">
       <div class="step-num">1</div>
       <div>
-        <div class="step-do">Describe the workflow in plain words and ask Cowork for a skill.</div>
-        <div class="step-why">Paste your half page from section 01 and say what should trigger it: "Turn this into a skill that fires whenever I ask for a status report." You're not learning a file format, you're handing over something you already do.</div>
+        <div class="step-do">Describe the workflow in plain words and ask Cowork for a skill. Paste your half page from section 01 and say what should trigger it — "turn this into a skill that fires whenever I ask for a status report".</div>
+        <div class="step-why">You're not learning a file format, you're handing over something you already do, which is why the half page matters more than any syntax on this page.</div>
       </div>
     </div>
     <div class="step-card">
       <div class="step-num">2</div>
       <div>
-        <div class="step-do">Read the draft against the rules above before you trust it.</div>
-        <div class="step-why">Is the description third person and full of the words you'd actually type? Is the body short, with the why alongside each rule? First drafts reliably over-explain and under-trigger, and both are visible in the first ten lines.</div>
+        <div class="step-do">Read the draft against the rules above before you trust it. Is the description third person and full of the words you'd actually type? Is the body short, with the why alongside each rule?</div>
+        <div class="step-why">First drafts reliably over-explain and under-trigger, and both of those show up in the first ten lines, so this check costs you a minute rather than a rewrite.</div>
         <div class="step-verify">You can point at the sentence that makes it fire.</div>
       </div>
     </div>
     <div class="step-card">
       <div class="step-num">3</div>
       <div>
-        <div class="step-do">Test it cold in a fresh session, with and without the skill.</div>
-        <div class="step-why">A fresh session has none of the conversation you just had, which is exactly the condition your colleague will use it in. Run the same ask both ways and grade the difference — if you can't see one, the skill isn't earning its place.</div>
+        <div class="step-do">Test it cold in a fresh session, with and without the skill. Run the same ask both ways and grade the difference.</div>
+        <div class="step-why">A fresh session has none of the conversation you just had, which is exactly the condition your colleague will use it in — and if the two runs look the same, the skill isn't earning its place.</div>
         <div class="step-verify">It fires on its own, without you naming the skill.</div>
       </div>
     </div>
     <div class="step-card">
       <div class="step-num">4</div>
       <div>
-        <div class="step-do">Fix only what the test caught, then save the skill file.</div>
-        <div class="step-why">Add the one instruction that closes the gap and nothing else. Every line you add that no test demanded is a line someone maintains later and nobody can explain.</div>
+        <div class="step-do">Fix only what the test caught, then save the skill file. Add the one instruction that closes the gap and nothing else.</div>
+        <div class="step-why">Every line you add that no test demanded is a line someone maintains later and nobody can explain.</div>
       </div>
-    </div>
-  </div>
-
-  <div class="tip-trick" style="margin-top:32px;">
-    <div class="tip-trick-icon">🔑</div>
-    <div class="tip-trick-copy">
-      <div class="tip-trick-label">The automatic tuner needs a key you probably don't have</div>
-      <p>Anthropic's skill-creator can auto-tune a description with its <code>run_loop</code> optimizer, but that step needs a raw <code>ANTHROPIC_API_KEY</code>. If you sign in through SSO, you can't run it — and that's fine. Tune the description by hand instead: add trigger words, try a few realistic prompts, adjust. Slower, same result.</p>
     </div>
   </div>
 </div>
