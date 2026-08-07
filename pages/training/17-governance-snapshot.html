@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Governance Snapshot — Day 3</title>
+<link rel="stylesheet" href="../../styles/shared.css"/>
+<style>
+/* Page-specific styles go here. This scaffold relies entirely on shared.css. */
+</style>
+</head>
+<body>
+<script src="../../footer.js"></script>
+<script src="../../nav.js"></script>
+<script src="../../training-sidebar.js"></script>
+<script src="../../interactive.js"></script>
+
+<!-- MODULE PROGRESS -->
+<div class="module-strip">
+  <span class="ms-label">Day</span>
+  <a href="01-what-is-cowork.html" class="ms-item upcoming"><span class="ms-num">1</span>Foundations &amp; Personal Value</a>
+  <span class="ms-arrow">›</span>
+  <a href="05-working-effectively.html" class="ms-item upcoming"><span class="ms-num">2</span>Skills &amp; Everyday Workflows</a>
+  <span class="ms-arrow">›</span>
+  <a href="04-use-cases-by-industry.html" class="ms-item active"><span class="ms-num">3</span>Use Cases + Governance</a>
+</div>
+
+<div class="page-header" id="intro">
+  <div class="eyebrow"><a href="../workshops/module-3-workshop.html" style="color:inherit;text-decoration:underline;text-underline-offset:2px;">Day 3</a> · Lesson 2 of 2</div>
+  <h1 class="title">Governance <em>Snapshot</em></h1>
+  <p class="subtitle">Ten minutes on the three questions your team will ask the moment you tell them what you did this week: what is Cowork actually connected to, who decides what it's allowed to do, and where does our data go. Short answers, honestly given — including the one place the answer isn't comfortable.</p>
+  <div class="header-phase">
+    <div class="header-phase-dot" style="background:var(--blueD)"></div>
+    Use Cases + Governance · ~10 min
+  </div>
+</div>
+
+<!-- WHAT'S CONNECTED -->
+<div class="section" id="connected">
+  <div class="sec-eyebrow">01 — What's connected</div>
+  <h2 class="sec-title">What Cowork can reach at Gen Re <em>today</em></h2>
+  <p class="sec-sub">The short answer is the folders you hand it, and nothing else. That isn't a limitation to work around — it is the control, and it's the one you operate personally every time you start a session.</p>
+
+  <div class="insight-grid" style="margin-top:28px;">
+    <div class="insight-card">
+      <div class="sec-eyebrow" style="margin-bottom:6px;">Local folders — yes</div>
+      <p style="font-size:15px;color:var(--slate);line-height:1.65;margin:0;">Cowork reads and writes inside the folders you grant and nowhere else: not the drive above them, not your Documents, not a network share you happen to have mapped. Code it needs to run runs in an isolated VM on your own machine.</p>
+    </div>
+    <div class="insight-card">
+      <div class="sec-eyebrow" style="margin-bottom:6px;">Microsoft 365 — not yet</div>
+      <p style="font-size:15px;color:var(--slate);line-height:1.65;margin:0;">Anthropic ships a connector for mail, calendar, and SharePoint or OneDrive. It is <strong>not live at Gen Re</strong> — it sits with IT Security. If it is switched on, it uses delegated permissions: Claude inherits your access and never more, and those reads land in the Microsoft 365 audit log like any other access to the same files.</p>
+    </div>
+    <div class="insight-card">
+      <div class="sec-eyebrow" style="margin-bottom:6px;">Anything else — review first</div>
+      <p style="font-size:15px;color:var(--slate);line-height:1.65;margin:0;">Other connectors, marketplace plugins, and desktop extensions are an administrator's decision, not a personal one. If something looks useful, raise it rather than install it. Nothing in these three days needed anything beyond one local folder, which is a reasonable guide to how much you need one.</p>
+    </div>
+  </div>
+
+  <div class="tip-trick" style="margin-top:32px;">
+    <div class="tip-trick-icon">📁</div>
+    <div class="tip-trick-copy">
+      <div class="tip-trick-label">There are no per-file permissions — the grant is the whole control</div>
+      <p>You cannot let Cowork see nine files in a folder and not the tenth. Granting a drive root grants everything under it. So point it at the narrowest folder that holds the job — a project folder, not <code>My Documents</code> — and add a second folder explicitly on the day it genuinely needs one. That single decision does more to contain risk than anything else on this page.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ROLES -->
+<div class="section section-dark" id="roles">
+  <div class="sec-eyebrow on-dark">02 — Roles at a glance</div>
+  <h2 class="sec-title on-dark">Who can turn what <em>on</em></h2>
+  <p class="sec-sub on-dark">You hold a licence, not an admin console. It's worth knowing which side of that line each thing sits on, so you ask the right person instead of hunting for a setting that was never yours.</p>
+
+  <div class="dev-grid-2" style="margin-top:28px;">
+    <div class="dev-card">
+      <div class="dev-kicker">Yours</div>
+      <h3>What a member decides</h3>
+      <p style="color:rgba(255,255,255,.65);font-size:15px;line-height:1.65;">Which folders you grant, which permission mode you run in, which model you pick, and what you write in your own instructions and skills. A skill you write is <strong>yours alone</strong> — it sits in your Cowork folder and no colleague has it until IT packages it and distributes it to a group.</p>
+      <div class="dev-quote">Personal until distributed. Sharing a skill properly is an admin action.</div>
+    </div>
+    <div class="dev-card">
+      <div class="dev-kicker">Your admins'</div>
+      <h3>What only an administrator can turn on</h3>
+      <p style="color:rgba(255,255,255,.65);font-size:15px;line-height:1.65;">The Cowork capability itself; which connectors exist and whether each is always allowed, needs approval, or is blocked — that setting is organization-wide, with no per-group version, so the strictest requirement governs everyone; which models are available and how hard they are allowed to work; and which skills and plugins reach which groups.</p>
+      <div class="dev-quote">Model and effort caps live on the Models tab. When one desk is running everything on Opus, that cap is the fix, not a memo.</div>
+    </div>
+    <div class="dev-card">
+      <div class="dev-kicker">Ask for the narrow role</div>
+      <h3>Owner is not an admin convenience</h3>
+      <p style="color:rgba(255,255,255,.65);font-size:15px;line-height:1.65;">Owners always have full access to every feature and cannot be narrowed. Administration is meant to be carved up instead, across six areas — Identity &amp; Access, Billing, Analytics, Privacy, User Management, Libraries — each set to no access, can view, or can manage. Somebody who only pulls the usage numbers for the steering committee wants a <strong>Custom role with Analytics</strong>, not an Owner seat.</p>
+      <div class="dev-quote">Name the one area you need. Don't ask for the keys to the building.</div>
+    </div>
+    <div class="dev-card">
+      <div class="dev-kicker">The one that catches people</div>
+      <h3>A Custom role inherits nothing</h3>
+      <p style="color:rgba(255,255,255,.65);font-size:15px;line-height:1.65;">Anthropic's wording is exact: <em>"Members assigned to custom roles don't automatically inherit organization-enabled capabilities. Every capability a 'Custom' role member needs must be explicitly granted."</em> So if Cowork is enabled for the organization and your group still can't see it, that is usually the reason — the capability was never granted to the role. One sentence to your admin, not a ticket that bounces for a fortnight.</p>
+      <div class="dev-quote">The organization toggle is the ceiling. The role is the grant.</div>
+    </div>
+  </div>
+</div>
+
+<!-- DATA -->
+<div class="section" id="data">
+  <div class="sec-eyebrow">03 — How data is handled</div>
+  <h2 class="sec-title">Where it goes, what's kept, and what <em>isn't logged</em></h2>
+  <p class="sec-sub">The part to be precise about, because getting it slightly wrong in front of a client or an examiner is worse than never raising it. Verified against Anthropic's documentation on <strong>21 July 2026</strong> — these facts move, so treat the date as part of the fact.</p>
+
+  <!--
+    FACILITATOR: this is the date-stamped facts block. Re-verify every claim in the four
+    cards below against the Sources section of cowork-context.md (§5) before each cohort —
+    the audit-coverage gap, the retention numbers, and the ZDR boundary are all things
+    Anthropic is actively changing. If a fact has moved, fix it here before you present.
+  -->
+
+  <div class="bp-grid--light" style="margin-top:28px;">
+    <div class="bp-item">
+      <div class="bp-num">01</div>
+      <div class="bp-title">Your files stay put — the reading doesn't</div>
+      <div class="bp-body">The documents live on your machine and code runs in an isolated VM on it. But the model call goes out to Anthropic's API: whatever Cowork reads from a granted folder leaves the machine to be processed, exactly like text you paste into chat. "It runs locally" is half the story and it's the half people get wrong. Scope the folder as though everything inside it is being sent out, because functionally it is.</div>
+    </div>
+    <div class="bp-item">
+      <div class="bp-num">02</div>
+      <div class="bp-title">What Anthropic does with it</div>
+      <div class="bp-body">On commercial plans — Team, Enterprise, and the API — Anthropic does not train on your data by default, and retention is 30 days. Zero data retention is available on the API and on Claude Code Enterprise; it is <strong>not</strong> available on the Cowork interface. State that boundary up front rather than letting it surface later as a surprise.</div>
+    </div>
+    <div class="bp-item">
+      <div class="bp-num">03</div>
+      <div class="bp-title">The audit-coverage gap, in one sentence</div>
+      <div class="bp-body">As of July 2026, Claude Cowork activity is not captured in Anthropic's Audit Logs, Compliance API, or Data Exports on any plan tier including Enterprise, and conversation history lives locally on the user's own machine. The compensating rule is the part to remember: <strong>work that needs centralized audit or zero retention runs on Anthropic's audited surfaces — the API or Claude Code Enterprise — not in the Cowork interface.</strong> Anthropic is closing the gap; until it does, we name it ourselves rather than hope nobody asks.</div>
+    </div>
+    <div class="bp-item">
+      <div class="bp-num">04</div>
+      <div class="bp-title">What covers it in the meantime</div>
+      <div class="bp-body">Three planes of monitoring, and no single one is enough. The <strong>Compliance API</strong> covers organization-level administrative activity. <strong>OpenTelemetry</strong> is the closest thing to session-level visibility — tools called, files read and modified, skills used, and whether each action was approved by a person or auto-initiated — and it emits nothing until an admin configures an endpoint. An on-device <strong>proxy or LLM gateway</strong> catches what the other two miss at the network boundary. Your admins run all three; what you owe them is not putting work into Cowork that belongs on an audited surface.</div>
+    </div>
+  </div>
+</div>
+
+<!-- TAKE IT BACK -->
+<div class="section section--off" id="takeaway">
+  <div class="sec-eyebrow">04 — Take this back to your team</div>
+  <h2 class="sec-title">The version you can give <em>standing up</em></h2>
+  <p class="sec-sub">You will be asked. Colleagues who weren't in the room will hear "it reads our files" and want to know what that means before you finish the sentence. Three answers, short enough to give in a corridor.</p>
+
+  <div class="insight-grid" style="margin-top:28px;">
+    <div class="insight-card">
+      <div class="sec-eyebrow" style="margin-bottom:6px;">On access</div>
+      <p style="font-size:15px;color:var(--slate);line-height:1.65;margin:0;">It sees the folder you hand it and nothing else, it asks before it acts while you leave it on ask-before-acting, and no cedent-confidential material goes into it. Whoever grants the folder owns that decision, and it is not a decision anyone makes on your behalf.</p>
+    </div>
+    <div class="insight-card">
+      <div class="sec-eyebrow" style="margin-bottom:6px;">On the output</div>
+      <p style="font-size:15px;color:var(--slate);line-height:1.65;margin:0;">It drafts, you verify, you sign. The licences went to people who already sign off on work that leaves the building, and nothing here changes who is accountable for what goes out. It helps you check things; it doesn't help you skip checking them.</p>
+    </div>
+    <div class="insight-card">
+      <div class="sec-eyebrow" style="margin-bottom:6px;">On audit, when they push</div>
+      <p style="font-size:15px;color:var(--slate);line-height:1.65;margin:0;">The gap is real and we name it: Cowork sessions are not in the central audit logs today, so anything needing centralized audit or zero retention runs on the API or Claude Code Enterprise instead. That is a written routing rule with a date on it, not a hope that it won't come up.</p>
+    </div>
+  </div>
+
+  <div class="tip-trick" style="margin-top:32px;">
+    <div class="tip-trick-icon">📄</div>
+    <div class="tip-trick-copy">
+      <div class="tip-trick-label">One page to take with you</div>
+      <p>The <a href="../workshops/cheat-sheet.html">quick-reference cheat sheet</a> puts the folder rule, the verification habit, and this governance summary on a single page. Send it round with the answer to the first question your team will ask, which is always some version of: is this allowed, and who says so?</p>
+    </div>
+  </div>
+</div>
+
+<!-- KNOWLEDGE CHECK -->
+<div class="section">
+  <div class="ix-quiz" data-ix-quiz="m3" data-ix-pass="4"></div>
+</div>
+
+<!-- NEXT -->
+<div class="section" id="next">
+  <div class="sec-eyebrow">Up next</div>
+  <h2 class="sec-title">After today</h2>
+  <p class="sec-sub">That's the three days. Next steps, who to contact, office hours, and the Advanced session for anyone who wants to keep building are all on the Day 3 hub — along with everything you produced this week.</p>
+  <a href="../workshops/module-3-workshop.html" style="display:inline-flex;align-items:center;gap:8px;background:var(--blueD);color:var(--white);text-decoration:none;padding:12px 24px;border-radius:8px;font-weight:600;font-size:15px;margin-top:8px;">Day 3 hub →</a>
+</div>
+
+<div class="page-footer"></div>
+</body>
+</html>
