@@ -140,12 +140,12 @@ Claims" (June 2026)**. Their stated framework is *almost exactly* what this curr
 
 | Gen Re's published principle | Where our curriculum already teaches it |
 |---|---|
-| **Decompose** complex judgment into sequential, specialized steps | Module 3, `workflow-decomposition` / the blueprint lesson |
-| **Transparency** — each reasoning step explicit and auditable, not a black box | Module 2 (permission modes, watching the work) + Module 4 |
-| **Validation** — "golden datasets," hand-labeled reference data, multi-layered testing | Module 3's **evals before docs** rule |
-| **Documentation** — records of prompts, model settings, decision pathways | Module 3 `SKILL.md` practice; Module 4 monitoring planes |
+| **Decompose** complex judgment into sequential, specialized steps | Day 2, lesson 09 (Anatomy of a Skill) + the `workflow-decomposition` blueprint |
+| **Transparency** — each reasoning step explicit and auditable, not a black box | Day 2 (permission modes, watching the work) + Day 3's governance snapshot |
+| **Validation** — "golden datasets," hand-labeled reference data, multi-layered testing | Day 2 lesson 09's **evals before docs** rule |
+| **Documentation** — records of prompts, model settings, decision pathways | Day 2 lesson 09's `SKILL.md` practice; Day 3's governance-snapshot monitoring planes |
 | **Human-in-the-loop** — edge cases routed to reviewers on confidence thresholds | The "Cowork drafts, you sign off" spine of the whole program |
-| *"Reliability is a property of the entire workflow rather than the model alone"* | Module 4 governance framing |
+| *"Reliability is a property of the entire workflow rather than the model alone"* | Day 3's governance-snapshot framing |
 | *"Generative AI... supplements rather than replaces human decision-making"* | `why-cowork.html` §augmentation-not-replacement |
 
 **Use this.** Open the program by quoting Gen Re's own framework back to them and showing that
@@ -170,7 +170,7 @@ Knowledge workers across a research-and-judgment institution. Expect:
 | **Life & Health underwriting** | Medical/financial underwriting standards, manual work, mortality/morbidity research |
 | **Research / Knowledge Center** | Publications, evidence synthesis, trend and emerging-exposure analysis, webinars and academies |
 | **Risk, Compliance, Legal, Internal Audit** | Regulatory reporting, control narratives, policy work |
-| **IT / InfoSec / Identity** | The Module 4 audience |
+| **IT / InfoSec / Identity** | The audience for Day 3's governance snapshot (lesson 17) |
 
 No coding assumed. Deep domain expertise assumed. **These are people who are paid for judgment
 and are professionally trained to be skeptical of unexplainable outputs** — the actuarial
@@ -214,7 +214,7 @@ Different from a bank, and in some ways **harder**:
   regulators are actually in scope for the cohort.
 - **Cross-border data.** A US/Germany dual structure raises **GDPR** and data-residency
   questions that a single-country bank build never had to answer. This is a first-class
-  Module 4 topic here, not a footnote. **[CONFIRM]** with their Legal/Privacy function.
+  Day 3 governance-snapshot topic here, not a footnote. **[CONFIRM]** with their Legal/Privacy function.
 - **Sensitive data classes.** Not customer PII in the retail sense — instead **cedent
   confidential submission data** (a competitor's book, shared in trust) and, on the L&H side,
   **medical/health information**. Both are arguably *more* sensitive than the banking examples.
