@@ -80,7 +80,7 @@
   // Every module shares the same four-stage spine. These live as anchored
   // sections on the module's workshop hub, so each stage is `hub + hash`.
   var MODULE_STAGES = [
-    { label: 'Optional prep',    hash: '#prework' },
+    { label: 'Pre-work',         hash: '#prework' },
     { label: 'Workshop content', hash: '#content' }
   ];
 
