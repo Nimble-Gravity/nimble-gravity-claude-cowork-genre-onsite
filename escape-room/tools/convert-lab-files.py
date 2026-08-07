@@ -1,7 +1,7 @@
 # Facilitator tool: regenerate the participant-facing .docx lab files from the
 # .txt sources in escape-room/lab-files/. The .txt files are the editable source
 # of truth (git-diffable); the .docx files are what participants download —
-# Workshop 1/2 feedback: business users recognize Word docs, not .txt/.md.
+# cohort feedback: business users recognize Word docs, not .txt/.md.
 #
 # Usage:  python tools/convert-lab-files.py            (from the escape-room/ folder)
 #         python tools/convert-lab-files.py <folder>   (convert every .txt under <folder>,

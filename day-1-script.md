@@ -302,8 +302,10 @@ thorough one you never wrote.** The gaps come back as `[FILL IN]` markers and fi
 ### Step 1 — the folder · 1:05–1:10
 **[DO]** On the projector: show `about-me/` inside the workshop folder in Explorer. Then **show it again** —
 close Explorer, reopen it, navigate there a second time at half the speed.
-**[THEY]** *"Confirm you can see an `about-me` folder inside `Desktop\cowork-workshop`. Create it if it isn't
-there. Hand up if you can't."*
+**[THEY]** *"Confirm you can see an `about-me` folder inside `Desktop\cowork-workshop`. It ships in the zip,
+so it should be there — hand up if it isn't."*
+**[NOTE]** A missing `about-me/` means the extract didn't finish. Have them re-extract rather than
+hand-create the folder — a hand-made one is missing `ABOUT-ME-TEMPLATE.docx` and they'll be a step behind.
 
 ### Step 2 — start the interview · 1:10–1:15
 **[DO]** Fresh session on the workshop folder. Paste the interview prompt from
@@ -353,7 +355,13 @@ before it writes anything — read that recap and correct anything wrong, becaus
 **[NOTE]** This is the "simple test that confirms personalization worked" the client asked for. Run it on the
 projector **first**, then have every person run it. Use these words exactly.
 
-**[DO]** On the projector, in a fresh session: type the test question and read the answer aloud.
+**[DO]** On the projector, in a **fresh** session granted **`Desktop\cowork-workshop-after`** — the
+personalized copy from prep item 1, *not* the cold folder. The cold folder has no profile in it, so running
+this test there returns the generic answer you are about to tell the room means failure. Type the test
+question and read the answer aloud.
+**[NOTE]** The room runs it against **their own** `Desktop\cowork-workshop` — that is where they just wrote
+their files. Only the projector needs the `-after` copy, and only because your own workshop folder is kept
+cold for the demo.
 **[SAY]** *"Here is how you know it worked. Fresh session, and you ask it this:*
 
 > **"What do you know about how I work?"**

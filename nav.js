@@ -468,7 +468,8 @@
   var allOverlayLinks = [overlayHome];
 
   CRAFTS.forEach(function (craft) {
-    if (!craft.pages.length) return;
+    // Hub-only crafts (Advanced has no lessons) still get a group with its hub link.
+    if (!craft.pages.length && !craft.hub) return;
 
     var group = document.createElement('div');
     group.className = 'nav-overlay-craft-group';

@@ -48,7 +48,7 @@
         '<div class="nav-footer-kicker">Nimble Gravity · Cowork Enablement</div>' +
         '<div class="nav-footer-title">Cowork Workshop · Claude Cowork</div>' +
         '<div class="nav-footer-text">A three-day onsite enablement program that gets Gen Re knowledge workers productive with Cowork — personal setup and a first verified run, skills built from everyday workflows, then your own use cases and a governance snapshot.</div>' +
-        '<div class="nav-footer-stages" aria-label="Workshops">' +
+        '<div class="nav-footer-stages" aria-label="Program days">' +
           '<span class="nav-footer-stage">Day 1 · Foundations &amp; Personal Value</span>' +
           '<span class="nav-footer-stage">Day 2 · Skills &amp; Everyday Workflows</span>' +
           '<span class="nav-footer-stage">Day 3 · Use Cases + Governance</span>' +

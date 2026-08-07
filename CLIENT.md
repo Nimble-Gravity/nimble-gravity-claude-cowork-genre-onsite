@@ -190,7 +190,7 @@ mapping — **[CONFIRM] all of these in discovery**:
 | Fraud / AML alert queue triage | same | **Claims queue triaged into a prioritized brief** (fraud is a live Gen Re research topic — medical fraud, AI-enabled property claim deception) |
 | Loan terms compared across a portfolio | same | **Treaty terms / clause language compared across a portfolio of contracts** |
 | "Good first tasks at Axos" | `01-what-is-cowork.html` | Good first tasks at Gen Re — reading a submission pack, summarizing a Knowledge Center source set, drafting a claims file chronology |
-| **Maya Chen, Commercial Credit Analyst** | `assets/demo/maya-profile/` (the only remaining holder — the Day 1 demo no longer uses a persona; see `day-1-script.md`) | New persona — a **Treaty Underwriter** or **Actuarial Analyst**. Keep the fictional-persona disclaimer. |
+| **Maya Chen, Commercial Credit Analyst** | *Removed.* The Day 1 demo runs on the facilitator's **own** profile (`cowork-workshop` cold vs. `cowork-workshop-after`; see `day-1-script.md` prep item 1), so no persona ships. | None needed. If a future cohort wants a canned persona again, build a **Treaty Underwriter** or **Actuarial Analyst** and keep the fictional-persona disclaimer. |
 | `sample-loan-file.md` | `assets/demo/` | Synthetic **cedent submission pack** |
 | `sample-variance-dataset.md` | `assets/demo/` | Synthetic **experience / loss-ratio dataset** |
 | Access register, role matrix, rubrics | `control-room/lab-files/` | Same structure, Gen Re org names (see §8) |
