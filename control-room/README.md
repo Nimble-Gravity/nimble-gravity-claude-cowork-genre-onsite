@@ -51,7 +51,9 @@ ES modules and `fetch` don't work over `file://`, and code hashing needs `https:
 | 3 | Read the Room | Authoring a reporting skill; reading the Analytics surface | `analytics-export.csv` |
 | 4 | The Control Narrative | The governance one-pager + QA against an acceptance checklist | `exam-checklist.txt` |
 
-Answer key lives in `../workshop-4-script.md` (facilitator appendix) and in `config/rooms.source.json`.
+Answer key lives in `config/rooms.source.json`. (It used to be duplicated in a
+`workshop-4-script.md` facilitator appendix; that script was retired when the
+programme became the three-day onsite — see `day-3-script.md`.)
 
 All six lab files are in `lab-files/` and are linked for download from
 `../pages/training/16-the-control-room.html`. They are **synthetic** — no real Gen Re data.
@@ -152,4 +154,4 @@ browser's teams — the badge at the top tells you which mode you're in.
 2. Distribute the six `lab-files/` to participants before the break — they are not part of this app.
 3. Confirm local-only vs Supabase in `config/app-config.js`; set `adminKey` if you want one.
 4. Open `admin.html` on the facilitator machine; teams open the root URL and enter a team name to start.
-5. Keep the answer key (`../workshop-4-script.md`, facilitator appendix) open but not screen-shared.
+5. Keep the answer key (`config/rooms.source.json`) open but not screen-shared.
