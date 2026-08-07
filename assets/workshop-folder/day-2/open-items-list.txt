@@ -1,0 +1,25 @@
+Project Alpha — Open Items List
+
+Maintained by: P. Chen, Programme Manager
+As at: Friday 7 August 2026
+Reviewed weekly. Closed items are dropped from this list at the end of each month.
+
+OPEN ITEMS
+
+| Ref | Item | Owner | Raised | Due | Status |
+| A-11 | Steering decision on the nine casualty parity exceptions: reproduce the legacy manual adjustment, or price casualty correctly from go-live | Steering group | 5 Aug | 13 Aug | Open |
+| A-12 | Facultative binder history — answer Halstead's schema question so the fourth extract can be loaded | D. Kim | 29 Jul | Overdue | Open |
+| A-14 | Hand over the UAT environment to the Gen Re team | M. Ferreira (Halstead) | 22 Jul | 24 Aug | Open |
+| A-15 | Trace the remaining seven casualty exceptions to a root cause | Halstead engineering | 5 Aug | 28 Aug | In progress |
+| A-16 | Confirm UAT participants and release them from BAU for the six-week window | R. Vega | 24 Jul | 21 Aug | Open |
+| A-17 | Agree the cutover weekend and the fallback position if parity is not signed off | P. Chen | 31 Jul | 4 Sep | Open |
+| A-18 | Book the six training sessions and circulate dates to the treaty and pricing teams | A. Torres | 31 Jul | 11 Sep | In progress |
+| A-19 | Decide whether the legacy workbook stays available read-only after go-live, and for how long | R. Vega | 5 Aug | 18 Sep | Open |
+| A-20 | Sign off the migrated aggregate monitoring extract | S. Okafor | 7 Aug | 21 Aug | Open |
+
+NOTES
+
+- A-12 is the only overdue item on the list. It is a small question but the fourth extract cannot be loaded without an answer, and that extract is needed for UAT data.
+- A-11 drives A-15. Halstead cannot size the remaining parity work until the steering group has decided, so the 28 August date on A-15 assumes a decision on 13 August.
+- A-14 has no float behind it. The UAT window is six weeks and the go-live date of 2 November has not moved.
+- Nothing on this list is currently forecast to breach the budget of $1,420,000.

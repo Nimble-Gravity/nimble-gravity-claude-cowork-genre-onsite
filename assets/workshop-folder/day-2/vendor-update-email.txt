@@ -1,0 +1,27 @@
+Project Alpha — Vendor Update (email)
+
+From: M. Ferreira, Engagement Lead, Halstead Data Systems
+To: P. Chen
+Cc: R. Vega, D. Kim
+Date: Thursday 6 August 2026
+Subject: Project Alpha — week 14 update and two asks
+
+Hi P.,
+
+Short update ahead of your steering pack.
+
+The D4 parity report went across on 5 August, a day early. Headline is that thirty-one of the forty in-scope treaties reconcile inside the 0.5% tolerance. The nine that don't are all casualty. Our engineers have now traced two of them to the trending basis in the legacy workbook rather than to anything in our engine — in other words the old numbers were wrong, not the new ones. We think the other seven will land the same way, but we are not going to say that until we have done the work.
+
+Two asks.
+
+First, we need the casualty decision. Until your steering group tells us whether the platform should reproduce the legacy manual adjustment or price casualty layers correctly from day one, we cannot size the remaining parity work and we cannot commit to the November date with any confidence. We would like this on 13 August rather than in September.
+
+Second, the facultative binder history schema question has been with D. Kim since 29 July. It is a small question but the fourth extract cannot be loaded without it, and that extract is on the critical path for UAT data.
+
+On our side, the UAT environment will be available to your team on Friday 21 August. Provisioning is complete and we are running the final data load this week.
+
+Everything else is where we said it would be.
+
+Best,
+M. Ferreira
+Halstead Data Systems
