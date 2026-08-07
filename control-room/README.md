@@ -5,7 +5,8 @@ clock: an access review, an RBAC repair, an adoption readout, and the one-page c
 Each artifact they produce in Cowork yields the sign-off code that clears the next station.
 
 Four review stations, one master status board, a leaderboard, and a facilitator view.
-Vanilla ES modules + Three.js from a CDN, no build step.
+Vanilla ES modules + Three.js, vendored locally under `assets/vendor/three/`
+(a delivery network may block public CDNs), no build step.
 
 ## The premise
 

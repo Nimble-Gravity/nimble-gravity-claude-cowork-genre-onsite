@@ -5,7 +5,8 @@ Cowork training workshop. Teams complete lab steps in Cowork; the lab artifacts
 contain unlock codes they enter here to open the next room. Four rooms, one
 40-minute timer, a live leaderboard, and a facilitator view.
 
-No build step, no framework: vanilla ES modules + Three.js from a CDN.
+No build step, no framework: vanilla ES modules + Three.js, vendored locally
+under `assets/vendor/three/` (a delivery network may block public CDNs).
 
 ## Quick start
 
