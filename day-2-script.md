@@ -204,9 +204,12 @@ the top. It has to contain the words you'd actually type. If your description sa
 it will never fire, because nothing you ever type looks like that. If it says 'Use when someone asks for a
 weekly status report, a project update, or a steering-group note' — it fires."*
 
-**[DO]** Show the finished example in
-[Lesson 2 §A worked example](pages/training/09-anatomy-of-a-skill.html#example). Read the description out
-loud. **[DO]** Show it **again**, this time pointing at the specific trigger phrases inside it.
+**[DO] — leave the deck here.** The finished `SKILL.md` is **not on the slide** — it is forty lines of
+monospace and it does not project. Switch to the lesson page,
+[Lesson 2 §A worked example](pages/training/09-anatomy-of-a-skill.html#example), and show the file there.
+The slide says so too, so the room is expecting the switch rather than wondering what happened.
+Read the description out loud. **[DO]** Show it **again**, this time pointing at the specific trigger
+phrases inside it. Then go back to the deck.
 
 **[SAY] — repeat it back differently:** *"Say that the other way round: the description is not a summary for
 a human. It's the sentence that has to match what you type. Write it in the words you'd use on a Thursday

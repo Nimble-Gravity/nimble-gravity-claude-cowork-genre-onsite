@@ -7,7 +7,7 @@ The four skills the workshop ships as real, downloadable artifacts. They *are* t
 | Co-setup | `cowork-cosetup/` | `02-getting-set-up.html` | Interviews you and writes your personalization / about-me files. |
 | Workflow decomposition | `workflow-decomposition/` | `11-build-a-skill-lab.html` | Interviews you about a workflow and offers to draft it as a skill. |
 | Memo generation | `memo-generation/` | `09-anatomy-of-a-skill.html` | Small, finished, high-ROI example: notes/email → formatted memo. The good-vs-bad worked example. |
-| Solution profile | `solution-profile/` | `04-use-cases-by-industry.html` §04 | A demo prompt packaged as a skill: legacy-system folder → cited solution profile + as-is architecture diagram. The long worked example; this finished copy is the facilitator's safety net for the Day 3 live build. |
+| Solution profile | `solution-profile/` | `04-use-cases-by-industry.html` §04 | A demo prompt packaged as a skill: legacy-system folder → cited solution profile + as-is architecture diagram. The long worked example; this finished copy is the facilitator's safety net for the Day 3 live build. **Its sample input folder is `assets/demo/solution-profile-folder/`** (the TreatyLayerPricer files) — linked from `resources.html`, and the folder the Day 3 backup demo runs against. |
 
 ## Distribution (v1 = copy-paste)
 

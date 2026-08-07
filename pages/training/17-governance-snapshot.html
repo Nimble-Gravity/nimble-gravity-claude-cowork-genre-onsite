@@ -44,7 +44,7 @@
   <div class="insight-grid" style="margin-top:28px;">
     <div class="insight-card">
       <div class="sec-eyebrow" style="margin-bottom:6px;">Local folders — yes</div>
-      <p style="font-size:15px;color:var(--slate);line-height:1.65;margin:0;">Cowork reads and writes inside the folders you grant and nowhere else: not the drive above them, not your Documents, not a network share you happen to have mapped. Code it needs to run runs in an isolated VM on your own machine.</p>
+      <p style="font-size:15px;color:var(--slate);line-height:1.65;margin:0;">Cowork reads and writes inside the folders you grant and nowhere else: not the drive above them, not your Documents, not a network share you happen to have mapped. Code it needs to run runs in an isolated VM, not loose on your system.</p>
     </div>
     <div class="insight-card">
       <div class="sec-eyebrow" style="margin-bottom:6px;">Microsoft 365 — not yet</div>
@@ -81,7 +81,7 @@
     <div class="dev-card">
       <div class="dev-kicker">Your admins'</div>
       <h3>What only an administrator can turn on</h3>
-      <p style="color:rgba(255,255,255,.65);font-size:15px;line-height:1.65;">The Cowork capability itself; which connectors exist and whether each is always allowed, needs approval, or is blocked — that setting is organization-wide, with no per-group version, so a single choice applies to everybody; which models are available and how hard they are allowed to work; and which skills and plugins reach which groups.</p>
+      <p style="color:rgba(255,255,255,.65);font-size:15px;line-height:1.65;">The Cowork capability itself; which connectors exist and whether each is always allowed, needs approval, or is blocked — that setting is organization-wide, with no per-group version, so a single choice applies to everybody; which models are available and how hard they are allowed to work; and which skills and plugins reach which groups. Where you sit in several groups, the <strong>most permissive setting wins</strong> — being in a group where something is switched off does not block you if another of your groups has it on. Group membership is the real control, not the per-group toggle.</p>
       <div class="dev-quote">Model and effort caps live on the Models tab. When one desk is running everything on Opus, that cap is the fix, not a memo.</div>
     </div>
     <div class="dev-card">
@@ -116,7 +116,7 @@
     <div class="bp-item">
       <div class="bp-num">01</div>
       <div class="bp-title">Your files stay put — the reading doesn't</div>
-      <div class="bp-body">The documents live on your machine and code runs in an isolated VM on it. But the model call goes out to Anthropic's API: whatever Cowork reads from a granted folder leaves the machine to be processed, exactly like text you paste into chat. "It runs locally" is half the story and it's the half people get wrong. Scope the folder as though everything inside it is being sent out, because functionally it is.</div>
+      <div class="bp-body">The documents live on your machine and code runs in an isolated VM. But the model call goes out to Anthropic's API: whatever Cowork reads from a granted folder leaves the machine to be processed, exactly like text you paste into chat. "It runs locally" is half the story and it's the half people get wrong. Scope the folder as though everything inside it is being sent out, because functionally it is.</div>
     </div>
     <div class="bp-item">
       <div class="bp-num">02</div>
@@ -126,12 +126,12 @@
     <div class="bp-item">
       <div class="bp-num">03</div>
       <div class="bp-title">The audit-coverage gap, in one sentence</div>
-      <div class="bp-body">As of July 2026, Claude Cowork activity is not captured in Anthropic's Audit Logs, Compliance API, or Data Exports on any plan tier including Enterprise, and conversation history lives locally on the user's own machine. The compensating rule is the part to remember: <strong>work that needs centralized audit or zero retention runs on Anthropic's audited surfaces — the API or Claude Code Enterprise — not in the Cowork interface.</strong> Anthropic has published no date for bringing Cowork into those surfaces, so plan against the gap as it stands rather than around a fix you're assuming — and name it yourself before somebody else does.</div>
+      <div class="bp-body">As of July 2026, Claude Cowork activity is not captured in Anthropic's Audit Logs, Compliance API, or Data Exports on any plan tier including Enterprise, and conversation history lives locally on the user's own machine. The compensating rule is the part to remember: <strong>work that needs centralized audit or zero retention runs on Anthropic's audited surfaces — the API or Claude Code Enterprise — not in the Cowork interface.</strong> We have no date from Anthropic for bringing Cowork into those surfaces, so plan against the gap as it stands rather than around a fix you're assuming — and name it yourself before somebody else does.</div>
     </div>
     <div class="bp-item">
       <div class="bp-num">04</div>
       <div class="bp-title">What covers it in the meantime</div>
-      <div class="bp-body">Three planes of monitoring, and no single one is enough. The <strong>Compliance API</strong> covers organization-level administrative activity. <strong>OpenTelemetry</strong> is the closest thing to session-level visibility — tools called, files read and modified, skills used, and whether each action was approved by a person or auto-initiated — and it emits nothing until an admin configures an endpoint. An on-device <strong>proxy or LLM gateway</strong> catches what the other two miss at the network boundary. Your admins run all three; what you owe them is not putting work into Cowork that belongs on an audited surface.</div>
+      <div class="bp-body">Three planes of monitoring, and no single one is enough. The <strong>Compliance API</strong> covers organization-level administrative activity. <strong>OpenTelemetry</strong> is the closest thing to session-level visibility, and it emits nothing until an admin configures an endpoint. Worth knowing exactly what it carries once one is: <strong>the full text of user prompts</strong>, tools called, files read and modified, skills used, and whether each action was approved by a person or auto-initiated. So your prompts and your file paths land in Gen Re's security tooling — a fair trade for session-level visibility, and a data-handling decision in its own right rather than a free one. An on-device <strong>proxy or LLM gateway</strong> catches what the other two miss at the network boundary. Your admins run all three; what you owe them is not putting work into Cowork that belongs on an audited surface.</div>
     </div>
   </div>
 </div>
@@ -161,7 +161,7 @@
     <div class="tip-trick-icon">📄</div>
     <div class="tip-trick-copy">
       <div class="tip-trick-label">One page to take with you</div>
-      <p>The <a href="../workshops/cheat-sheet.html">quick-reference cheat sheet</a> is the day-to-day card — model defaults, permission modes, the prompt principles, <code>/schedule</code>, session habits, and a <a href="../workshops/cheat-sheet.html#governance">governance block</a> carrying the three rules from this page in short form: the folder rule, the verification habit, and where work goes when it needs centralized audit. Print it. The three corridor answers above are what you carry without it.</p>
+      <p>The <a href="../workshops/cheat-sheet.html">quick-reference cheat sheet</a> is the day-to-day card — model defaults, permission modes, the prompt principles, <code>/schedule</code>, session habits, and a <a href="../workshops/cheat-sheet.html#governance">governance block</a> carrying the four rules from this page in short form: the folder rule, what “local” really means, the verification habit, and where work goes when it needs centralized audit. Print it. The three corridor answers above are what you carry without it.</p>
     </div>
   </div>
 </div>

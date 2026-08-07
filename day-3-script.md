@@ -29,12 +29,22 @@ break**.
    everyone can reach. Open item: Gen Re, Chris sourcing. **Until it is confirmed, the backup demo is the plan
    of record rather than the fallback** — plan the block that way and be pleasantly surprised.
 3. **Build and rehearse the backup skill.** Have it finished, tested, and open in a side window before the
-   block starts. See [the trigger](#backup-trigger) below.
+   block starts. See [the trigger](#backup-trigger) below. The prepared skill is
+   `skills/solution-profile/SKILL.md` and it runs against `assets/demo/solution-profile-folder/` — the
+   TreatyLayerPricer files. **Copy that folder somewhere local and rehearse the five moves on it**, so the
+   fallback is a rehearsed demo rather than an improvisation.
 4. **Read the shortlisted canvases against the selection criteria** in
    [Lesson 1 §Picking the one we build](pages/training/04-use-cases-by-industry.html#selection) so you can
    defend the shortlist in the room in one sentence each.
-5. **Re-verify the governance facts** in `cowork-context.md` §Module 4 — last verified **2026-07-21**. If you
-   have not re-checked them, say so in the room rather than presenting stale facts as current.
+5. **`TODO` — re-verify the governance facts. Not yet done.** `cowork-context.md` §Module 4 was last verified
+   **2026-07-21**, and the date stamps on the lesson, the cheat sheet and the Rules of the Road all say so
+   deliberately — **they have not been silently bumped, because the facts have not been re-checked.** Work
+   through the Sources in `cowork-context.md` §5 before Thursday: the audit-coverage gap, the retention
+   numbers, the ZDR boundary, and the model lineup. If a fact has moved, fix it on
+   `pages/training/17-governance-snapshot.html`, `pages/workshops/cheat-sheet.html` §06 and
+   `pages/workshops/acceptable-use.html` — all three — and update the stamps together. **If you arrive not
+   having done it, say so in the room** rather than presenting a month-old fact as current. Open item on
+   Nimble Gravity.
 6. **Test at 1366×768. Two windows.** A live build with a file tree, a skill file and a chat pane will not fit
    three ways. Decide in advance which two windows you drive and stick to them.
 7. **Name your moderator.** Fill `[MODERATOR]` here and it is filled everywhere in this script:
@@ -157,6 +167,12 @@ same files. If you fall behind, don't panic and don't try to catch up silently �
 ### The loop, out loud · 0:35–1:05
 **[SAY] — lead with what we're doing:** *"Five moves, and I'll name each one as we do it. Capture what we
 want. Draft the skill. Test it cold. Grade the difference. Fix only what the test caught."*
+
+**[DO] — 0. Same folder as the last two days.** *“Open `Desktop\cowork-workshop` — the same folder you have
+had open since Tuesday. Your `about-me/` files are still in it, so the skill we write today inherits the
+voice and the role you set up on Day 1 rather than starting cold. That is the whole point of having written
+them down.”* This is what `README.docx` told them Day 3 would do; say it out loud so the folder is open
+before the build starts, not during it.
 
 **[DO] — 1. Capture.** Paste the half page into a fresh session on the staged folder and ask for a skill:
 *"turn this into a skill that fires whenever I ask for `[the trigger phrase]`."*
