@@ -185,12 +185,12 @@
     <div class="bp-item">
       <div class="bp-num">01</div>
       <div class="bp-title">The folder rule</div>
-      <div class="bp-body">Cowork reads and writes only in the folders you grant. There are no per-file permissions — granting a folder grants everything under it, and granting a drive root grants the drive. Point it at the narrowest folder that holds the job, and add a second one explicitly on the day it's genuinely needed.</div>
+      <div class="bp-body">Cowork reads and writes only in the folders you grant. There are no granular per-file permissions, so least privilege means picking a narrow folder rather than filtering inside a wide one. Point it at the narrowest folder that holds the job, and add a second one explicitly on the day it's genuinely needed.</div>
     </div>
     <div class="bp-item">
       <div class="bp-num">02</div>
       <div class="bp-title">"Local" is only half true</div>
-      <div class="bp-body">The files stay on your machine and code runs in an isolated VM on it — but the model call goes to Anthropic's API, so whatever Cowork reads from a granted folder leaves the machine to be processed. Scope the folder as though everything inside it is being sent out, because functionally it is.</div>
+      <div class="bp-body">Cowork runs on the desktop against local folders, and code it needs to run runs in an isolated VM — but the model call goes to Anthropic's API, so whatever it reads from a granted folder leaves the machine to be processed. The files are local; the reasoning over them is not. Scope the folder as though everything inside it is being sent out, because functionally it is.</div>
     </div>
     <div class="bp-item">
       <div class="bp-num">03</div>
@@ -216,8 +216,8 @@
       <p style="font-size:15px;color:var(--slate);line-height:1.65;margin:0;">Post in the Gen Re Cowork Teams channel or raise your hand in the room. Your cohort and facilitator are there in real time.</p>
     </div>
     <div class="insight-card">
-      <div class="sec-eyebrow" style="margin-bottom:6px;">Between sessions</div>
-      <p style="font-size:15px;color:var(--slate);line-height:1.65;margin:0;">Office hours [TBD] and the training microsite at <a href="#">this page</a>. Bring a real example — "here's what I tried" gets much better help than "it didn't work."</p>
+      <div class="sec-eyebrow" style="margin-bottom:6px;">Between the days, and after</div>
+      <p style="font-size:15px;color:var(--slate);line-height:1.65;margin:0;">Office hours [TBD], and this portal — the <a href="resources.html">resource library</a> has every download, lab, and deck. Bring a real example: "here's what I tried" gets much better help than "it didn't work."</p>
     </div>
   </div>
 
