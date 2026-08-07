@@ -1,0 +1,57 @@
+Quarterly Treaty-Layer Summary — Larkspur Mutual Insurance Company
+
+Property Catastrophe Excess of Loss, 2026 treaty year
+Prepared by: D. Kim, P&C Treaty Operations
+Circulated to: R. Vega (Portfolio), S. Okafor (Monitoring), Treaty Accounting
+Prepared: 17 July 2026
+
+KEY DATES
+
+- Treaty inception: 1 January 2026
+- Treaty expiry: 31 December 2026
+- Reporting period covered: 1 April 2026 to 30 June 2026
+- Loss and premium data as at: 30 June 2026
+- Renewal notice date under Article 14 (90 days prior to expiry): 2 October 2026
+
+THE PROGRAMME
+
+Larkspur Mutual is a mutual property and casualty writer operating across seven midwestern states, with a book weighted towards homeowners and small commercial property. This is the fourth consecutive year we have participated on their catastrophe programme.
+
+The 2026 placement is a four-layer property catastrophe excess-of-loss treaty attaching at $2,500,000, with total programme limit of $32,500,000 above the retention. Our signed share is 22.5% across all four layers, unchanged from 2025. Reinstatement provisions are one paid reinstatement on Layers 1 and 2, and free reinstatement on Layers 3 and 4. All figures below are 100% of the treaty, not our share.
+
+LAYER STRUCTURE AND QUARTERLY POSITION
+
+| Layer | Cover | Ceded premium | Rate on line | Incurred at 30 Jun |
+| 1 | $2.5M xs $2.5M | $1,180,000 | 47.2% | $2,500,000 |
+| 2 | $5.0M xs $5.0M | $1,455,000 | 29.1% | $1,400,000 |
+| 3 | $10.0M xs $10.0M | $1,120,000 | 11.2% | nil |
+| 4 | $15.0M xs $20.0M | $685,000 | 4.6% | nil |
+| Total | $32.5M programme limit | $4,405,000 | — | $3,900,000 |
+
+Ceded premium is the full-year deposit premium, booked quarterly in equal instalments. Incurred figures are paid plus outstanding case reserves as advised by the cedent, and carry no IBNR loading at this stage. Reinstatement premium is excluded — see below.
+
+LOSS ACTIVITY IN THE QUARTER
+
+Two events were notified in the period, both convective storm.
+
+The first, a severe thunderstorm and hail outbreak across the Missouri valley on 14 April 2026, was advised at $6,400,000 gross to the cedent as at 30 June. That takes the retention in full, exhausts Layer 1, and puts $1,400,000 into Layer 2. Larkspur's adjusters had closed roughly 60% of the claim count by the end of the quarter, and the reserve has moved twice since first advice, both times upwards. We should expect further development here.
+
+The second, a hail event across the northern portion of the book on 27 May 2026, is advised at $2,180,000 gross. That sits inside the $2,500,000 retention and produces no recovery under the treaty unless it develops. Movement to date has been modest.
+
+Layers 3 and 4 are untouched, as they were in each of the previous three treaty years.
+
+Against $4.41 million of ceded premium for the year, incurred of $3.90 million at the halfway point puts the treaty at a loss ratio of 89% on a written basis — before any allowance for development on the April event, and before the second half of the wind season. On a full-year view this treaty is unlikely to make money.
+
+POINTS FOR THE REVIEW
+
+- Layer 1 is exhausted, so the single paid reinstatement on that layer is now triggered. Treaty Accounting is calculating the reinstatement premium; it is not in the figures above and will need to be before the year-end position is struck.
+- The April reserve has moved upwards twice on partial claim closure. Any further development goes straight into Layer 2, which has $3,600,000 of unused limit.
+- The cedent's advice on both events came through later than the 30-day notification standard in Article 9. Not material this quarter, but it is the second year running.
+- Larkspur Mutual has told the broker they are considering raising their retention to $5,000,000 at renewal. That would remove Layer 1 from the programme, which is where the premium is.
+- Aggregate exposure across our midwestern cedents is close to the level that triggers a monitoring review. S. Okafor is running the test for the Q3 cycle.
+
+NEXT STEPS
+
+- Confirm the April reserve position with the cedent at the end of August, once claim closure passes 80%.
+- Issue renewal terms to Larkspur Mutual by 15 October 2026, per the Article 14 notice date.
+- Bring the retention question to the underwriting committee before terms are issued, not after.

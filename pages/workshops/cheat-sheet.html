@@ -25,7 +25,7 @@
 <div class="page-header" id="intro">
   <div class="eyebrow">Gen Re · Cowork Program</div>
   <h1 class="title">Cowork <em>Quick Reference</em></h1>
-  <p class="subtitle">Everything you need to remember on one page — model defaults, permission modes, the five prompt principles, session hygiene, and the /schedule constraint.</p>
+  <p class="subtitle">Everything you need to remember on one page — model defaults, permission modes, the five prompt principles, the /schedule constraint, session hygiene, and the four governance rules: the folder rule, what “local” really means, the verification habit, and where work goes when it needs a central audit trail.</p>
   <div class="header-phase">
     <div class="header-phase-dot"></div>
     Print-friendly · keep it handy
@@ -54,8 +54,8 @@
     </div>
     <div class="bp-item">
       <div class="bp-num">03</div>
-      <div class="bp-title">Effort levels</div>
-      <div class="bp-body"><code>high</code> is the product default. Step down to <code>medium</code> for routine work to save usage allowance. Use <code>low</code> for quick lookups only.</div>
+      <div class="bp-title">Your admin sets the ceiling</div>
+      <div class="bp-body">The default model for new conversations, which models are available at all, and how hard they are allowed to work are set centrally on the admin Models tab. If a model or a setting you expected isn't there, that is why — ask rather than hunt for it.</div>
     </div>
   </div>
 </div>
@@ -136,8 +136,8 @@
     </div>
     <div class="bp-item">
       <div class="bp-num">03</div>
-      <div class="bp-title">Missed runs are skipped</div>
-      <div class="bp-body">A missed run is skipped, not queued. It catches up when the app reopens only if you configured a catch-up policy. Otherwise, you lose that run.</div>
+      <div class="bp-title">A missed run is a lost run</div>
+      <div class="bp-body">If the machine is asleep or Claude Desktop is closed at the scheduled time, that run simply does not happen — assume nothing queues it up for later. So never let a deadline depend on a scheduled run having fired: check the output folder.</div>
     </div>
     <div class="bp-item">
       <div class="bp-num">04</div>
@@ -176,19 +176,48 @@
   </div>
 </div>
 
+<!-- GOVERNANCE -->
+<div class="section section--off" id="governance">
+  <div class="sec-eyebrow">06 — Governance</div>
+  <h2 class="sec-title">Four rules to keep <em>straight</em></h2>
+  <p class="sec-sub">The folder rule, what “local” really means, the verification habit, and where work goes when it needs a central audit trail. Facts verified 21 July 2026 — treat the date as part of the fact.</p>
+  <div class="bp-grid--light" style="margin-top:28px;">
+    <div class="bp-item">
+      <div class="bp-num">01</div>
+      <div class="bp-title">The folder rule</div>
+      <div class="bp-body">Cowork reads and writes only in the folders you grant. There are no granular per-file permissions, so least privilege means picking a narrow folder rather than filtering inside a wide one. Point it at the narrowest folder that holds the job, and add a second one explicitly on the day it's genuinely needed.</div>
+    </div>
+    <div class="bp-item">
+      <div class="bp-num">02</div>
+      <div class="bp-title">"Local" is only half true</div>
+      <div class="bp-body">Cowork runs on the desktop against local folders, and code it needs to run runs in an isolated VM — but the model call goes to Anthropic's API, so whatever it reads from a granted folder leaves the machine to be processed. The files are local; the reasoning over them is not. Scope the folder as though everything inside it is being sent out, because functionally it is.</div>
+    </div>
+    <div class="bp-item">
+      <div class="bp-num">03</div>
+      <div class="bp-title">The verification habit</div>
+      <div class="bp-body">It drafts, you verify, you sign. Read the output back against the source before it goes anywhere: every claim traceable to a file, gaps flagged rather than filled. Whoever was accountable for the work before is accountable for it now.</div>
+    </div>
+    <div class="bp-item">
+      <div class="bp-num">04</div>
+      <div class="bp-title">The audit-gap routing rule</div>
+      <div class="bp-body">Claude Cowork activity is not captured in Anthropic's Audit Logs, Compliance API, or Data Exports on any plan tier, and conversation history lives locally on your machine. So work that needs centralized audit or zero retention runs on Anthropic's audited surfaces — the API or Claude Code Enterprise — not in the Cowork interface. Where a given piece of work falls is a call for the program team and IT: ask rather than assume.</div>
+    </div>
+  </div>
+</div>
+
 <!-- GET HELP -->
-<div class="section section--off" id="help">
-  <div class="sec-eyebrow">06 — Get help</div>
+<div class="section" id="help">
+  <div class="sec-eyebrow">07 — Get help</div>
   <h2 class="sec-title">Who to ask when you're <em>stuck</em></h2>
-  <p class="sec-sub">You're not on your own. Use these channels when a session goes sideways or a question comes up between workshops.</p>
+  <p class="sec-sub">You're not on your own. Use these channels when a session goes sideways or a question comes up between the days.</p>
   <div class="insight-grid" style="margin-top:28px;">
     <div class="insight-card">
       <div class="sec-eyebrow" style="margin-bottom:6px;">In the session</div>
       <p style="font-size:15px;color:var(--slate);line-height:1.65;margin:0;">Post in the Gen Re Cowork Teams channel or raise your hand in the room. Your cohort and facilitator are there in real time.</p>
     </div>
     <div class="insight-card">
-      <div class="sec-eyebrow" style="margin-bottom:6px;">Between sessions</div>
-      <p style="font-size:15px;color:var(--slate);line-height:1.65;margin:0;">Office hours [TBD] and the training microsite at <a href="#">this page</a>. Bring a real example — "here's what I tried" gets much better help than "it didn't work."</p>
+      <div class="sec-eyebrow" style="margin-bottom:6px;">Between the days, and after</div>
+      <p style="font-size:15px;color:var(--slate);line-height:1.65;margin:0;">Office hours — your facilitator confirms the times in the room on Day 1 and again at the Day 3 close — and this portal: the <a href="resources.html">resource library</a> has every download, lab, and deck. Bring a real example: "here's what I tried" gets much better help than "it didn't work."</p>
     </div>
   </div>
 

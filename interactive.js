@@ -47,14 +47,20 @@
   function clearAck(id)         { var s = getStore(); if (s.ack) { delete s.ack[id]; setStore(s); } }
   function resetAll()           { try { window.localStorage.removeItem(LS_KEY); } catch (e) {} }
 
-  var MODULE_LABELS = { m1: 'Workshop 1 · Setup & Foundations', m2: 'Workshop 2 · Use Cowork', m3: 'Workshop 3 · Build a Skill', m4: 'Workshop 4 · Govern & Roll Out' };
-  function passedCount() { var s = getStore(); var q = s.quiz || {}; var n = 0; ['m1','m2','m3','m4'].forEach(function (m) { if (q[m] && q[m].passed) n++; }); return n; }
+  // The three-day spine: one knowledge check per day (m1 on the Day 1 lab lesson,
+  // m2 on Skill Anatomy, m3 on Governance Snapshot). The Advanced block is a clinic
+  // with no lessons and no check, so it is not in this list and does not gate the
+  // certificate. Add an id here and the progress bar, readout and certificate follow.
+  var MODULE_IDS = ['m1', 'm2', 'm3'];
+  var MODULE_LABELS = { m1: 'Day 1 · Foundations & Personal Value', m2: 'Day 2 · Skills & Everyday Workflows', m3: 'Day 3 · Use Cases + Governance' };
+  var MODULE_SHORT = { m1: 'Day 1', m2: 'Day 2', m3: 'Day 3' };
+  function passedCount() { var s = getStore(); var q = s.quiz || {}; var n = 0; MODULE_IDS.forEach(function (m) { if (q[m] && q[m].passed) n++; }); return n; }
   function fmtDate(ts) { var d = ts ? new Date(ts) : new Date(); var m = ['January','February','March','April','May','June','July','August','September','October','November','December']; return m[d.getMonth()] + ' ' + d.getDate() + ', ' + d.getFullYear(); }
 
   // ── Content config (questions live here, not in lesson HTML) ────────────────
   var QUIZZES = {
     m1: {
-      label: 'Workshop 1 · Setup & Foundations',
+      label: 'Day 1 · Foundations & Personal Value',
       questions: [
         { q: 'How is Cowork different from a chat?',
           options: ['It writes longer answers, but you still copy them out and do the work yourself', 'You delegate a multi-step job and supervise while it works across your files', 'It is the same as chat, just renamed'],
@@ -70,25 +76,9 @@
           answer: 1 }
       ]
     },
+    // Mounted at the end of 09-anatomy-of-a-skill.html (data-ix-pass="4").
     m2: {
-      label: 'Workshop 2 · Use Cowork',
-      questions: [
-        { q: 'What is the safe default model for everyday work?',
-          options: ['Opus for everything — it is the most capable', 'Sonnet by default, stepping up to Opus only for hard reasoning', 'Haiku for everything, to minimize cost'],
-          answer: 1 },
-        { q: 'Before running a task, what should you connect?',
-          options: ['A parent folder, so it has everything it might need', 'Only the folder the task needs', 'Every folder up front, so you never have to grant again'],
-          answer: 1 },
-        { q: 'What makes a strong first use case?',
-          options: ['A quick factual question you could just ask in chat', 'A repetitive, document-heavy job that ends in a deliverable', 'A one-off creative task with no source files'],
-          answer: 1 },
-        { q: 'What standing risk comes with untrusted external content?',
-          options: ['Prompt injection — hidden instructions in a page, email, or document', 'The model forgetting your earlier messages', 'Your files being uploaded to train the model'],
-          answer: 0 }
-      ]
-    },
-    m3: {
-      label: 'Workshop 3 · Build a Skill',
+      label: 'Day 2 · Skills & Everyday Workflows',
       questions: [
         { q: 'What comes first when authoring a skill, per Anthropic?',
           options: ['Polished, exhaustive documentation', 'The evaluations — evals before docs', 'A long list of rules in ALL-CAPS'],
@@ -101,11 +91,18 @@
           answer: 1 },
         { q: 'The fastest way to start a skill from working text is to…',
           options: ['Write the SKILL.md by hand from a blank file', 'Paste the working prompt and ask Claude to turn it into a skill', 'Wait for Anthropic to publish an official one'],
-          answer: 1 }
+          answer: 1 },
+        { q: 'What is the safe default model for everyday work?',
+          options: ['Opus for everything — it is the most capable', 'Sonnet by default, stepping up to Opus only for hard reasoning', 'Haiku for everything, to minimize cost'],
+          answer: 1 },
+        { q: 'What standing risk comes with untrusted external content?',
+          options: ['Prompt injection — hidden instructions in a page, email, or document', 'The model forgetting your earlier messages', 'Your files being uploaded to train the model'],
+          answer: 0 }
       ]
     },
-    m4: {
-      label: 'Workshop 4 · Govern & Roll Out',
+    // Mounted at the end of 17-governance-snapshot.html (data-ix-pass="5").
+    m3: {
+      label: 'Day 3 · Use Cases + Governance',
       questions: [
         { q: 'A colleague needs to pull usage reports for the steering committee — nothing else. What should they get?',
           options: ['The Owner role, so they are not blocked', 'A Custom role with the Analytics admin area', 'A shared login with an existing Owner'],
@@ -505,10 +502,10 @@
     card.appendChild(el('p', 'ix-card-sub', 'A snapshot of your own progress on this device.'));
 
     var grid = el('div', 'ix-readout-grid');
-    ['m1', 'm2', 'm3', 'm4'].forEach(function (m, i) {
+    MODULE_IDS.forEach(function (m) {
       var passed = quiz[m] && quiz[m].passed;
       var pill = el('span', 'ix-pill' + (passed ? ' on' : ''));
-      pill.appendChild(el('span', null, (passed ? '✓ ' : '○ ') + 'Workshop ' + (i + 1)));
+      pill.appendChild(el('span', null, (passed ? '✓ ' : '○ ') + MODULE_SHORT[m]));
       grid.appendChild(pill);
     });
     card.appendChild(grid);
@@ -568,9 +565,9 @@
     var card = el('div', 'ix-card');
     card.appendChild(el('div', 'ix-kicker', 'Your progress'));
     card.appendChild(el('div', 'ix-card-title', (prof && prof.name) ? (prof.name + "'s progress") : 'Your progress'));
-    card.appendChild(el('p', 'ix-card-sub', 'Module quizzes you have passed, on this device.'));
+    card.appendChild(el('p', 'ix-card-sub', 'Knowledge checks you have passed, on this device.'));
     var rows = el('div', 'ix-prog');
-    ['m1', 'm2', 'm3', 'm4'].forEach(function (m) {
+    MODULE_IDS.forEach(function (m) {
       var q = quiz[m];
       var passed = q && q.passed;
       var row = el('div', 'ix-prog-row' + (passed ? ' on' : ''));
@@ -583,10 +580,10 @@
     var n = passedCount();
     var bar = el('div', 'ix-bar');
     var fill = el('div', 'ix-bar-fill');
-    fill.style.width = (n / 4 * 100) + '%';
+    fill.style.width = (n / MODULE_IDS.length * 100) + '%';
     bar.appendChild(fill);
     card.appendChild(bar);
-    card.appendChild(el('p', 'ix-prog-summary', n + ' of 4 workshops complete' + (n === 4 ? ' — certificate unlocked below.' : '.')));
+    card.appendChild(el('p', 'ix-prog-summary', n + ' of ' + MODULE_IDS.length + ' days complete' + (n === MODULE_IDS.length ? ' — certificate unlocked below.' : '.')));
     var actions = el('div', 'ix-actions');
     var reset = el('button', 'ix-btn ix-btn--ghost', 'Clear my data');
     reset.type = 'button';
@@ -596,7 +593,7 @@
     mount.appendChild(card);
   }
 
-  // ── Certificate (client-only; gated on all four module quizzes passed) ──────
+  // ── Certificate (client-only; gated on every MODULE_IDS check being passed) ─
   function buildCertNode() {
     var prof = getProfile();
     var name = (prof && prof.name) ? prof.name : '';
@@ -605,7 +602,7 @@
     cert.appendChild(el('div', 'ix-cert-title', 'Certificate of Completion'));
     cert.appendChild(el('div', 'ix-cert-line', 'This certifies that'));
     cert.appendChild(el('div', 'ix-cert-name', name || 'Your name'));
-    cert.appendChild(el('div', 'ix-cert-line', 'completed the four-module Cowork Enablement Program.'));
+    cert.appendChild(el('div', 'ix-cert-line', 'completed the three-day Cowork Enablement Program.'));
     var d = new Date();
     var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
     cert.appendChild(el('div', 'ix-cert-meta', months[d.getMonth()] + ' ' + d.getDate() + ', ' + d.getFullYear()));
@@ -616,11 +613,11 @@
   function renderCertificate(mount) {
     mount.innerHTML = '';
     var n = passedCount();
-    if (n < 4) {
+    if (n < MODULE_IDS.length) {
       var locked = el('div', 'ix-locked');
       locked.appendChild(el('div', 'ix-locked-icon', '🔒'));
       locked.appendChild(el('div', 'ix-locked-title', 'Certificate locked'));
-      locked.appendChild(el('div', 'ix-locked-sub', 'Pass all four module quizzes to unlock your certificate — ' + n + ' of 4 done. Each one is the Knowledge check stage on its workshop hub.'));
+      locked.appendChild(el('div', 'ix-locked-sub', 'Pass all ' + MODULE_IDS.length + ' knowledge checks to unlock your certificate — ' + n + ' of ' + MODULE_IDS.length + ' done. Each one is at the end of that day’s last lesson.'));
       mount.appendChild(locked);
       return;
     }

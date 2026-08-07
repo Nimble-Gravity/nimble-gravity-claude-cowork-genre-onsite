@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Folder Access — Workshop 2</title>
+<title>The Workshop Folder — Day 1</title>
 <link rel="stylesheet" href="../../styles/shared.css"/>
 <style>
 /* Page-specific styles go here. This scaffold relies entirely on shared.css. */
@@ -16,85 +16,115 @@
 
 <!-- MODULE PROGRESS -->
 <div class="module-strip">
-  <span class="ms-label">Workshop</span>
-  <a href="01-what-is-cowork.html" class="ms-item upcoming"><span class="ms-num">1</span>Setup &amp; Foundations</a>
+  <span class="ms-label">Day</span>
+  <a href="01-what-is-cowork.html" class="ms-item active"><span class="ms-num">1</span>Foundations &amp; Personal Value</a>
   <span class="ms-arrow">›</span>
-  <a href="04-use-cases-by-industry.html" class="ms-item active"><span class="ms-num">2</span>Use Cowork</a>
+  <a href="05-working-effectively.html" class="ms-item upcoming"><span class="ms-num">2</span>Skills &amp; Everyday Workflows</a>
   <span class="ms-arrow">›</span>
-  <a href="08-decompose-your-workflow.html" class="ms-item upcoming"><span class="ms-num">3</span>Build a Skill</a>
-  <span class="ms-arrow">›</span>
-  <a href="12-skills-to-plugins.html" class="ms-item upcoming"><span class="ms-num">4</span>Govern &amp; Roll Out</a>
+  <a href="04-use-cases-by-industry.html" class="ms-item upcoming"><span class="ms-num">3</span>Use Cases + Governance</a>
 </div>
 
 <div class="page-header" id="intro">
-  <div class="eyebrow"><a href="../workshops/module-2-workshop.html" style="color:inherit;text-decoration:underline;text-underline-offset:2px;">Workshop 2</a> · Lesson 3 of 4</div>
-  <h1 class="title">Folder <em>Access</em></h1>
-  <p class="subtitle">Cowork only sees the folders you hand it. Granting access well — one folder at a time, scoped to the task — is what keeps a capable agent both useful and safe. Here is exactly how it works and how to think about it.</p>
+  <div class="eyebrow"><a href="../workshops/module-1-workshop.html" style="color:inherit;text-decoration:underline;text-underline-offset:2px;">Day 1</a> · Lesson 3 of 4</div>
+  <h1 class="title">The Workshop <em>Folder</em></h1>
+  <p class="subtitle">Cowork only sees the folders you hand it. For the next three days that's one folder on your Desktop, <code>cowork-workshop</code>, holding every file we use. Set it up once here and every instruction for the rest of the program points at the same place.</p>
   <div class="header-phase">
-    <div class="header-phase-dot" style="background:var(--violet)"></div>
-    Use Cowork · ~15 min
+    <div class="header-phase-dot" style="background:var(--teal)"></div>
+    Foundations &amp; Personal Value · ~15 min
   </div>
 </div>
 
-<!-- GRANT -->
-<div class="section" id="grant">
-  <div class="sec-eyebrow">01 — Grant access to a folder</div>
-  <h2 class="sec-title">Point Cowork at exactly what the task <em>needs</em></h2>
-  <p class="sec-sub">Granting folder access takes a few seconds, and it is worth doing deliberately rather than by reflex. Access is per folder: what you grant is what Cowork can read and write.</p>
+<!-- SET IT UP -->
+<div class="section" id="setup">
+  <div class="sec-eyebrow">01 — Set up the workshop folder</div>
+  <h2 class="sec-title">Download it, unzip it, hand it <em>over</em></h2>
+  <p class="sec-sub">Five steps, about five minutes. Do them now, in order — everything on Days 1, 2 and 3 assumes the folder is exactly where these steps put it.</p>
 
-  <div class="bp-grid--light" style="margin-top:28px;">
-    <div class="bp-item">
-      <div class="bp-num">01</div>
-      <div class="bp-title">Open the folder picker</div>
-      <div class="bp-body">In a session, choose to add a folder using the folder control near the input. Cowork prompts you to select one from your machine.</div>
+  <div class="step-list">
+    <div class="step-card">
+      <div class="step-num">1</div>
+      <div>
+        <div class="step-do">Download <code>workshop-folder.zip</code> from the <a href="../workshops/pre-work.html">pre-work page</a>.</div>
+        <div class="step-why">It holds every document we work on across the three days, so nobody has to hunt for a file mid-exercise or work from a different version than the person next to them.</div>
+        <div class="step-verify">The zip lands in your Downloads folder.</div>
+      </div>
     </div>
-    <div class="bp-item">
-      <div class="bp-num">02</div>
-      <div class="bp-title">Select one folder</div>
-      <div class="bp-body">Pick the single folder that holds the task's source material. Don't grant a parent folder "to be safe" — that hands over everything inside it.</div>
+    <div class="step-card">
+      <div class="step-num">2</div>
+      <div>
+        <div class="step-do">Right-click the zip, choose <strong>Extract All</strong>, and extract it to your <strong>Desktop</strong>.</div>
+        <div class="step-why">Cowork works on real files on disk. It can't read inside a zip, and files left in Downloads get lost among everything else you downloaded this month.</div>
+      </div>
     </div>
-    <div class="bp-item">
-      <div class="bp-num">03</div>
-      <div class="bp-title">Confirm the grant</div>
-      <div class="bp-body">Cowork now reads and writes within that folder for the session. It still asks before permanently deleting anything, in any mode.</div>
+    <div class="step-card">
+      <div class="step-num">3</div>
+      <div>
+        <div class="step-do">Make the path read exactly <code>Desktop\cowork-workshop</code>.</div>
+        <div class="step-why">Windows likes to nest the contents inside a second folder of the same name, or append a number — rename or move things until it doesn't. Every instruction for the next three days uses this exact path, so a mismatch here becomes ten minutes of confusion later.</div>
+        <div class="step-verify">Explorer's address bar reads <code>…\Desktop\cowork-workshop</code>, and you can see the files immediately inside it — not another folder of the same name.</div>
+      </div>
+    </div>
+    <div class="step-card">
+      <div class="step-num">4</div>
+      <div>
+        <div class="step-do">In Cowork, open the folder picker and select <code>Desktop\cowork-workshop</code>.</div>
+        <div class="step-why">This is the whole data-access model: Cowork reads and writes inside the folders you hand it and nowhere else. Handing it one folder is how you keep a capable agent scoped to the job.</div>
+        <div class="step-verify">Ask <em>"Which folder are you working in?"</em> — it answers with a path ending in <code>cowork-workshop</code>, not "I don't have access to a folder".</div>
+      </div>
+    </div>
+    <div class="step-card">
+      <div class="step-num">5</div>
+      <div>
+        <div class="step-do">Ask Cowork to list everything in the folder. Compare what comes back against <code>README.docx</code>.</div>
+        <div class="step-why">This is the first and smallest version of the habit the whole program is built on — you check the output against the source rather than taking it on trust. It also proves the grant actually worked before you depend on it.</div>
+        <div class="step-verify">You see <code>about-me/</code>, <code>demo/</code>, <code>day-2/</code>, <code>README.docx</code> and a <code>claude.md</code>. Anything missing means the extract didn't finish — flag a facilitator.</div>
+      </div>
     </div>
   </div>
 
+  <div class="tip-trick" style="margin-top:32px;">
+    <div class="tip-trick-icon">📁</div>
+    <div class="tip-trick-copy">
+      <div class="tip-trick-label">It could be any folder — but this week it's this one</div>
+      <p>There's nothing special about the Desktop. Back at your desk you'll point Cowork at a project folder, and it can be a OneDrive or SharePoint folder too. For these three days everyone works in this one local folder, because sync can lag or throw up a conflict copy while Cowork has files open — and debugging somebody's OneDrive is not how we're spending the morning.</p>
+    </div>
+  </div>
+
+  <div class="tip-trick" style="margin-top:18px;">
+    <div class="tip-trick-icon">🖥️</div>
+    <div class="tip-trick-copy">
+      <div class="tip-trick-label">Two windows, side by side</div>
+      <p>On a 14-inch laptop, put Claude on the left half of the screen and File Explorer on the right: <strong>Win + ←</strong> and <strong>Win + →</strong>. You never need more than those two windows, and seeing files change in Explorer while Cowork works is half of what makes it click.</p>
+    </div>
+  </div>
 </div>
 
 <!-- WHAT IT GRANTS -->
 <div class="section section-dark" id="scope">
-  <div class="sec-eyebrow on-dark">02 — What the permission grants</div>
-  <h2 class="sec-title on-dark">Local, scoped, and run in an isolated <em>VM</em></h2>
-  <p class="sec-sub on-dark">Folder access isn't a blank cheque. Cowork works locally, inside the folders you granted, and runs any code in an isolated VM rather than loose on your machine.</p>
+  <div class="sec-eyebrow on-dark">02 — What the grant actually gives Cowork</div>
+  <h2 class="sec-title on-dark">Scoped to the folder, but not a closed <em>box</em></h2>
+  <p class="sec-sub on-dark">Handing over a folder is a real permission, and it's worth being precise about what it does and doesn't mean — particularly the part most people get wrong.</p>
 
   <div class="dev-grid-2" style="margin-top:28px;">
     <div class="dev-card">
       <div class="dev-kicker">Scope</div>
       <h3>Only the folders you grant</h3>
-      <p style="color:rgba(255,255,255,.65);font-size:15px;line-height:1.65;">Cowork can't reach files outside the folders you've added. Need it to see another folder? Grant that one too, explicitly. Nothing is implicit.</p>
+      <p style="color:rgba(255,255,255,.65);font-size:15px;line-height:1.65;">Cowork can't reach files outside the folders you've added — not the drive above, not your Documents, not the network share. If it needs another folder, you grant that one too, explicitly. And whatever the mode, it asks before it permanently deletes anything.</p>
       <div class="dev-quote">Access is per folder, for the work at hand.</div>
     </div>
     <div class="dev-card">
       <div class="dev-kicker">Isolation</div>
-      <h3>Code runs in a VM</h3>
-      <p style="color:rgba(255,255,255,.65);font-size:15px;line-height:1.65;">File reads and writes happen directly inside the folders you grant. There is no sandbox for that. Code execution is different: any script Cowork runs executes in an isolated virtual machine, not on your machine directly. And regardless of mode, Cowork always asks before it permanently deletes a file.</p>
+      <h3>Code runs in a separate VM</h3>
+      <p style="color:rgba(255,255,255,.65);font-size:15px;line-height:1.65;">Reading and writing happens directly in the folder you granted. When a task needs to run something — recalculating a spreadsheet, building a chart — that runs in an isolated virtual machine rather than loose on your system.</p>
       <div class="dev-quote">Capable, but boxed in by design.</div>
     </div>
   </div>
-</div>
 
-<!-- LEAST PRIVILEGE -->
-<div class="section" id="least">
-  <div class="sec-eyebrow">03 — Least privilege in practice</div>
-  <h2 class="sec-title">Grant what the task needs, and no <em>more</em></h2>
-  <p class="sec-sub">The habit that keeps this safe is least privilege: the smallest grant that lets the work happen. It also shrinks the blast radius if a document tries to redirect Cowork — the prompt-injection risk from Lesson 2.</p>
-
-  <div class="tip-trick" style="margin-top:28px;">
-    <div class="tip-trick-icon">🔐</div>
+  <div class="tip-trick tip-trick--dark" style="margin-top:32px;">
+    <div class="tip-trick-icon">☁️</div>
     <div class="tip-trick-copy">
-      <div class="tip-trick-label">A folder per task, not per drive</div>
-      <p>Stage each job in its own folder and grant that one. When the task is done you don't have a standing grant to your whole file system sitting open. For regulated work, this scoping is part of the control story you'll show IT in Workshop 4.</p>
+      <div class="tip-trick-label">"It runs locally" is half the story — say the other half out loud</div>
+      <p>The files stay on your machine. The reading does not: whatever Cowork opens in a granted folder is sent to Anthropic's service to be processed, the same as text you paste into chat. That's why the scope of the grant matters — and why the rule about keeping confidential cedent material out of this pilot isn't ceremony. Day 3 covers what that means for the enterprise, in writing.</p>
     </div>
   </div>
 </div>
@@ -102,9 +132,9 @@
 <!-- NEXT -->
 <div class="section" id="next">
   <div class="sec-eyebrow">Up next</div>
-  <h2 class="sec-title">Lesson 4: Use Cowork Lab</h2>
-  <p class="sec-sub">You've got use cases, the habits to work effectively, and now folder access down. Time to run a real task end to end against your own files and produce a deliverable.</p>
-  <a href="07-use-cowork-lab.html" style="display:inline-flex;align-items:center;gap:8px;background:var(--violet);color:var(--white);text-decoration:none;padding:12px 24px;border-radius:8px;font-weight:600;font-size:15px;margin-top:8px;">Next Lesson →</a>
+  <h2 class="sec-title">Lesson 4: Personalize &amp; Verify</h2>
+  <p class="sec-sub">The folder is set up and Cowork can see it. Now watch a cold read of a real document go wrong in an instructive way, teach Cowork who you are, and run the same ask again.</p>
+  <a href="03-first-cowork-session.html" style="display:inline-flex;align-items:center;gap:8px;background:var(--teal);color:var(--white);text-decoration:none;padding:12px 24px;border-radius:8px;font-weight:600;font-size:15px;margin-top:8px;">Next Lesson →</a>
 </div>
 
 <div class="page-footer"></div>

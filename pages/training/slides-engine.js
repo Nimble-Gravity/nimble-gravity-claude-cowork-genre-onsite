@@ -38,6 +38,18 @@
     return clone.innerHTML;
   }
 
+  /**
+   * Index of the period that ends the first sentence of `text`, or -1 if
+   * none is found. A period only counts as a sentence end when it's
+   * followed by whitespace + a capital letter, or by the end of the string
+   * — this keeps "e.g.", "v2.1", and "README.docx" from being mistaken for
+   * sentence boundaries.
+   */
+  function firstSentenceEnd(text) {
+    var m = /\.(?=\s+[A-Z]|\s*$)/.exec(text);
+    return m ? m.index : -1;
+  }
+
   /* ─── Extraction ────────────────────────────────────────── */
 
   /**
@@ -76,6 +88,13 @@
 
       var isDark = sec.classList.contains('section-dark');
       var bullets = [];
+      /* Parallel to `bullets` — bulletSources[i] is the DOM element that
+         produced bullets[i]. Only consulted when a section has step cards,
+         to split bullets into "before the step list" / "after" without
+         touching the bullet objects themselves (so step-free sections are
+         byte-identical to before this array existed). */
+      var bulletSources = [];
+      var stepSlides = [];
 
       /* Insight cards */
       sec.querySelectorAll('.insight-card').forEach(function (card) {
@@ -86,6 +105,7 @@
             heading: textOf(head),
             body:    body ? textOf(body) : ''
           });
+          bulletSources.push(card);
         }
       });
 
@@ -100,6 +120,7 @@
             heading: heading,
             body:    body ? textOf(body) : ''
           });
+          bulletSources.push(card);
         }
       });
 
@@ -114,7 +135,39 @@
             heading: heading.trim(),
             body:    body ? textOf(body) : ''
           });
+          bulletSources.push(card);
         }
+      });
+
+      /* Step cards (.step-card) — numbered "what → why" steps, onsite delivery.
+         Each card is its own slide (not a chunked bullet): the client asked
+         for steps presented one screen at a time, not four crowded onto one
+         slide. Heading = "Step N — first sentence of .step-do"; the rest of
+         .step-do plus .step-why becomes the slide subtitle; .step-verify (if
+         present) rides along as that same slide's single isTip bullet — the
+         engine's existing callout representation — so the check never
+         separates from the step it verifies via bullet chunking. */
+      sec.querySelectorAll('.step-card').forEach(function (card) {
+        var num    = card.querySelector('.step-num');
+        var doEl   = card.querySelector('.step-do');
+        var why    = card.querySelector('.step-why');
+        var verify = card.querySelector('.step-verify');
+        if (!doEl) return;
+        var doText = textOf(doEl);
+        var endIdx = firstSentenceEnd(doText);
+        var heading = 'Step ' + (num ? textOf(num) : '') + ' — ' +
+                      (endIdx > 0 ? doText.slice(0, endIdx) : doText);
+        var bodyBits = [];
+        if (endIdx > 0 && endIdx < doText.length - 1) bodyBits.push(doText.slice(endIdx + 1).trim());
+        if (why) bodyBits.push(textOf(why));
+        stepSlides.push({
+          type:     'content',
+          dark:     isDark,
+          eyebrow:  '',
+          title:    heading,
+          subtitle: bodyBits.join(' '),
+          bullets:  verify ? [{ heading: 'Verify', body: textOf(verify), isTip: true }] : []
+        });
       });
 
       /* Tip / trick boxes */
@@ -128,6 +181,7 @@
             body:    body ? textOf(body) : '',
             isTip:   true
           });
+          bulletSources.push(tip);
         }
       });
 
@@ -140,6 +194,7 @@
             heading: textOf(head),
             body:    body ? textOf(body) : ''
           });
+          bulletSources.push(card);
         }
       });
 
@@ -154,6 +209,7 @@
             heading: heading.trim(),
             body:    body ? textOf(body) : ''
           });
+          bulletSources.push(card);
         }
       });
 
@@ -169,6 +225,7 @@
             heading: heading,
             body:    (title && header ? textOf(title) + (body ? ' — ' + textOf(body) : '') : (body ? textOf(body) : ''))
           });
+          bulletSources.push(card);
         }
       });
 
@@ -181,11 +238,14 @@
             heading: textOf(q).replace(/^"|"$/g, ''),
             body:    hint ? textOf(hint) : ''
           });
+          bulletSources.push(card);
         }
       });
 
-      /* Numbered / comparison list items (qa-row, qa-card, step-card, etc.) */
-      sec.querySelectorAll('.qa-card, .step-card, .pro-con-card, .comparison-card').forEach(function (card) {
+      /* Numbered / comparison list items (qa-row, qa-card, etc.) — .step-card
+         has its own dedicated extractor above and is deliberately excluded
+         here so it isn't double-processed. */
+      sec.querySelectorAll('.qa-card, .pro-con-card, .comparison-card').forEach(function (card) {
         var head = card.querySelector('h3, .card-label, strong');
         var body = card.querySelector('p');
         if (head) {
@@ -193,28 +253,69 @@
             heading: textOf(head),
             body:    body ? textOf(body) : ''
           });
+          bulletSources.push(card);
         }
       });
 
       /* Nothing is truncated or dropped: overflow bullets continue onto
          follow-on slides instead of being cut at four per slide. */
       var PER_SLIDE = 4;
-      var chunks = [];
-      for (var i = 0; i < bullets.length; i += PER_SLIDE) {
-        chunks.push(bullets.slice(i, i + PER_SLIDE));
+      function chunkBullets(list) {
+        var out = [];
+        for (var i = 0; i < list.length; i += PER_SLIDE) out.push(list.slice(i, i + PER_SLIDE));
+        return out;
       }
-      if (!chunks.length) chunks.push([]);
 
-      chunks.forEach(function (chunk, idx) {
-        slides.push({
-          type:     'content',
-          dark:     isDark,
-          eyebrow:  textOf(eyeEl),
-          title:    innerOf(h2) + (idx > 0 ? ' <span class="sl-cont">(cont.)</span>' : ''),
-          subtitle: idx === 0 ? textOf(subEl) : '',
-          bullets:  chunk
+      /* Split `bullets` into what came before vs. after the step list in the
+         markup, so a section authored as intro-card → steps → closing-tip
+         doesn't get its closing tip yanked in front of the steps it follows.
+         Sections with no step cards skip this entirely and chunk `bullets`
+         exactly as before — same array, same chunkBullets() call, same
+         fallback — so their output is unchanged. This only resolves the
+         step-list boundary; the fixed code-order in which the loops above
+         collect .insight-card/.dev-card/etc. bullets is untouched. */
+      var beforeBullets = bullets;
+      var afterBullets  = [];
+      if (stepSlides.length) {
+        var firstStepCard = sec.querySelector('.step-card');
+        beforeBullets = [];
+        bullets.forEach(function (b, idx) {
+          var src = bulletSources[idx];
+          var isAfterSteps = firstStepCard && src &&
+            !!(firstStepCard.compareDocumentPosition(src) & Node.DOCUMENT_POSITION_FOLLOWING);
+          (isAfterSteps ? afterBullets : beforeBullets).push(b);
         });
-      });
+      }
+
+      var beforeChunks = chunkBullets(beforeBullets);
+      /* The section always leads with its own slide (h2 + subtitle), even
+         with zero bullets before the steps — matches the pre-step-card
+         fallback that guaranteed every section produced at least one slide. */
+      if (!beforeChunks.length) beforeChunks.push([]);
+      var afterChunks = chunkBullets(afterBullets);
+
+      var slideIdx = 0;
+      function buildChunkSlides(chunkList) {
+        return chunkList.map(function (chunk) {
+          var s = {
+            type:     'content',
+            dark:     isDark,
+            eyebrow:  textOf(eyeEl),
+            title:    innerOf(h2) + (slideIdx > 0 ? ' <span class="sl-cont">(cont.)</span>' : ''),
+            subtitle: slideIdx === 0 ? textOf(subEl) : '',
+            bullets:  chunk
+          };
+          slideIdx++;
+          return s;
+        });
+      }
+
+      var beforeContentSlides = buildChunkSlides(beforeChunks);
+      var afterContentSlides  = buildChunkSlides(afterChunks);
+
+      beforeContentSlides.forEach(function (s) { slides.push(s); });
+      stepSlides.forEach(function (s) { slides.push(s); });
+      afterContentSlides.forEach(function (s) { slides.push(s); });
     });
 
     return slides;
@@ -336,6 +437,15 @@
     deck.appendChild(buildEnd());
 
     /* Init Reveal */
+    if (typeof Reveal === 'undefined') {
+      deck.innerHTML =
+        '<section><h2>Slide engine did not load</h2>' +
+        '<p>reveal.js is missing. It is vendored at ' +
+        '<code>assets/vendor/reveal/</code> — check the file is present and that this deck is ' +
+        'being served over HTTP (open it via <code>./serve</code>, not <code>file://</code>).</p>' +
+        '<p>Fallback: present from the lesson pages directly.</p></section>';
+      return;
+    }
     Reveal.initialize({
       hash:            true,
       transition:      'fade',

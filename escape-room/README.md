@@ -1,11 +1,12 @@
-# The Skill Vault — Virtual Escape Room (Workshop 3)
+# The Skill Vault — Virtual Escape Room (Day 2)
 
 A web-based escape room that gates the hands-on lab exercises for the Claude
 Cowork training workshop. Teams complete lab steps in Cowork; the lab artifacts
 contain unlock codes they enter here to open the next room. Four rooms, one
 40-minute timer, a live leaderboard, and a facilitator view.
 
-No build step, no framework: vanilla ES modules + Three.js from a CDN.
+No build step, no framework: vanilla ES modules + Three.js, vendored locally
+under `assets/vendor/three/` (a delivery network may block public CDNs).
 
 ## Quick start
 
