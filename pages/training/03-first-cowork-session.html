@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Your First Cowork Session — Workshop 1</title>
+<title>Personalize &amp; Verify — Day 1</title>
 <link rel="stylesheet" href="../../styles/shared.css"/>
 <style>
 /* Page-specific styles go here. This scaffold relies entirely on shared.css. */
@@ -17,154 +17,251 @@
 
 <!-- MODULE PROGRESS -->
 <div class="module-strip">
-  <span class="ms-label">Workshop</span>
-  <a href="01-what-is-cowork.html" class="ms-item active"><span class="ms-num">1</span>Setup &amp; Foundations</a>
+  <span class="ms-label">Day</span>
+  <a href="01-what-is-cowork.html" class="ms-item active"><span class="ms-num">1</span>Foundations &amp; Personal Value</a>
   <span class="ms-arrow">›</span>
-  <a href="04-use-cases-by-industry.html" class="ms-item upcoming"><span class="ms-num">2</span>Use Cowork</a>
+  <a href="05-working-effectively.html" class="ms-item upcoming"><span class="ms-num">2</span>Skills &amp; Everyday Workflows</a>
   <span class="ms-arrow">›</span>
-  <a href="08-decompose-your-workflow.html" class="ms-item upcoming"><span class="ms-num">3</span>Build a Skill</a>
-  <span class="ms-arrow">›</span>
-  <a href="12-skills-to-plugins.html" class="ms-item upcoming"><span class="ms-num">4</span>Govern &amp; Roll Out</a>
+  <a href="04-use-cases-by-industry.html" class="ms-item upcoming"><span class="ms-num">3</span>Use Cases + Governance</a>
 </div>
 
 <div class="page-header" id="intro">
-  <div class="eyebrow">Workshop 1 · Lesson 3 of 3 · Exercise ✦</div>
-  <h1 class="title">Your First <em>Cowork Session</em></h1>
-  <p class="subtitle">Hand one real task to Cowork from start to finish. You'll pick a permission mode, give it a goal that ends in something you can check, read its plan, and approve each step. Reading those approvals is the habit worth building from the first session on.</p>
+  <div class="eyebrow">Day 1 · Lesson 4 of 4 · Exercise ✦</div>
+  <h1 class="title">Personalize <em>&amp; Verify</em></h1>
+  <p class="subtitle">You'll watch the same document get summarized twice — once by a Cowork that knows nothing about you, and once after you've told it who you are and what you will not put your name to. In between, you run the interview yourself. The point of the hour is the difference between the two summaries, and what it takes to catch what's wrong in either.</p>
   <div class="header-phase">
     <div class="header-phase-dot" style="background:var(--teal)"></div>
-    Exercise · ~30 min
+    Exercise · ~45 min
   </div>
 </div>
 
-<!-- RECAP — THE TWO-PROMPT AHA -->
-<div class="section" id="recap">
-  <div class="sec-eyebrow">01 — Feel the difference</div>
-  <h2 class="sec-title">Two prompts that prove it knows <em>you</em></h2>
-  <p class="sec-sub">Open a fresh session right after the co-setup interview and run these two prompts. This is the first aha: because you configured it, the answers are about your actual job, not a generic assistant's.</p>
+<!-- DEMO: BEFORE -->
+<div class="section" id="demo-before">
+  <div class="sec-eyebrow">01 — Demo: the cold read</div>
+  <h2 class="sec-title">Read the document <em>first</em>, then ask</h2>
+  <p class="sec-sub">Watch this one — you don't need to type along. A facilitator opens the demo document in Word, scrolls it end to end, and says out loud what it is. Only then does Cowork get asked for anything. That order matters: you cannot check a summary of a document you have never looked at.</p>
 
   <div class="insight-grid" style="margin-top:28px;">
     <div class="insight-card">
-      <div class="sec-eyebrow" style="margin-bottom:6px;">Prompt 1 — "Recap what you know about me"</div>
-      <p style="font-size:15px;color:var(--slate);line-height:1.65;margin:0;">Cowork plays back your role, your voice, and your priorities from the files co-setup just wrote. If the playback is generic, open <code>voice-profile.md</code> or <code>about-me.md</code> and fix it.</p>
+      <div class="sec-eyebrow" style="margin-bottom:6px;">The document</div>
+      <p style="font-size:15px;color:var(--slate);line-height:1.65;margin:0;"><code>demo/treaty-layer-summary.docx</code> in your workshop folder — a quarterly treaty-layer summary for Meridian Mutual, a cedent we made up. Layer structure, attachment points, ceded premium, the quarter's loss activity, and a covering narrative. Ordinary work, ordinary length.</p>
     </div>
     <div class="insight-card">
-      <div class="sec-eyebrow" style="margin-bottom:6px;">Prompt 2 — "Given who I am, what are the three highest-leverage things you could help me with this week?"</div>
-      <p style="font-size:15px;color:var(--slate);line-height:1.65;margin:0;">Now the offers are personalized — research these companies, summarize those filings, draft a memo in your voice. That relevance, not a feature list, is the whole point of setting it up.</p>
+      <div class="sec-eyebrow" style="margin-bottom:6px;">The ask</div>
+      <p style="font-size:15px;color:var(--slate);line-height:1.65;margin:0;">A one-page business summary someone could take into a quarterly review — the kind of thing you'd write on a Friday afternoon. Not a diagram, not a process map, not a restructuring of the document. Prose a colleague can read in two minutes.</p>
     </div>
   </div>
 
-  <div class="tip-trick" style="margin-top:32px;">
-    <div class="tip-trick-icon">🪞</div>
+  <div class="code-wrap" style="margin-top:28px;">
+    <div class="code-topbar">
+      <span class="cb-dot" style="background:#ff5f57"></span>
+      <span class="cb-dot" style="background:#febc2e"></span>
+      <span class="cb-dot" style="background:#28c840"></span>
+      <span class="code-label">The demo ask — run cold now, and again after you've personalized</span>
+      <button class="copy-btn" onclick="copyBlock('demo-prompt', this)">Copy</button>
+    </div>
+    <div class="code-body">
+<pre id="demo-prompt">Read demo/treaty-layer-summary.docx and write me a one-page summary I can take into the quarterly review. Cover what the treaty covers, how the layers sit, how the quarter went, and anything I should raise before the meeting. Don't invent anything — if the document doesn't say, tell me it doesn't say.</pre>
+    </div>
+  </div>
+
+  <div class="tip-trick" style="margin-top:28px;">
+    <div class="tip-trick-icon">🔎</div>
     <div class="tip-trick-copy">
-      <div class="tip-trick-label">If the mirror is blurry</div>
-      <p>A weak recap means a weak profile. Spend two minutes correcting <code>voice-profile.md</code> and <code>writing-rules.md</code>, then re-run prompt one. Those two files are the ones worth getting right.</p>
+      <div class="tip-trick-label">Two things in this document don't agree</div>
+      <p>There is a total that doesn't sum and a date that contradicts one earlier in the file. They're in there on purpose. Cold, Cowork will most likely repeat both in fluent, confident prose — because that's what the document says, and nobody asked it to check. That is the whole lesson: it drafts, you verify, and the verification only happens if someone builds it into the ask.</p>
     </div>
   </div>
 </div>
 
-<!-- PICK A TASK -->
-<div class="section" id="task">
-  <div class="sec-eyebrow">02 — Pick a first task</div>
-  <h2 class="sec-title">Choose work that ends in something you can <em>check</em></h2>
-  <p class="sec-sub">Now that Cowork knows you, point it at work that takes up your time, and pick a task with a clear result you can verify. Connect the folder or context it needs and state the outcome plainly.</p>
-
-  <div class="insight-grid" style="margin-top:28px;">
-    <div class="insight-card">
-      <div class="sec-eyebrow" style="margin-bottom:6px;">Three starters worth trying</div>
-      <p style="font-size:15px;color:var(--slate);line-height:1.65;margin:0;"><span data-client-slot="starter-tasks-m1">Summarize a legacy model or script you own and see it come back framed for your role. Work through a config or process doc for the key points and the gaps. Or take a recurring status update you write and have Cowork draft it in your voice. A no-stakes warm-up: point it at a messy folder and have it organize the loose files.</span></p>
-    </div>
-    <div class="insight-card">
-      <div class="sec-eyebrow" style="margin-bottom:6px;">Set the model first</div>
-      <p style="font-size:15px;color:var(--slate);line-height:1.65;margin:0;">Use the model selector next to the input and start on Sonnet. It handles most Cowork work at much lower cost. You'll get to when Opus earns its keep in Workshop 2.</p>
-    </div>
-  </div>
-</div>
-
-<!-- COST DIAL -->
-<div class="section" id="cost-dial">
-  <div class="sec-eyebrow">03 — Mind the cost</div>
-  <h2 class="sec-title">Your cost dial: model, session, <em>usage</em></h2>
-  <p class="sec-sub">Three habits keep Cowork cheap and sharp from the first session. Think of them as one dial — how much you spend, and how good the output is. The full playbook comes in Workshop 2.</p>
+<!-- WHAT TO WATCH -->
+<div class="section section--off" id="watch">
+  <div class="sec-eyebrow">02 — What to watch while it runs</div>
+  <h2 class="sec-title">Four moments worth your <em>attention</em></h2>
+  <p class="sec-sub">A Cowork session isn't a black box that hands you a result. There are four points where you can see what's happening and change it, and knowing them is the difference between supervising the work and receiving it.</p>
 
   <div class="bp-grid--light" style="margin-top:28px;">
     <div class="bp-item">
       <div class="bp-num">01</div>
-      <div class="bp-title">Default to Sonnet</div>
-      <div class="bp-body">Your model is the dial. Sonnet handles almost everything at a fraction of the cost; reach for Opus only on genuinely hard reasoning. When Opus earns its keep is a Workshop 2 topic.</div>
+      <div class="bp-title">Open</div>
+      <div class="bp-body">Open the source document yourself first and scroll it. Thirty seconds of skimming tells you roughly what a right answer looks like — and without that, you have no basis to judge anything Cowork gives you.</div>
     </div>
     <div class="bp-item">
       <div class="bp-num">02</div>
-      <div class="bp-title">One task per session</div>
-      <div class="bp-body">A session carries everything said so far as context, so long threads cost more and drift. Batch related steps together, then start a fresh session for the next task.</div>
+      <div class="bp-title">Inspect</div>
+      <div class="bp-body">Cowork shows each file it's about to open or write, and waits. Read those prompts instead of clicking through them. If it reaches for a file you didn't expect, that's information — the ask was probably ambiguous.</div>
     </div>
     <div class="bp-item">
       <div class="bp-num">03</div>
-      <div class="bp-title">Spend where it earns it</div>
-      <div class="bp-body">Use plain chat for quick questions instead of a full delegation, and keep an eye on Settings, then Usage so there are no surprises.</div>
+      <div class="bp-title">Engage</div>
+      <div class="bp-body">You don't have to wait for it to finish being wrong. Say "stop — I meant the second layer, not the aggregate" mid-run and it re-plans from there. Correcting the plan costs far less than correcting the finished draft.</div>
     </div>
-  </div>
-
-  <div class="tip-trick" style="margin-top:32px;">
-    <div class="tip-trick-icon">📈</div>
-    <div class="tip-trick-copy">
-      <div class="tip-trick-label">The full playbook is Workshop 2</div>
-      <p>When Opus actually pays off, breaking long jobs into slices, and reading the usage dashboard all come in <a href="05-working-effectively.html">Working Effectively</a>. Today: Sonnet, one task per session, chat for the small stuff.</p>
+    <div class="bp-item">
+      <div class="bp-num">04</div>
+      <div class="bp-title">Check</div>
+      <div class="bp-body">Read the output next to the document, not next to your expectations. For each number and each claim, ask where it came from — and ask Cowork to tell you, if it didn't say.</div>
     </div>
   </div>
 </div>
 
 <!-- PERMISSION MODE -->
 <div class="section section-dark" id="permission">
-  <div class="sec-eyebrow on-dark">04 — Choosing a permission mode</div>
+  <div class="sec-eyebrow on-dark">03 — Choosing a permission mode</div>
   <h2 class="sec-title on-dark">Begin with <em>ask before acting</em></h2>
-  <p class="sec-sub on-dark">Permission mode is how you control what Cowork does on its own. For a first run, and for any unfamiliar files or content you don't fully trust, keep it pausing for your approval on each action.</p>
+  <p class="sec-sub on-dark">Permission mode is how much Cowork does without stopping to check with you. For today, and for any unfamiliar files, leave it pausing for approval on each action — that pause is where the inspecting happens.</p>
 
   <div class="dev-grid-2" style="margin-top:28px;">
     <div class="dev-card">
       <div class="dev-kicker">Ask before acting</div>
       <h3>Approve each step</h3>
-      <p style="color:rgba(255,255,255,.65);font-size:15px;line-height:1.65;">Claude stops before each action and shows what it's about to do. Use this for new tools, unfamiliar files, and anything you want to keep a close eye on. It's the right default.</p>
-      <div class="dev-quote">In either mode, Claude asks first before it deletes a file for good.</div>
+      <p style="color:rgba(255,255,255,.65);font-size:15px;line-height:1.65;">Cowork stops before each action and shows what it's about to do. Use it for anything new, anything you didn't write yourself, and anything you want to watch closely. It is the right default, and it's what we use all day today.</p>
+      <div class="dev-quote">In either mode, it asks first before deleting a file for good.</div>
     </div>
     <div class="dev-card">
       <div class="dev-kicker">Act without asking</div>
       <h3>Faster, when you're watching</h3>
-      <p style="color:rgba(255,255,255,.65);font-size:15px;line-height:1.65;">Claude runs without stopping for each step. It's quicker, but save it for trusted files and sites while you're watching the session. Not for your first run.</p>
+      <p style="color:rgba(255,255,255,.65);font-size:15px;line-height:1.65;">Cowork runs the whole plan without pausing. Quicker for a job you've run before on files you trust, while you're sitting there watching it. Not for your first run, and not for anything that came from outside Gen Re.</p>
       <div class="dev-quote">Pick the mode by how much you trust the content.</div>
     </div>
   </div>
 </div>
 
-<!-- RUN & REVIEW -->
-<div class="section" id="run">
-  <div class="sec-eyebrow">05 — Run it and check the result</div>
-  <h2 class="sec-title">Read the plan before you read the <em>output</em></h2>
-  <p class="sec-sub">Cowork looks at the request, lays out a plan, and works through it with the progress shown as it goes. Watch it, redirect if it drifts, and check the result against what you asked for.</p>
+<!-- THE LAB -->
+<div class="section" id="lab">
+  <div class="sec-eyebrow">04 — Your turn</div>
+  <h2 class="sec-title">Teach Cowork who <em>you</em> are</h2>
+  <p class="sec-sub">Now you run the interview. It asks about your role, who reviews your work, how you write, and what you'd never put your name to, then writes your answers into plain files in the workshop folder. Copy the prompt below, then work through the five steps. Answer as yourself — this is your own configuration, and you'll keep it after the workshop.</p>
 
-  <div class="bp-grid--light" style="margin-top:28px;">
-    <div class="bp-item">
-      <div class="bp-num">01</div>
-      <div class="bp-title">Catch a wrong plan early</div>
-      <div class="bp-body">Fixing the plan costs far less than fixing the finished work. If the steps look off, say so before you approve them.</div>
+  <div class="code-wrap" style="margin-top:28px;">
+    <div class="code-topbar">
+      <span class="cb-dot" style="background:#ff5f57"></span>
+      <span class="cb-dot" style="background:#febc2e"></span>
+      <span class="cb-dot" style="background:#28c840"></span>
+      <span class="code-label">Paste into a fresh Cowork session on your workshop folder</span>
+      <button class="copy-btn" onclick="copyBlock('skill-cosetup', this)">Copy</button>
     </div>
-    <div class="bp-item">
-      <div class="bp-num">02</div>
-      <div class="bp-title">Read each approval</div>
-      <div class="bp-body">Look at what a step will do before you click. The habit, not the tool, is what keeps the work safe to hand off.</div>
+    <div class="code-body">
+<pre id="skill-cosetup">You're going to personalize Cowork for me. Run a thorough, adaptive interview, then write my personalization files to THIS folder so that from now on you know my role, my voice, my priorities, and my team. Treat it like onboarding a sharp new assistant — by the end you should be able to draft in my voice and tailor your help to my actual job.
+
+STEP 1 — HARVEST FIRST
+If any data source or working folder is already accessible, harvest everything you reasonably can about me BEFORE asking anything: my name, title, and role signals, the kinds of documents and data I work with, my current projects and priorities, and how I write (tone, length, sign-off) from any drafts you can read. Build a draft picture of me from this, and only ask me about what you couldn't find or need to confirm.
+If nothing is connected, or you can't read anything useful, do NOT stop and do NOT error — just go to the interview and ask me directly to fill every gap. Either path must finish and produce the files.
+
+STEP 2 — IDENTIFY MY ROLE AND DOMAIN
+Work out what I actually do and in what field — underwriting, actuarial, claims, finance, legal, operations, or anything else. If the harvest told you, confirm it in a sentence; if not, ask. This shapes everything that follows.
+
+STEP 3 — RUN AN ADAPTIVE INTERVIEW
+Tailor the questions to my role and field — a treaty underwriter, a pricing actuary, a claims manager, a finance lead, and a compliance officer should each get a different conversation. Don't read from a fixed script: let each answer shape your next question, and generate the questions that actually matter for my work. (For pricing you'd dig into models, assumptions, and sign-off; for claims, case types, reserving practice, and cedent correspondence; for finance, close cycles, materiality, and who signs — use the same instinct for whatever I turn out to do.)
+
+Run it well:
+- Ask me ONE question at a time, using Cowork's question popup (the modal) — not by typing the questions inline in chat. Offer answer choices in the popup where they help, so I can just pick, and wait for each answer before asking the next.
+- Confirm what you harvested; only ask for what you don't already know.
+- Sharpen vague answers with follow-ups; get concrete examples, real names and numbers where they help.
+- Respect my time — aim for 20–40 minutes. If I skip something, put [FILL IN] there; never invent an answer.
+- Read it back. Before writing any files, recap what you heard and let me correct it.
+
+COVER THESE (adapt and prioritize to my role)
+- Identity and role: name, title, team, who I report to.
+- Accountability: in one sentence, the outcomes I own.
+- Where my week goes: the 3–7 tasks or deliverables that take most of my time, and which recur.
+- Priorities and current work: what I'm focused on now; active projects.
+- Audience and stakeholders: who I produce work for; who I collaborate with; who reviews or approves it.
+- Tools, data, and domain rules: the systems and data I live in, plus any standards or regulations that bind my work.
+- Voice and writing style (spend real time here — ask several questions): how formal or casual I want drafts; sentence feel (short and punchy, or fuller and flowing); tone (warm, direct, neutral, authoritative); jargon vs plain language, and words I always use or always avoid; format defaults (bullets vs prose, length, headings, how I open and sign off); and how my voice shifts by audience (internal vs client, exec vs peer). Capture a short real sample of my own writing I'm happy with, confirmed by me, to anchor it.
+- AI do's and don'ts (ask me directly): what you should ALWAYS do in my name (cite the source, flag uncertainty, ask before sending, keep it tight) and NEVER do (invent figures, make the decision, overclaim, be sycophantic). And the AI "tells" to avoid so drafts don't sound like AI — clichés and filler ("it's not just X, it's Y", "delve", "in today's landscape"), over-hedging, emoji, bullet overload, em-dash overuse.
+- Standards: what "good" vs "rushed" looks like, and the review or approval steps I must respect.
+- Durable facts: stable things worth remembering — fiscal year, recurring deadlines, naming conventions, regulatory constraints.
+
+THEN WRITE THESE FILES TO THIS FOLDER (keep claude.md short and pointing to the about-me/ files; plain first person, concrete over generic):
+- claude.md — short entry point: read the about-me/ files each session; who I am in a line; what I'm accountable for; default to my voice-profile and writing-rules for anything you draft; and keep about-me/memory.md current — whenever you learn a durable fact during a session, add or update it there, and review memory.md at the end of each session.
+- about-me/about-me.md — role, team, reporting; accountability; where my week goes; current priorities; audience and stakeholders; tools, data, and domain rules; good vs rushed; my approval chain.
+- about-me/voice-profile.md — my voice in detail: formality, sentence feel, tone, jargon level, the words I use and avoid, format defaults, and how it shifts by audience — plus a short real sample in my voice.
+- about-me/writing-rules.md — explicit AI do's and don'ts: what to always do and never do in my name, my hard constraints, and the specific AI "tells" to avoid (clichés, filler, over-hedging, emoji, em-dash overuse).
+- about-me/team.md — the people I work with and how (manager, collaborators, reviewers, audience); seed it from what you harvested; leave room to grow.
+- about-me/memory.md — durable facts to remember across sessions; start with what I gave you. It is a living document: you add to it during and after each session as you learn key things (per the instruction in claude.md).
+
+QUALITY BAR: specific over generic; use the real details you harvested or I gave you; mark gaps with [FILL IN] rather than padding. When done, list the files you wrote and tell me to start a fresh session and run two checks — "Recap what you know about me." and "Given who I am, what are the three highest-leverage things you could help me with this week?" If the playback is thin, point me to the file to fix.
+
+START NOW: first tell me what you found about me from anything you can read (or say you couldn't read anything and will ask directly), confirm my role and field, then begin.</pre>
     </div>
-    <div class="bp-item">
-      <div class="bp-num">03</div>
-      <div class="bp-title">Check it against the goal</div>
-      <div class="bp-body">Did the result meet the bar you set? Note where it lacked context or wandered. Those notes set you up for Workshop 2.</div>
+  </div>
+
+  <div class="step-list">
+    <div class="step-card">
+      <div class="step-num">1</div>
+      <div>
+        <div class="step-do">Open <code>Desktop\cowork-workshop</code> in Explorer and confirm there's an <code>about-me/</code> folder. If it isn't there, create it.</div>
+        <div class="step-why">That's where the interview writes your files. Knowing the folder before you start is what lets you watch them appear rather than wonder where they went.</div>
+        <div class="step-verify">You can see an empty (or nearly empty) <code>about-me</code> folder inside the workshop folder.</div>
+      </div>
+    </div>
+    <div class="step-card">
+      <div class="step-num">2</div>
+      <div>
+        <div class="step-do">Start a <strong>fresh</strong> Cowork session on the workshop folder and paste in the interview prompt above.</div>
+        <div class="step-why">A fresh session means nothing from the demo is still in play. Everything the interview writes should come from your answers, not from a treaty summary it happened to read ten minutes ago.</div>
+      </div>
+    </div>
+    <div class="step-card">
+      <div class="step-num">3</div>
+      <div>
+        <div class="step-do">Answer as yourself — your real role, your real reviewers, the phrases you actually refuse to sign off on.</div>
+        <div class="step-why">These files are yours and you keep them after the workshop. An invented answer produces a configuration that flatters someone who doesn't exist and helps you with nothing.</div>
+      </div>
+    </div>
+    <div class="step-card">
+      <div class="step-num">4</div>
+      <div>
+        <div class="step-do">Work silently for five minutes. Facilitators are roaming — put a hand up rather than turning to your neighbour.</div>
+        <div class="step-why">The interview is a conversation, and a conversation doesn't survive a room of thirty people talking over it. Five quiet minutes gets everyone past the questions that matter most.</div>
+      </div>
+    </div>
+    <div class="step-card">
+      <div class="step-num">5</div>
+      <div>
+        <div class="step-do">Read the recap it gives you, correct anything wrong, and tell it to write the files.</div>
+        <div class="step-why">The read-back is the cheapest place to fix a misunderstanding. Once it's in <code>voice-profile.md</code>, every draft you get for the rest of the week inherits it.</div>
+        <div class="step-verify">Ask <em>"What do you know about how I work?"</em> — the answer should quote your own about-me answers back at you, in your words. If it's generic, open the file and fix it.</div>
+      </div>
     </div>
   </div>
 
   <div class="tip-trick" style="margin-top:32px;">
-    <div class="tip-trick-icon">✦</div>
+    <div class="tip-trick-icon">⏭️</div>
     <div class="tip-trick-copy">
-      <div class="tip-trick-label">Try it now</div>
-      <p>Run one of the starters on Sonnet with "ask before acting" on. Then run a vague version of the same request and compare the two. The difference a clear brief makes shows up after a couple of runs, and it tends to stick.</p>
+      <div class="tip-trick-label">"Skip" is a real answer</div>
+      <p>If a question needs a document you don't have to hand, say skip. It leaves a <code>[FILL IN]</code> marker you can search for later and moves on. A configuration with three gaps that you finished beats a perfect one you're still doing at the coffee break.</p>
+    </div>
+  </div>
+
+  <div style="margin-top:18px;display:flex;gap:12px;flex-wrap:wrap;">
+    <a href="../../skills/cowork-cosetup/SKILL.md" download style="display:inline-flex;align-items:center;gap:8px;border:1px solid var(--border);color:var(--teal);text-decoration:none;padding:10px 18px;border-radius:8px;font-weight:600;font-size:14px;">Download SKILL.md ↓</a>
+    <a href="../../skills/cowork-cosetup/" style="display:inline-flex;align-items:center;gap:8px;color:var(--teal);text-decoration:none;padding:10px 4px;font-weight:600;font-size:14px;">Browse the skill folder →</a>
+  </div>
+</div>
+
+<!-- DEMO: AFTER -->
+<div class="section section--off" id="demo-after">
+  <div class="sec-eyebrow">05 — Demo: the same ask, personalized</div>
+  <h2 class="sec-title">Same document, same question, different <em>answer</em></h2>
+  <p class="sec-sub">Back to <code>demo/treaty-layer-summary.docx</code> and the same prompt as the cold run. Nothing about the document changed and nothing about the ask changed. The only difference is that Cowork has now read a set of files describing who you are and what you will not put your name to.</p>
+
+  <div class="insight-grid" style="margin-top:28px;">
+    <div class="insight-card">
+      <div class="sec-eyebrow" style="margin-bottom:6px;">What changes</div>
+      <p style="font-size:15px;color:var(--slate);line-height:1.65;margin:0;">Bottom line first, in your register, at the length you said you write. And because your writing rules say never state a figure you can't source, the totals get re-added and the dates cross-checked — so the two things that don't agree come back as flagged questions instead of confident sentences.</p>
+    </div>
+    <div class="insight-card">
+      <div class="sec-eyebrow" style="margin-bottom:6px;">What doesn't change</div>
+      <p style="font-size:15px;color:var(--slate);line-height:1.65;margin:0;">Your accountability. A personalized Cowork is a better first reader, not a signature. It will still miss things, and it is still your name on the summary that goes into the review. Personalization moves the work from "rewrite this" to "check this" — that's the whole gain, and it's a big one.</p>
+    </div>
+  </div>
+
+  <div class="tip-trick" style="margin-top:32px;">
+    <div class="tip-trick-icon">🧾</div>
+    <div class="tip-trick-copy">
+      <div class="tip-trick-label">Take the comparison seriously</div>
+      <p>Put the two summaries side by side and ask what you'd have caught reading only the first one. That answer — not the time saved — is what makes the case for this internally, and it's the story worth telling your team when they ask what the three days were about.</p>
     </div>
   </div>
 </div>
@@ -177,11 +274,22 @@
 <!-- NEXT -->
 <div class="section" id="next">
   <div class="sec-eyebrow">Up next</div>
-  <h2 class="sec-title">Workshop 2: Use Cowork</h2>
-  <p class="sec-sub">You've run one task end to end. Workshop 2 puts Cowork to work on the jobs that pay off first in your industry, and covers how to get good results without overspending.</p>
-  <a href="04-use-cases-by-industry.html" style="display:inline-flex;align-items:center;gap:8px;background:var(--teal);color:var(--white);text-decoration:none;padding:12px 24px;border-radius:8px;font-weight:600;font-size:15px;margin-top:8px;">Start Workshop 2 →</a>
+  <h2 class="sec-title">Day 2: Skills &amp; Everyday Workflows</h2>
+  <p class="sec-sub">Cowork now knows who you are. Day 2 takes one workflow you run every week, walks it end to end with Cowork, and turns the part you repeat into something you can hand to a colleague.</p>
+  <a href="05-working-effectively.html" style="display:inline-flex;align-items:center;gap:8px;background:var(--teal);color:var(--white);text-decoration:none;padding:12px 24px;border-radius:8px;font-weight:600;font-size:15px;margin-top:8px;">Start Day 2 →</a>
 </div>
 
 <div class="page-footer"></div>
+<script>
+function copyBlock(id, btn) {
+  var pre = document.getElementById(id);
+  if (!pre || !navigator.clipboard) return;
+  navigator.clipboard.writeText(pre.innerText).then(function () {
+    var prev = btn.textContent;
+    btn.textContent = 'Copied!';
+    setTimeout(function () { btn.textContent = prev; }, 2000);
+  });
+}
+</script>
 </body>
 </html>
