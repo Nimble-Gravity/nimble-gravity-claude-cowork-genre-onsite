@@ -97,17 +97,9 @@
   function hubFileOf(craft) { return craft.hub ? craft.hub.split('/').pop() : null; }
   function isHubOf(craft)   { return hubFileOf(craft) === currentFile; }
 
-  function ensureIconoirStylesheet() {
-    if (document.getElementById('iconoir-css')) return;
-
-    var link = document.createElement('link');
-    link.id = 'iconoir-css';
-    link.rel = 'stylesheet';
-    link.href = 'https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css';
-    document.head.appendChild(link);
-  }
-
-  ensureIconoirStylesheet();
+  /* No icon webfont. This site is delivered inside a regulated client network
+     that may block public CDNs, so nav used to pull an entire icon font from
+     jsdelivr for three glyphs. The three are now plain text characters. */
 
   var reducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -306,7 +298,7 @@
   // back to the academic-cap glyph if footer.js hasn't loaded for some reason.
   var brandMark = (window.SDLCFooter && window.SDLCFooter.wordmarkSvg)
     ? '<span class="nav-home-logo" aria-hidden="true">' + window.SDLCFooter.wordmarkSvg + '</span>'
-    : '<i class="nav-home-icon iconoir-academic-cap" aria-hidden="true"></i>';
+    : '<span class="nav-home-icon" aria-hidden="true">◆</span>';
   homeEl.innerHTML =
     brandMark +
     '<span class="nav-home-label">Cowork Workshop</span>';
@@ -460,7 +452,7 @@
   overlayHome.href = root + 'index.html';
   overlayHome.className = 'nav-overlay-home' + (isHome ? ' active' : '');
   overlayHome.innerHTML =
-    '<i class="iconoir-academic-cap" aria-hidden="true" style="font-size:16px;flex-shrink:0;"></i>' +
+    '<span aria-hidden="true" style="font-size:16px;flex-shrink:0;">◆</span>' +
     '<span>Cowork Workshop</span>';
   overlayBody.appendChild(overlayHome);
 

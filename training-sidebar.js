@@ -99,7 +99,7 @@
   var home = document.createElement('a');
   home.href = '../../index.html';
   home.className = 'tsb-home';
-  home.innerHTML = '<i class="iconoir-arrow-left" aria-hidden="true"></i>Workshop Home';
+  home.innerHTML = '<span aria-hidden="true" style="margin-right:6px;">←</span>Workshop Home';
   sb.appendChild(home);
 
   MODULES.forEach(function (mod) {
