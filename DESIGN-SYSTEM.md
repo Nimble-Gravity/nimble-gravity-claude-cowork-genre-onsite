@@ -79,7 +79,27 @@ What the engine extracts from each lesson:
   | `.hy-card` | `.hy-label` + `.hy-title` | `.hy-body` / `<p>` |
   | `.sg-card` | `.sg-header` / `.sg-title` | `.sg-title` + `<p>` |
   | `.reflect-card` | `.reflect-q` | `.reflect-hint` |
-  | `.qa-card` / `.step-card` / `.pro-con-card` / `.comparison-card` | `h3` / `.card-label` / `strong` | `<p>` |
+  | `.qa-card` / `.pro-con-card` / `.comparison-card` | `h3` / `.card-label` / `strong` | `<p>` |
+  | `.step-card` | `Step N` (`.step-num`) + first sentence of `.step-do` | rest of `.step-do` + `.step-why`; `.step-verify` becomes a second bullet (styled amber on the slide, same as a tip) |
+
+`.step-card` markup contract (numbered "do this, and here's why" steps, added for onsite delivery):
+a `.step-list` wrapper holds `.step-card` children, each with a `.step-num` (integer), a `.step-do`
+(imperative action — the "what"), an optional `.step-why` (one-sentence rationale), and an optional
+`.step-verify` (the "ask Claude X, expect Y" check, rendered with an amber accent). A `.step-card`
+with no `.step-do` is skipped by the extractor.
+
+```html
+<div class="step-list">
+  <div class="step-card">
+    <div class="step-num">1</div>
+    <div>
+      <div class="step-do">Open Claude Desktop and click <strong>Cowork</strong> in the left rail.</div>
+      <div class="step-why">Chat answers questions; Cowork works in your files. Today lives in Cowork.</div>
+      <div class="step-verify">You see a folder picker, not a chat box.</div>
+    </div>
+  </div>
+</div>
+```
 
 Notes for authors:
 

@@ -117,6 +117,37 @@
         }
       });
 
+      /* Step cards (.step-card) — numbered "what → why" steps, onsite delivery.
+         One content bullet per card (heading = "Step N — first sentence of
+         .step-do", body = remainder of .step-do + .step-why); .step-verify
+         becomes a second bullet using the same isTip callout representation
+         as the tip/trick boxes below. */
+      sec.querySelectorAll('.step-card').forEach(function (card) {
+        var num    = card.querySelector('.step-num');
+        var doEl   = card.querySelector('.step-do');
+        var why    = card.querySelector('.step-why');
+        var verify = card.querySelector('.step-verify');
+        if (!doEl) return;
+        var doText   = textOf(doEl);
+        var firstDot = doText.indexOf('.');
+        var heading  = 'Step ' + (num ? textOf(num) : '') + ' — ' +
+                       (firstDot > 0 ? doText.slice(0, firstDot) : doText);
+        var bodyBits = [];
+        if (firstDot > 0 && firstDot < doText.length - 1) bodyBits.push(doText.slice(firstDot + 1).trim());
+        if (why) bodyBits.push(textOf(why));
+        bullets.push({
+          heading: heading,
+          body:    bodyBits.join(' ')
+        });
+        if (verify) {
+          bullets.push({
+            heading: 'Verify',
+            body:    textOf(verify),
+            isTip:   true
+          });
+        }
+      });
+
       /* Tip / trick boxes */
       sec.querySelectorAll('.tip-trick, .tip-box, .callout').forEach(function (tip) {
         var label = tip.querySelector('.tip-trick-label, .callout-label, strong');
@@ -184,8 +215,10 @@
         }
       });
 
-      /* Numbered / comparison list items (qa-row, qa-card, step-card, etc.) */
-      sec.querySelectorAll('.qa-card, .step-card, .pro-con-card, .comparison-card').forEach(function (card) {
+      /* Numbered / comparison list items (qa-row, qa-card, etc.) — .step-card
+         has its own dedicated extractor above and is deliberately excluded
+         here so it isn't double-processed. */
+      sec.querySelectorAll('.qa-card, .pro-con-card, .comparison-card').forEach(function (card) {
         var head = card.querySelector('h3, .card-label, strong');
         var body = card.querySelector('p');
         if (head) {
