@@ -437,6 +437,15 @@
     deck.appendChild(buildEnd());
 
     /* Init Reveal */
+    if (typeof Reveal === 'undefined') {
+      deck.innerHTML =
+        '<section><h2>Slide engine did not load</h2>' +
+        '<p>reveal.js is missing. It is vendored at ' +
+        '<code>assets/vendor/reveal/</code> — check the file is present and that this deck is ' +
+        'being served over HTTP (open it via <code>./serve</code>, not <code>file://</code>).</p>' +
+        '<p>Fallback: present from the lesson pages directly.</p></section>';
+      return;
+    }
     Reveal.initialize({
       hash:            true,
       transition:      'fade',
