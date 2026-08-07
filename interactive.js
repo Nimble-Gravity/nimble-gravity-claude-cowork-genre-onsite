@@ -70,25 +70,9 @@
           answer: 1 }
       ]
     },
+    // Mounted at the end of 09-anatomy-of-a-skill.html (data-ix-pass="4").
     m2: {
       label: 'Day 2 · Skills & Everyday Workflows',
-      questions: [
-        { q: 'What is the safe default model for everyday work?',
-          options: ['Opus for everything — it is the most capable', 'Sonnet by default, stepping up to Opus only for hard reasoning', 'Haiku for everything, to minimize cost'],
-          answer: 1 },
-        { q: 'Before running a task, what should you connect?',
-          options: ['A parent folder, so it has everything it might need', 'Only the folder the task needs', 'Every folder up front, so you never have to grant again'],
-          answer: 1 },
-        { q: 'What makes a strong first use case?',
-          options: ['A quick factual question you could just ask in chat', 'A repetitive, document-heavy job that ends in a deliverable', 'A one-off creative task with no source files'],
-          answer: 1 },
-        { q: 'What standing risk comes with untrusted external content?',
-          options: ['Prompt injection — hidden instructions in a page, email, or document', 'The model forgetting your earlier messages', 'Your files being uploaded to train the model'],
-          answer: 0 }
-      ]
-    },
-    m3: {
-      label: 'Day 3 · Use Cases + Governance',
       questions: [
         { q: 'What comes first when authoring a skill, per Anthropic?',
           options: ['Polished, exhaustive documentation', 'The evaluations — evals before docs', 'A long list of rules in ALL-CAPS'],
@@ -101,11 +85,19 @@
           answer: 1 },
         { q: 'The fastest way to start a skill from working text is to…',
           options: ['Write the SKILL.md by hand from a blank file', 'Paste the working prompt and ask Claude to turn it into a skill', 'Wait for Anthropic to publish an official one'],
-          answer: 1 }
+          answer: 1 },
+        { q: 'What is the safe default model for everyday work?',
+          options: ['Opus for everything — it is the most capable', 'Sonnet by default, stepping up to Opus only for hard reasoning', 'Haiku for everything, to minimize cost'],
+          answer: 1 },
+        { q: 'What standing risk comes with untrusted external content?',
+          options: ['Prompt injection — hidden instructions in a page, email, or document', 'The model forgetting your earlier messages', 'Your files being uploaded to train the model'],
+          answer: 0 }
       ]
     },
-    m4: {
-      label: 'Advanced · Build Your Own',
+    // Day 3 governance bank. Not mounted yet — the Day 3 governance lesson
+    // (17-governance-snapshot.html) mounts it with data-ix-pass="4".
+    m3: {
+      label: 'Day 3 · Use Cases + Governance',
       questions: [
         { q: 'A colleague needs to pull usage reports for the steering committee — nothing else. What should they get?',
           options: ['The Owner role, so they are not blocked', 'A Custom role with the Analytics admin area', 'A shared login with an existing Owner'],
@@ -129,6 +121,13 @@
           options: ['On the Claude Cowork interface — its controls are enough', 'On Anthropic’s audited surfaces — the API or Claude Code Enterprise — not the Cowork interface', 'Anywhere — the audit gap does not matter for regulated work'],
           answer: 1 }
       ]
+    },
+    // Advanced has no lessons and no knowledge check under the three-day spine.
+    // The key stays because the progress readout and the certificate in
+    // pages/workshops/my-progress.html iterate m1..m4. Never mounted.
+    m4: {
+      label: 'Advanced · Build Your Own',
+      questions: []
     }
   };
 
