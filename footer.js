@@ -47,12 +47,12 @@
       '<div class="nav-footer-copy">' +
         '<div class="nav-footer-kicker">Nimble Gravity · Cowork Enablement</div>' +
         '<div class="nav-footer-title">Cowork Workshop · Claude Cowork</div>' +
-        '<div class="nav-footer-text">A four-workshop enablement program that gets knowledge workers productive with Cowork — getting set up, real use cases by industry, building your first skill, then plugins, team deployment, and governance.</div>' +
+        '<div class="nav-footer-text">A three-day onsite enablement program that gets Gen Re knowledge workers productive with Cowork — personal setup and a first verified run, skills built from everyday workflows, then your own use cases and a governance snapshot.</div>' +
         '<div class="nav-footer-stages" aria-label="Workshops">' +
-          '<span class="nav-footer-stage">Workshop 1 · Setup &amp; Foundations</span>' +
-          '<span class="nav-footer-stage">Workshop 2 · Use Cowork</span>' +
-          '<span class="nav-footer-stage">Workshop 3 · Build a Skill</span>' +
-          '<span class="nav-footer-stage">Workshop 4 · Govern &amp; Roll Out</span>' +
+          '<span class="nav-footer-stage">Day 1 · Foundations &amp; Personal Value</span>' +
+          '<span class="nav-footer-stage">Day 2 · Skills &amp; Everyday Workflows</span>' +
+          '<span class="nav-footer-stage">Day 3 · Use Cases + Governance</span>' +
+          '<span class="nav-footer-stage">Advanced · Build Your Own</span>' +
         '</div>' +
       '</div>' +
       '<a href="https://nimblegravity.com/" class="brand-link" target="_blank" rel="noopener noreferrer" aria-label="Nimble Gravity">' +

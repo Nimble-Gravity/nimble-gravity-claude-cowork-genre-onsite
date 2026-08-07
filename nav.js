@@ -8,89 +8,71 @@
       id: 'm1',
       folder: 'training',
       hub: 'pages/workshops/module-1-workshop.html',
-      label: 'Workshop 1',
-      subLabel: 'Setup & Foundations',
+      label: 'Day 1',
+      subLabel: 'Foundations & Personal Value',
       color: '#2f6b66',
       navColor: '#4f9990',
-      filePrefix: ['01-', '02-', '03-'],
+      filePrefix: ['01-', '02-', '06-', '03-'],
       pages: [
         '01-what-is-cowork',
         '02-getting-set-up',
+        '06-folder-access-walkthrough',
         '03-first-cowork-session'
       ],
       labels: [
         'What Is Cowork',
         'Get Set Up',
-        'First Session'
+        'Workshop Folder',
+        'Personalize & Verify'
       ]
     },
     {
       id: 'm2',
       folder: 'training',
       hub: 'pages/workshops/module-2-workshop.html',
-      label: 'Workshop 2',
-      subLabel: 'Use Cowork',
+      label: 'Day 2',
+      subLabel: 'Skills & Everyday Workflows',
       color: '#8c47e4',
       navColor: '#c4b5fd',
-      filePrefix: ['04-', '05-', '06-', '07-'],
+      filePrefix: ['05-', '09-'],
       pages: [
-        '04-use-cases-by-industry',
         '05-working-effectively',
-        '06-folder-access-walkthrough',
-        '07-use-cowork-lab'
+        '09-anatomy-of-a-skill'
       ],
       labels: [
-        'By Industry',
-        'Work Effectively',
-        'Folder Access',
-        'Use Cowork Lab'
+        'Walk a Workflow',
+        'Skill Anatomy'
       ]
     },
     {
       id: 'm3',
       folder: 'training',
       hub: 'pages/workshops/module-3-workshop.html',
-      label: 'Workshop 3',
-      subLabel: 'Build a Skill',
+      label: 'Day 3',
+      subLabel: 'Use Cases + Governance',
       color: '#2b6880',
       navColor: '#7dd3e8',
-      filePrefix: ['08-', '09-', '10-', '11-'],
+      filePrefix: ['04-', '17-'],
       pages: [
-        '08-decompose-your-workflow',
-        '09-anatomy-of-a-skill',
-        '10-make-it-a-skill',
-        '11-build-a-skill-lab'
+        '04-use-cases-by-industry',
+        '17-governance-snapshot'
       ],
       labels: [
-        'Decompose',
-        'Skill Anatomy',
-        'Make It a Skill',
-        'Build a Skill Lab'
+        'Use-Case Ideation',
+        'Governance Snapshot'
       ]
     },
     {
       id: 'm4',
       folder: 'training',
       hub: 'pages/workshops/module-4-workshop.html',
-      label: 'Workshop 4',
-      subLabel: 'Govern & Roll Out',
+      label: 'Advanced',
+      subLabel: 'Build Your Own',
       color: '#e8a317',
       navColor: '#f2c56b',
-      filePrefix: ['12-', '13-', '14-', '15-', '16-'],
-      pages: [
-        '12-skills-to-plugins',
-        '13-roles-and-access',
-        '14-set-up-and-govern',
-        '15-analytics-and-adoption',
-        '16-the-control-room'
-      ],
-      labels: [
-        'Package as a Plugin',
-        'Roles & Access',
-        'Set Up & Govern',
-        'Analytics & Adoption',
-        'The Control Room'
-      ]
+      filePrefix: [],
+      pages: [],
+      labels: []
     }
   ];
 

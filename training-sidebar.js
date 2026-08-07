@@ -3,51 +3,35 @@
 
   var MODULES = [
     {
-      label: 'Workshop 1',
-      subLabel: 'Setup & Foundations',
+      label: 'Day 1',
+      subLabel: 'Foundations & Personal Value',
       color: '#4f9990',
       slidesFile: 'module-1-slides.html',
       lessons: [
-        { file: '01-what-is-cowork.html',        title: 'What Is Cowork' },
-        { file: '02-getting-set-up.html',        title: 'Get Set Up' },
-        { file: '03-first-cowork-session.html',  title: 'First Session', exercise: true }
+        { file: '01-what-is-cowork.html',            title: 'What Is Cowork' },
+        { file: '02-getting-set-up.html',            title: 'Get Set Up' },
+        { file: '06-folder-access-walkthrough.html', title: 'Workshop Folder' },
+        { file: '03-first-cowork-session.html',      title: 'Personalize & Verify', exercise: true }
       ]
     },
     {
-      label: 'Workshop 2',
-      subLabel: 'Use Cowork',
+      label: 'Day 2',
+      subLabel: 'Skills & Everyday Workflows',
       color: '#c4b5fd',
       slidesFile: 'module-2-slides.html',
       lessons: [
-        { file: '04-use-cases-by-industry.html',     title: 'By Industry' },
-        { file: '05-working-effectively.html',       title: 'Work Effectively' },
-        { file: '06-folder-access-walkthrough.html', title: 'Folder Access' },
-        { file: '07-use-cowork-lab.html',            title: 'Use Cowork Lab', exercise: true }
+        { file: '05-working-effectively.html',  title: 'Walk a Workflow' },
+        { file: '09-anatomy-of-a-skill.html',   title: 'Skill Anatomy' }
       ]
     },
     {
-      label: 'Workshop 3',
-      subLabel: 'Build a Skill',
+      label: 'Day 3',
+      subLabel: 'Use Cases + Governance',
       color: '#7dd3e8',
       slidesFile: 'module-3-slides.html',
       lessons: [
-        { file: '08-decompose-your-workflow.html', title: 'Decompose' },
-        { file: '09-anatomy-of-a-skill.html',      title: 'Skill Anatomy' },
-        { file: '10-make-it-a-skill.html',         title: 'Make It a Skill' },
-        { file: '11-build-a-skill-lab.html',       title: 'Build a Skill Lab', exercise: true }
-      ]
-    },
-    {
-      label: 'Workshop 4',
-      subLabel: 'Govern & Roll Out',
-      color: '#f2c56b',
-      slidesFile: 'module-4-slides.html',
-      lessons: [
-        { file: '12-skills-to-plugins.html',       title: 'Package as a Plugin' },
-        { file: '13-roles-and-access.html',        title: 'Roles & Access' },
-        { file: '14-set-up-and-govern.html',       title: 'Set Up & Govern' },
-        { file: '15-analytics-and-adoption.html',  title: 'Analytics & Adoption' },
-        { file: '16-the-control-room.html',        title: 'The Control Room', exercise: true }
+        { file: '04-use-cases-by-industry.html', title: 'Use-Case Ideation' },
+        { file: '17-governance-snapshot.html',   title: 'Governance Snapshot' }
       ]
     }
   ];
