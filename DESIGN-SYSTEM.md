@@ -80,7 +80,13 @@ What the engine extracts from each lesson:
   | `.sg-card` | `.sg-header` / `.sg-title` | `.sg-title` + `<p>` |
   | `.reflect-card` | `.reflect-q` | `.reflect-hint` |
   | `.qa-card` / `.pro-con-card` / `.comparison-card` | `h3` / `.card-label` / `strong` | `<p>` |
-  | `.step-card` | `Step N` (`.step-num`) + first sentence of `.step-do` | rest of `.step-do` + `.step-why`; `.step-verify` becomes a second bullet (styled amber on the slide, same as a tip) |
+
+- **One slide per `.step-card`** — unlike every other class above, `.step-card` doesn't feed the
+  4-bullets-per-slide pool. Each card gets its own slide: heading = `Step N` (`.step-num`) + the first
+  sentence of `.step-do`; subtitle = the rest of `.step-do` + `.step-why`; `.step-verify` (if present)
+  rides along as that same slide's callout, styled amber, the same representation `.tip-trick` uses.
+  A section's step slides sit before or after its other content slides, matching whichever came first
+  in the markup.
 
 `.step-card` markup contract (numbered "do this, and here's why" steps, added for onsite delivery):
 a `.step-list` wrapper holds `.step-card` children, each with a `.step-num` (integer), a `.step-do`
@@ -103,10 +109,10 @@ with no `.step-do` is skipped by the extractor.
 
 Notes for authors:
 
-- The four classes that are **styled in `shared.css`** are `.insight-card`, `.dev-card`, `.bp-item`,
-  and `.tip-trick` — prefer these so the lesson page and the slide both look right. The others
-  (`.comp-card`, `.hy-card`, `.sg-card`, `.comparison-card`, …) extract to slides but were page-scoped
-  in the originals; add page CSS if you use them.
+- The classes that are **styled in `shared.css`** are `.insight-card`, `.dev-card`, `.bp-item`,
+  `.tip-trick`, and `.step-card` — prefer these so the lesson page and the slide both look right. The
+  others (`.comp-card`, `.hy-card`, `.sg-card`, `.comparison-card`, …) extract to slides but were
+  page-scoped in the originals; add page CSS if you use them.
 - `<em>` inside titles is preserved on slides; bodies render in full (no truncation). Sections with
   more than four cards split onto continuation slides ("(cont.)"), and long slides get a density
   class (`sl-dense` / `sl-dense-2`) that scales text down to fit the 1280×720 frame.

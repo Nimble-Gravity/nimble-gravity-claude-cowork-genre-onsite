@@ -38,6 +38,18 @@
     return clone.innerHTML;
   }
 
+  /**
+   * Index of the period that ends the first sentence of `text`, or -1 if
+   * none is found. A period only counts as a sentence end when it's
+   * followed by whitespace + a capital letter, or by the end of the string
+   * — this keeps "e.g.", "v2.1", and "README.docx" from being mistaken for
+   * sentence boundaries.
+   */
+  function firstSentenceEnd(text) {
+    var m = /\.(?=\s+[A-Z]|\s*$)/.exec(text);
+    return m ? m.index : -1;
+  }
+
   /* ─── Extraction ────────────────────────────────────────── */
 
   /**
@@ -76,6 +88,7 @@
 
       var isDark = sec.classList.contains('section-dark');
       var bullets = [];
+      var stepSlides = [];
 
       /* Insight cards */
       sec.querySelectorAll('.insight-card').forEach(function (card) {
@@ -118,34 +131,34 @@
       });
 
       /* Step cards (.step-card) — numbered "what → why" steps, onsite delivery.
-         One content bullet per card (heading = "Step N — first sentence of
-         .step-do", body = remainder of .step-do + .step-why); .step-verify
-         becomes a second bullet using the same isTip callout representation
-         as the tip/trick boxes below. */
+         Each card is its own slide (not a chunked bullet): the client asked
+         for steps presented one screen at a time, not four crowded onto one
+         slide. Heading = "Step N — first sentence of .step-do"; the rest of
+         .step-do plus .step-why becomes the slide subtitle; .step-verify (if
+         present) rides along as that same slide's single isTip bullet — the
+         engine's existing callout representation — so the check never
+         separates from the step it verifies via bullet chunking. */
       sec.querySelectorAll('.step-card').forEach(function (card) {
         var num    = card.querySelector('.step-num');
         var doEl   = card.querySelector('.step-do');
         var why    = card.querySelector('.step-why');
         var verify = card.querySelector('.step-verify');
         if (!doEl) return;
-        var doText   = textOf(doEl);
-        var firstDot = doText.indexOf('.');
-        var heading  = 'Step ' + (num ? textOf(num) : '') + ' — ' +
-                       (firstDot > 0 ? doText.slice(0, firstDot) : doText);
+        var doText = textOf(doEl);
+        var endIdx = firstSentenceEnd(doText);
+        var heading = 'Step ' + (num ? textOf(num) : '') + ' — ' +
+                      (endIdx > 0 ? doText.slice(0, endIdx) : doText);
         var bodyBits = [];
-        if (firstDot > 0 && firstDot < doText.length - 1) bodyBits.push(doText.slice(firstDot + 1).trim());
+        if (endIdx > 0 && endIdx < doText.length - 1) bodyBits.push(doText.slice(endIdx + 1).trim());
         if (why) bodyBits.push(textOf(why));
-        bullets.push({
-          heading: heading,
-          body:    bodyBits.join(' ')
+        stepSlides.push({
+          type:     'content',
+          dark:     isDark,
+          eyebrow:  '',
+          title:    heading,
+          subtitle: bodyBits.join(' '),
+          bullets:  verify ? [{ heading: 'Verify', body: textOf(verify), isTip: true }] : []
         });
-        if (verify) {
-          bullets.push({
-            heading: 'Verify',
-            body:    textOf(verify),
-            isTip:   true
-          });
-        }
       });
 
       /* Tip / trick boxes */
@@ -238,16 +251,42 @@
       }
       if (!chunks.length) chunks.push([]);
 
-      chunks.forEach(function (chunk, idx) {
-        slides.push({
+      var contentSlides = chunks.map(function (chunk, idx) {
+        return {
           type:     'content',
           dark:     isDark,
           eyebrow:  textOf(eyeEl),
           title:    innerOf(h2) + (idx > 0 ? ' <span class="sl-cont">(cont.)</span>' : ''),
           subtitle: idx === 0 ? textOf(subEl) : '',
           bullets:  chunk
-        });
+        };
       });
+
+      /* Where do the step slides go relative to the section's other content
+         slides? Sections with no step cards are unaffected (stepSlides is
+         empty either way). When a section mixes a step list with other
+         slide-worthy cards, keep the same before/after relationship the
+         markup has: if the step list appears before the section's other
+         cards in the document, its slides lead; otherwise they follow. */
+      var stepFirst = false;
+      if (stepSlides.length) {
+        var firstStepCard  = sec.querySelector('.step-card');
+        var firstOtherCard = sec.querySelector(
+          '.insight-card, .dev-card, .comp-card, .tip-trick, .tip-box, .callout, ' +
+          '.bp-item, .hy-card, .sg-card, .reflect-card, .qa-card, .pro-con-card, .comparison-card'
+        );
+        if (firstStepCard && firstOtherCard) {
+          stepFirst = !!(firstStepCard.compareDocumentPosition(firstOtherCard) & Node.DOCUMENT_POSITION_FOLLOWING);
+        }
+      }
+
+      if (stepFirst) {
+        stepSlides.forEach(function (s) { slides.push(s); });
+        contentSlides.forEach(function (s) { slides.push(s); });
+      } else {
+        contentSlides.forEach(function (s) { slides.push(s); });
+        stepSlides.forEach(function (s) { slides.push(s); });
+      }
     });
 
     return slides;
