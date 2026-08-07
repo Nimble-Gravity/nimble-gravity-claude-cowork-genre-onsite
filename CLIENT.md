@@ -11,32 +11,43 @@ about Cowork itself.
   Services, Gen Re Global IT — Enterprise Data and AI Services** (Stamford). Items still
   needing confirmation are marked **[CONFIRM]**.
 
-## 0. Engagement facts (confirmed by the client — 2026-07-27)
+## 0. Engagement facts (confirmed by the client — 2026-07-27; updated by the 07-31 call)
 
 Feedback from Chris Engelhardt (2026-07-27) established the following; these override the
-pre-discovery assumptions below where they conflict:
+pre-discovery assumptions below where they conflict. The 2026-07-31 call then restructured
+the engagement into a three-day onsite and corrected the cohort and proof-point list below —
+where this section and the 07-31 call disagree, the call is authoritative.
 
-- **The pilot cohort is Gen Re Global IT**, not underwriters. Anchor use cases for the
-  workshops: **documentation generation** (legacy Excel/VBA and R models → process docs and
-  build-ready specs — feeds their Python-platform modernization) and **technical review of
-  working code** (validated in their pilot as "an additional pair of eyes, not a replacement
-  for technical review").
-- **The M365 connector is NOT available at Gen Re — it is under IT Security review.** All
-  materials teach local-folder-first; the facilitator says exactly that if asked. Connector
-  setup content was removed from the participant materials.
+- **The pilot cohort is manager-level Gen Re business people — actuarial, underwriting,
+  claims, and finance** (not Global IT). This superseded an earlier 07-27 read that anchored
+  the workshops on Global IT's own VBA-documentation and code-review use cases; those are
+  **out of scope** for this cohort. Participant materials open with this framing directly:
+  "Gen Re managers and business leaders — actuarial, underwriting, claims, finance. No prior
+  agentic-AI experience assumed, and nothing here requires you to write code" (`index.html`).
+- **The M365 connector is NOT available at Gen Re — it is under IT Security review**, though
+  Gen Re (Charles) is pushing to have it live before Day 1. All materials teach
+  local-folder-first regardless; the facilitator says exactly that if the connector isn't
+  there yet.
 - **Pre-work and homework are optional** and framed that way everywhere; key components are
   covered live in each session. (Chris: "I am not sure people will do that.")
 - **The site carries a "piloting scalable training materials" note** (homepage + Start Here)
   so incomplete/generic material is expected rather than jarring.
 - **No draft-pending-sign-off banner and no acknowledgment gate** on the Rules of the Road —
   removed at Chris's request.
-- **Gen Re runs a Claude pilot community** with documented wins to cite (their own examples):
-  IFRS 18 impact analysis (half a day → ~1 hour), expected-loss/pricing view from a 70-tab
-  submission (minutes; property reliable, casualty needed careful review), treaty-and-amendment
-  interpretation, claims-outlier segmentation, a disability-income claim form redesign
-  (~4 minutes), legacy Excel/VBA → Python spec translation, R scripts → process docs, and code
-  review that once caught an error human review missed — alongside false positives. Use these
-  as proof points; never oversell beyond their own caveats.
+- **Gen Re runs a Claude pilot community** with documented wins to cite (their own examples).
+  **As of the 2026-07-31 call, treaty-and-amendment interpretation is OUT as a proof point** —
+  machine-reading contract/treaty wording is a live nerve for this client (the reason no
+  Anthropic-published plugin pack is named anywhere in the materials either — see
+  `cowork-context.md` §Module 2), and the client was explicit that raising it derails the
+  engagement. Do not cite it, reword it, or gesture at it. The remaining, still-usable proof
+  points: IFRS 18 impact analysis
+  (half a day → ~1 hour), an expected-loss/pricing view drafted from a 70-tab submission
+  (minutes; some of it came back clean and some needed real correction, which is rather the
+  point — don't frame this as a property-vs-casualty quality comparison between named business
+  units), claims-outlier segmentation, a disability-income claim form redesign (~4 minutes),
+  legacy Excel/VBA → Python spec translation, R scripts → process docs, and code review that
+  once caught an error human review missed — alongside false positives. Use these as proof
+  points; never oversell beyond their own caveats.
 
 
 ---

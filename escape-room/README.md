@@ -1,4 +1,4 @@
-# The Skill Vault — Virtual Escape Room (Workshop 3)
+# The Skill Vault — Virtual Escape Room (Day 2)
 
 A web-based escape room that gates the hands-on lab exercises for the Claude
 Cowork training workshop. Teams complete lab steps in Cowork; the lab artifacts

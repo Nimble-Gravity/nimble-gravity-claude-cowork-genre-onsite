@@ -20,21 +20,27 @@ grounded in (from the content-research report). Sources and date-sensitive cavea
 - **The program is the IP:** a repeatable microsite + skills library + adoption dashboard NG runs with clients.
   Reuse Anthropic's own training/material where possible; layer NG industry use cases on top.
 
-## 2. The 4-module curriculum
+## 2. The three-day onsite arc
 
-Each module = **two learning lessons + one hands-on lab**. Delivered over two weeks (two modules/week)
-or a single 6-hour intensive. Homework between sessions; office hours in parallel; train-the-trainers.
+*(Restructured 2026-08-07 from the original four-module, two-week/intensive curriculum into a
+three-day onsite for Gen Re, plus a fourth-day-style Advanced block. Hub filenames stay
+`module-1-workshop.html`…`module-4-workshop.html`; the program itself is now framed as Days, not
+Workshops/Modules — see `client-notes/onsite-agenda.md` for the client's own agenda.)*
 
-| Module | Lessons |
-|---|---|
-| **1 · Setup & Foundations** | What Is Cowork? · Get Set Up · First Cowork Session (lab) |
-| **2 · Use Cowork** | Use Cases by Industry · Working Effectively · Use Cowork Lab |
-| **3 · Build a Skill** | Decompose Your Workflow · Anatomy of a Skill · Build a Skill Lab |
-| **4 · Govern & Roll Out** | Package It as a Plugin · Roles & Access (RBAC) · Set Up & Govern · Analytics & Adoption · The Control Room (lab) |
+Each day is a 2-hour hybrid session (Day 3 adds a 1.5 h Advanced block back-to-back). Pre-work is
+optional but encouraged; office hours run between days.
 
-Module 4 carries **five** slots (12–16) — four teaching lessons plus the lab — because the governance
-pivot (2026-07-21) split RBAC, setup/governance, and analytics into their own lessons and moved the
-capstone deliverable inside the lab.
+| Day | Lessons | Lab |
+|---|---|---|
+| **Day 1 · Foundations & Personal Value** (Tue) | What Is Cowork? · Get Set Up · The Workshop Folder · Personalize & Verify (lessons 01, 02, 06, 03) | First Cowork session, live before/after demo |
+| **Day 2 · Skills & Everyday Workflows** (Wed) | Working Effectively · Anatomy of a Skill (lessons 05, 09) | The Skill Vault escape room |
+| **Day 3 · Gen Re Use Cases + Governance Snapshot** (Thu) | Use-Case Ideation · Governance Snapshot (lessons 04, 17) | Live skill build, from a room-selected use case |
+| **Advanced · Build Your Own** (Thu, +1.5 h) | No lessons — a bring-your-own-use-case clinic | Guided engagement on participants' own workflows |
+
+Lessons 07, 08, 10, 11, 12, 13, 14, 15, 16 and the `control-room/` capstone are **retired** from the
+live spine (they carried the old Modules 2–4's back half). They stay on disk and are reachable only
+from `resources.html`'s "Deep dives (reference only)" section, for self-study — never linked from a
+lesson, hub, or the nav/sidebar a participant navigates day-to-day.
 
 ## 3. Researched facts to build on (from the content report)
 
@@ -67,15 +73,19 @@ and the machine awake for tasks. Launched Jan 12 2026 (macOS preview); GA Apr 9 
 - **Failure modes:** **prompt injection** is the primary risk (mitigated, not solved — least privilege, limit
   browser to trusted sites, prefer Ask-before-acting; Opus 4.5+ most robust). **Context limits:** auto-compaction;
   decompose long work into **slices** with artifacts between them.
-- **Industry seeds (open-sourced by Anthropic):** `anthropics/financial-services` (Pitch Agent, GL Reconciler,
-  KYC Screener — "AI drafts, humans sign off"); `anthropics/claude-for-legal` (`/review-contract`, `/triage-nda`,
-  cold-start interview → practice profile, "draft for attorney review"); `anthropics/knowledge-work-plugins`.
-- **Gen Re approval status (client fact, 2026-07-28):** only the **Legal plugin** (`anthropics/claude-for-legal`)
-  is approved for use at Gen Re. No other Anthropic pack/plugin (financial-services, knowledge-work, life
-  sciences) is approved — content must speak to the approved plugin only and route everything else through the
-  Workshop 4 governance/review process. Don't present unapproved packs as installable seeds.
+- **Industry examples are generic reinsurance workflows — no Anthropic plugin packs are referenced.**
+  Content builds its own reinsurance-flavored scenarios (treaty-submission triage, quarterly experience-summary
+  drafting, document comparison against a checklist) instead of naming or demoing any Anthropic-published pack.
+- **Gen Re approval status (client fact, 2026-07-28, reconfirmed 2026-07-31):** raising an Anthropic plugin
+  pack by name — especially anything that reads or drafts contract/treaty wording — is a live nerve for this
+  client; it risks derailing the engagement given the internal review difficulty around their insurance
+  contracts. No pack is approved for use at Gen Re today. Content must not name or demo any specific
+  Anthropic plugin as installable; any plugin adoption routes through the governance/review process covered
+  in Day 3's governance snapshot (lesson 17).
 
 ### Module 3 — skills (highest-scrutiny; quote Anthropic verbatim, date-stamp)
+*(Now taught in Day 2's lesson 09, "Anatomy of a Skill" — the scrutiny rule still applies: quote
+Anthropic's skill-authoring best practices verbatim and date-stamp them.)*
 - A skill = a folder with **`SKILL.md`** (YAML frontmatter + Markdown body), on the open **Agent Skills** standard;
   the same file runs in Claude Cowork and Claude Code.
 - **Frontmatter:** `name` ≤ 64 chars, lowercase/numbers/hyphens, gerund form, no "anthropic"/"claude".

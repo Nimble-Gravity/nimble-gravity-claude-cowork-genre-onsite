@@ -27,9 +27,11 @@ Rules:
 
 | Key | File | What to replace |
 |---|---|---|
-| `industry-usecases-m2` | `pages/training/04-use-cases-by-industry.html` | The 2–3 seed industry use cases, re-cast to the client's verticals. |
-| `canonical-scenario-m2` | `pages/training/07-use-cowork-lab.html` | The canonical lab scenario, set to the client's real workflow. |
-| `adoption-dashboard-m4` | `pages/training/15-analytics-and-adoption.html` | Link to the client's (or NG's) adoption-dashboard reference build. |
+| `industry-usecases-m2` | `pages/training/04-use-cases-by-industry.html` | The 2–3 seed industry use cases, re-cast to the client's verticals. Live Day 3 lesson. |
+| `canonical-scenario-m2` | `pages/training/07-use-cowork-lab.html` | The canonical lab scenario, set to the client's real workflow. `07` is a **retired** lesson (self-study deep dive off `resources.html` only) — the slot still fires there, but it's no longer part of the live three-day spine. |
+| `adoption-dashboard-m4` | `pages/training/15-analytics-and-adoption.html` | Link to the client's (or NG's) adoption-dashboard reference build. `15` is a **retired** lesson (self-study deep dive only); the live spine's analytics coverage now lives condensed inside `17-governance-snapshot.html`, which does not currently carry this slot. |
+
+This table lists only the slots tied to the lesson remap; the repo has more `data-client-slot` regions on portal pages (sponsor message, data-classification examples, who-to-ask contacts, schedule dates, feedback-form links) — `grep -rn 'data-client-slot' .` is the source of truth for the full current list.
 
 Add new slots as the engagement needs them; record each one in this table.
 
@@ -41,15 +43,16 @@ Add new slots as the engagement needs them; record each one in this table.
 
 ## Stack-specific setup tracks
 
-`pages/training/02-getting-set-up.html` encodes connector setup by stack (Microsoft 365 / Google and other shops) using the `dev-grid-2` + `.dev-card` pattern. That two-column pattern is the reusable home for stack variation — to add another stack, add a `.dev-card`; nothing structural changes.
+`pages/training/02-getting-set-up.html` is **Microsoft 365 only** on this client branch (Gen Re's stack; the M365 connector section uses the `dev-grid-2` + `.dev-card` pattern for its two facts, not for stack variation). If a future client needs a different stack, that two-column pattern is the reusable home for it — add a `.dev-card` per stack; nothing structural changes. There is currently no live second-stack example to copy from.
 
-## Adding or renaming a lesson? Update all 5 manifests
+## Adding or renaming a lesson? Update all 4 manifests
 
-This is the one cross-cutting gotcha. The lesson list is duplicated in **five** places and they drift silently:
+This is the one cross-cutting gotcha. The lesson list is duplicated in **four** places and they drift silently:
 1. `nav.js` → `CRAFTS[n]` (`filePrefix[]` + positionally-zipped `pages[]` / `labels[]`)
 2. `training-sidebar.js` → `MODULES[n].lessons[]`
 3. `pages/training/module-N-slides.html` → `window.SLIDES_CFG.lessons[]`
-4. `footer.js` → stage chips (only if a module *name* changes)
-5. `index.html` → the `.toc-list` **and** the `.module-grid` (the list is hardcoded twice here)
+4. `footer.js` → stage chips (only if a day's *name* changes)
 
-New lessons **append** a new numeric prefix (13+) and are inserted at the right index in each array — display order is array order, not filename order. Always add the new prefix to the owning module's `filePrefix[]` in `nav.js`, or the page renders with an empty sub-nav.
+`index.html` is **not** part of this list on the current (onsite) structure — it's an executive summary of the three days plus Advanced (cards → hubs), not a lesson catalog, so it carries no per-lesson list to keep in sync.
+
+New lessons **append** a new numeric prefix (the live spine currently runs 01–06, 09, 17; retired deep-dives hold 07, 08, 10–16 — pick an unused number above the highest in use) and are inserted at the right index in each array — display order is array order, not filename order. Always add the new prefix to the owning day's `filePrefix[]` in `nav.js`, or the page renders with an empty sub-nav.
