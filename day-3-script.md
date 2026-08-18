@@ -290,8 +290,8 @@ especially.
 
 **[SAY] — 1. What's connected** *([§Connected](pages/training/17-governance-snapshot.html#connected))*:
 *"**Local folders — yes**, the ones you grant, and only those. **Microsoft 365 — read-only**; it's live at
-Gen Re — Claude can read mail, calendar, and SharePoint/OneDrive, but it can't send email or write anything
-back — and nothing you did this week depended on it. **Anything else — review first.** And one thing worth
+Gen Re — Claude can read mail, calendar, Teams messages, and SharePoint/OneDrive, but it can't send email or
+write anything back — and nothing you did this week depended on it. **Anything else — review first.** And one thing worth
 saying plainly: there are no per-file permissions. The folder grant **is** the control. That's why rule one
 all week was 'work only in the workshop folder'."*
 

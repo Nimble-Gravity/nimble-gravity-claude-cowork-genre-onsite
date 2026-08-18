@@ -41,12 +41,14 @@ skill is a separate step and is what creates the skills folder.
 Run it in three moves; see `reference/interview.md` for the harvest checklist, the
 adaptive question bank, and the file templates.
 
-1. **Harvest first.** If an M365 (or other) connector is available, read everything you
-   reasonably can — name, title, department and org position, manager, frequent
-   collaborators, recurring meetings, the documents and data they work with, current
-   priorities, and their writing voice from sent mail — and build a draft profile, then
-   confirm it rather than re-asking. **If nothing is connected or readable, do not fail —
-   just ask the questions directly to fill every gap.**
+1. **Harvest first.** If the M365 (or another) connector is available, read everything you
+   reasonably can before asking anything — name, title, department and org position,
+   manager, frequent collaborators, recurring meetings, the documents and data they work
+   with, current priorities, and their writing voice from sent mail and Teams messages —
+   and build a draft profile. Use it to skip questions it already answered and to steer
+   which ones matter most in what follows, confirming only what's uncertain rather than
+   re-asking from scratch. **If nothing is connected or readable, do not fail — just ask
+   the questions directly to fill every gap.**
 2. **Adapt to the role and domain.** Work out what the user does and in what field
    (finance, law, healthcare, sales, engineering, ops, HR — anything), then generate the
    questions that matter for *that* work. Don't read a fixed script; let each answer

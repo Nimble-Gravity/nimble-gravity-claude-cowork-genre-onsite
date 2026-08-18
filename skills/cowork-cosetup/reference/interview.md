@@ -15,9 +15,12 @@ If M365 (or any connector) is on, read before you ask and build a draft profile 
 - **Cadence** — recurring meetings and deadlines; what their week actually looks like.
 - **Work** — the documents, systems, and data they touch; current projects and priorities
   from recent threads.
-- **Voice** — tone, length, and sign-off from their sent mail.
+- **Voice** — tone, length, and sign-off from their sent mail and Teams messages.
 
-Then **confirm** what you found instead of re-asking it.
+Then use it to run a shorter, sharper interview rather than a full one: confirm what you
+found in a line instead of re-asking it, skip any topic it already answered outright, and
+let what it told you about their role and priorities decide which of the core-coverage
+questions below matter most for them.
 
 **No connector, or nothing readable? Do not fail.** Skip the harvest and ask the questions
 below directly. Either path must finish and produce the files.

@@ -30,6 +30,9 @@ where this section and the 07-31 call disagree, the call is authoritative.
   still teach local-folder-first as the primary path; the connector is additional context, not
   a dependency. This is our understanding as of 2026-08-17; if it turns out not to be live by
   Day 1, the fallback is unaffected — every exercise still runs from the local workshop folder.
+  **Scope now also documented as including Teams messages** (added to materials 2026-08-18)
+  **[CONFIRM]** — the 08-17 confirmation above predates this and didn't mention Teams; get this
+  back-confirmed with Chris before it's relied on live in the room, and drop the tag once it is.
 - **Pre-work and homework are optional** and framed that way everywhere; key components are
   covered live in each session. (Chris: "I am not sure people will do that.")
 - **The site carries a "piloting scalable training materials" note** (homepage + Start Here)

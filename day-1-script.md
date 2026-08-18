@@ -148,9 +148,9 @@ week, and I'll be repeating it enough that you'll get bored of it."*
 isn't in Anthropic's centralized audit logs today, which is exactly why rules one and two exist. The full
 answer is Day 3, and I'll give it to you properly there."* Do not improvise governance depth on Day 1.
 
-**[NOTE]** M365 connector: *"It's live and read-only — Claude can read mail, calendar, and SharePoint/OneDrive,
-but it can't send email or write anything back. Nothing in these three days depends on it — everything runs
-from the local folder."* That is the whole answer. Move.
+**[NOTE]** M365 connector: *"It's live and read-only — Claude can read mail, calendar, Teams messages, and
+SharePoint/OneDrive, but it can't send email or write anything back. Nothing in these three days depends on it
+— everything runs from the local folder."* That is the whole answer. Move.
 
 ---
 
@@ -310,9 +310,10 @@ hand-create the folder — a hand-made one is missing `ABOUT-ME-TEMPLATE.docx` a
 
 ### Step 2 — start the interview · 1:10–1:15
 **[SAY] — connectors, before they paste it in:** *"One thing before you start. The M365 connector is live and
-read-only. If it's on for you, the interview's first move will try reading your own mail and calendar to save
-you typing — that's your own data, nothing beyond what you can already see, and it can't send or write anything
-back. If you'd rather just answer the questions directly, that's fine too — say so, or say skip."* Follow along:
+read-only. If it's on for you, the interview's first move will try reading your own mail, calendar, and Teams
+messages to save you typing — that's your own data, nothing beyond what you can already see, and it can't send
+or write anything back. If you'd rather just answer the questions directly, that's fine too — say so, or say
+skip."* Follow along:
 [Lesson 4 §Connectors](pages/training/03-first-cowork-session.html#connectors).
 
 **[DO]** Fresh session on the workshop folder. Paste the interview prompt from
@@ -446,8 +447,8 @@ the room. **[NOTE]** Ask the moderator to post it for the remote attendees too.
   Gen Re IT during the lab, and make sure they get a working seat before Day 2 — Days 2 and 3 both run on
   what's produced today.
 - **Asked "does it read my email?"** No, not for this week's work — it reads the folder you handed it, and
-  nothing else. The M365 connector is separate: it's live and read-only (mail, calendar, SharePoint/OneDrive;
-  no sending, no writing back), and nothing this week depends on it.
+  nothing else. The M365 connector is separate: it's live and read-only (mail, calendar, Teams messages,
+  SharePoint/OneDrive; no sending, no writing back), and nothing this week depends on it.
 - **Lines worth keeping verbatim:** *"you cannot check a summary of a document you have never looked at"* ·
   *"it drafts, you check, you sign"* · *"a better first reader, not a signature"* · *"from rewrite this to
   check this."*
