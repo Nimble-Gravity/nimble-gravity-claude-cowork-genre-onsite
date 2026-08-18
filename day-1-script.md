@@ -309,6 +309,12 @@ so it should be there — hand up if it isn't."*
 hand-create the folder — a hand-made one is missing `ABOUT-ME-TEMPLATE.docx` and they'll be a step behind.
 
 ### Step 2 — start the interview · 1:10–1:15
+**[SAY] — connectors, before they paste it in:** *"One thing before you start. The M365 connector is live and
+read-only. If it's on for you, the interview's first move will try reading your own mail and calendar to save
+you typing — that's your own data, nothing beyond what you can already see, and it can't send or write anything
+back. If you'd rather just answer the questions directly, that's fine too — say so, or say skip."* Follow along:
+[Lesson 4 §Connectors](pages/training/03-first-cowork-session.html#connectors).
+
 **[DO]** Fresh session on the workshop folder. Paste the interview prompt from
 [Lesson 4 §Lab](pages/training/03-first-cowork-session.html#lab) — the room copies it from the lesson page
 with the Copy button. Show where that button is. Show it twice.
