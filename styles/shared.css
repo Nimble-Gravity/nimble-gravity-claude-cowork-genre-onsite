@@ -3760,8 +3760,8 @@ section.hero .dev-chip {
   padding:8px 16px;font-weight:600;font-size:14px;cursor:pointer;white-space:nowrap;}
 .step-btn:disabled{opacity:.35;cursor:default;}
 .step-count{color:var(--slate);font-weight:600;font-size:13.5px;text-align:center;flex:1;}
-@media(max-width:1024px){.step-bar{top:49px;}} /* nav.js hides .nav-sub at this breakpoint: nav-top (48px) + wrapper border (1px) */
-@media(max-width:768px){.step-bar{padding:8px 14px;gap:10px;}.step-count{font-size:12.5px;}}
+@media(max-width:1024px){.step-bar{top:49px;z-index:998;}} /* nav.js hides .nav-sub at this breakpoint: nav-top (48px) + wrapper border (1px); z-index dropped one below .nav-mobile-overlay's 999 so the overlay always wins */
+@media(max-width:768px){.step-bar{padding:8px 14px;gap:10px;margin-left:24px;margin-right:24px;}.step-count{font-size:12.5px;}} /* matches .section/.page-header's 24px gutter at this breakpoint, not the desktop 64px */
 /* Print/PDF: show every step (matches the no-JS fallback), Prev/Next is meaningless on paper.
    Same specificity as .step-hidden's !important, declared later, so this wins in print. */
 @media print {
