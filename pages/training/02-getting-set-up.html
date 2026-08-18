@@ -146,29 +146,29 @@
 <!-- M365 CONNECTOR -->
 <div class="section section-dark" id="m365">
   <div class="sec-eyebrow on-dark">04 — Microsoft 365 connector</div>
-  <h2 class="sec-title on-dark">Conceptual today, useful <em>later</em></h2>
-  <p class="sec-sub on-dark">Anthropic ships a Microsoft 365 connector that lets Claude reach your mail, calendar, and SharePoint or OneDrive files. It is not live at Gen Re today, and whether it arrives during the pilot is a Gen Re decision. Either way nothing in these three days depends on it — everything runs from the local workshop folder.</p>
+  <h2 class="sec-title on-dark">Live today, and <em>read-only</em></h2>
+  <p class="sec-sub on-dark">Anthropic's Microsoft 365 connector is live at Gen Re: Claude can read your mail, calendar, and SharePoint or OneDrive files. It is read-only — Claude cannot send email or write anything back through the connector. Everything today still runs from the local workshop folder; the connector is context you can use, not a requirement.</p>
 
   <div class="dev-grid-2" style="margin-top:28px;">
     <div class="dev-card">
-      <div class="dev-kicker">What it would add</div>
+      <div class="dev-kicker">What it adds</div>
       <h3>Context you'd otherwise paste in</h3>
-      <p style="color:rgba(255,255,255,.65);font-size:15px;line-height:1.65;">With the connector on, the personalization interview can read how you actually write from your sent mail and pre-fill half its questions, and a later task can pull the submission straight from SharePoint instead of you saving a copy to a folder first.</p>
-      <div class="dev-quote">Conceptual until the connector is live at Gen Re.</div>
+      <p style="color:rgba(255,255,255,.65);font-size:15px;line-height:1.65;">The personalization interview can read how you actually write from your sent mail and pre-fill half its questions, and a later task can read a submission straight from SharePoint instead of you saving a copy to a folder first.</p>
+      <div class="dev-quote">Read-only: it can look, not send or write.</div>
     </div>
     <div class="dev-card">
       <div class="dev-kicker">What it doesn't change</div>
       <h3>It sees only what you can see</h3>
-      <p style="color:rgba(255,255,255,.65);font-size:15px;line-height:1.65;">The connector uses delegated permissions: Claude inherits your access, never more, and those calls land in the Microsoft 365 audit log like any other access to those files. It needs an admin to turn it on for the organization — it isn't something you enable from your own settings.</p>
-      <div class="dev-quote">Nothing today depends on it.</div>
+      <p style="color:rgba(255,255,255,.65);font-size:15px;line-height:1.65;">The connector uses delegated permissions: Claude inherits your access, never more, and those reads land in the Microsoft 365 audit log like any other access to those files. It was turned on for the organization by an admin — it isn't something you enable from your own settings.</p>
+      <div class="dev-quote">No sending email. No writing back. Read-only.</div>
     </div>
   </div>
 
   <div class="tip-trick tip-trick--dark" style="margin-top:32px;">
     <div class="tip-trick-icon">📁</div>
     <div class="tip-trick-copy">
-      <div class="tip-trick-label">Local folder first, always</div>
-      <p>Even once the connector lands, the habit worth keeping is the one you'll learn in the next lesson: put the files a task needs into one folder and point Cowork at that folder. A narrow grant is easier to explain, easier to review, and easier to undo.</p>
+      <div class="tip-trick-label">Local folder first, still</div>
+      <p>Read-only means the connector can inform a draft but can't act on it — nothing gets sent or saved back through Claude. The habit worth keeping is the one you'll learn in the next lesson: put the files a task needs into one folder and point Cowork at that folder. A narrow grant is easier to explain, easier to review, and easier to undo.</p>
     </div>
   </div>
 </div>

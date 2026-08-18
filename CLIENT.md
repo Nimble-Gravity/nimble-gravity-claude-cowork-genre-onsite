@@ -24,10 +24,11 @@ where this section and the 07-31 call disagree, the call is authoritative.
   **out of scope** for this cohort. Participant materials open with this framing directly:
   "Gen Re managers and business leaders — actuarial, underwriting, claims, finance. No prior
   agentic-AI experience assumed, and nothing here requires you to write code" (`index.html`).
-- **The M365 connector is NOT available at Gen Re — it is under IT Security review**, though
-  Gen Re (Charles) is pushing to have it live before Day 1. All materials teach
-  local-folder-first regardless; the facilitator says exactly that if the connector isn't
-  there yet.
+- **The M365 connector is now live at Gen Re and read-only** (confirmed 2026-08-17, superseding
+  the 07-27/07-31 "under IT Security review" read below) — Claude can read mail, calendar, and
+  SharePoint/OneDrive, but cannot send email or write anything back through it. All materials
+  still teach local-folder-first as the primary path; the connector is additional context, not
+  a dependency.
 - **Pre-work and homework are optional** and framed that way everywhere; key components are
   covered live in each session. (Chris: "I am not sure people will do that.")
 - **The site carries a "piloting scalable training materials" note** (homepage + Start Here)
