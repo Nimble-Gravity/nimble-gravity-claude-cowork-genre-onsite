@@ -43,8 +43,11 @@
   // Inject styles
   var style = document.createElement('style');
   style.textContent =
-    // Sidebar shell
-    '.tsb{position:fixed;top:84px;left:0;width:' + SIDEBAR_WIDTH + 'px;bottom:0;' +
+    // Sidebar shell — top tracks nav.js's --nav-h (see nav.js syncBodyPadding),
+    // since the training sidebar only ever renders on lesson pages, which now
+    // carry a one-row nav (no sub-row), not the two-row height this used to
+    // assume.
+    '.tsb{position:fixed;top:var(--nav-h,49px);left:0;width:' + SIDEBAR_WIDTH + 'px;bottom:0;' +
     'background:#fff;border-right:1px solid var(--border);' +
     'overflow-y:auto;overflow-x:hidden;z-index:900;' +
     'display:flex;flex-direction:column;transition:top .3s ease;}' +

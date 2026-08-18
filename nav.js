@@ -378,8 +378,11 @@
     return folderMatch && fileMatch;
   }) || null;
 
-  if (activeCraft) {
-    var onHub = isHubOf(activeCraft);
+  // Sub-row only appears on the module's hub itself, toggling between the
+  // hub's own #prework/#content sections. On a lesson page you're already
+  // inside "Workshop content", so showing it there duplicated the day tabs
+  // above it without adding real navigation — dropped from lesson pages.
+  if (activeCraft && isHubOf(activeCraft)) {
     var subRow = document.createElement('div');
     subRow.className = 'nav-sub';
     subRow.style.setProperty('--nc', activeCraft.color);
@@ -393,13 +396,9 @@
         subRow.appendChild(arrow);
       }
 
-      // On a lesson page you're inside "Workshop content"; on the hub the active
-      // stage is driven by scroll position (see the stage scroll-spy below).
-      var isActive = onHub ? (stage.hash === '#prework') : (stage.hash === '#content');
-
       var stepA = document.createElement('a');
       stepA.href = root + activeCraft.hub + stage.hash;
-      stepA.className = 'nav-sub-step' + (isActive ? ' active' : '');
+      stepA.className = 'nav-sub-step' + (stage.hash === '#prework' ? ' active' : '');
       stepA.style.setProperty('--nc', activeCraft.color);
       stepA.style.animationDelay = (i * 90) + 'ms';
       stepA.setAttribute('data-stage', stage.hash);
@@ -409,27 +408,25 @@
 
     navEl.appendChild(subRow);
 
-    // Stage scroll-spy — on the hub, highlight the stage section currently in view.
-    if (onHub) {
-      var stageEls = MODULE_STAGES.map(function (s) {
-        return { hash: s.hash, el: document.getElementById(s.hash.slice(1)) };
-      }).filter(function (s) { return s.el; });
-      var stageSteps = subRow.querySelectorAll('.nav-sub-step');
-      var syncStage = function () {
-        if (!stageEls.length) return;
-        var y = window.scrollY + 140;
-        var active = stageEls[0].hash;
-        stageEls.forEach(function (s) { if (s.el.offsetTop <= y) active = s.hash; });
-        stageSteps.forEach(function (a) {
-          var on = a.getAttribute('data-stage') === active;
-          a.classList.toggle('active', on);
-          a.setAttribute('aria-current', on ? 'true' : '');
-        });
-      };
-      window.addEventListener('scroll', syncStage, { passive: true });
-      window.addEventListener('load', syncStage);
-      syncStage();
-    }
+    // Stage scroll-spy — highlight the stage section currently in view.
+    var stageEls = MODULE_STAGES.map(function (s) {
+      return { hash: s.hash, el: document.getElementById(s.hash.slice(1)) };
+    }).filter(function (s) { return s.el; });
+    var stageSteps = subRow.querySelectorAll('.nav-sub-step');
+    var syncStage = function () {
+      if (!stageEls.length) return;
+      var y = window.scrollY + 140;
+      var active = stageEls[0].hash;
+      stageEls.forEach(function (s) { if (s.el.offsetTop <= y) active = s.hash; });
+      stageSteps.forEach(function (a) {
+        var on = a.getAttribute('data-stage') === active;
+        a.classList.toggle('active', on);
+        a.setAttribute('aria-current', on ? 'true' : '');
+      });
+    };
+    window.addEventListener('scroll', syncStage, { passive: true });
+    window.addEventListener('load', syncStage);
+    syncStage();
   }
 
   // Insert before the script tag
@@ -625,9 +622,15 @@
   // Append overlay to body after nav is in DOM
   document.body.appendChild(overlay);
 
-  // Sync body padding to nav height (accounts for one or two rows)
+  // Sync body padding to nav height (accounts for one or two rows). Also
+  // published as --nav-h: .step-bar and .tsb read it to stay flush under
+  // the nav instead of hardcoding a pixel offset — nav height now varies
+  // by page (hub pages carry the sub-row, lesson pages don't) as well as
+  // by viewport width, so a fixed number can't track it.
   function syncBodyPadding() {
-    document.body.style.paddingTop = navEl.offsetHeight + 'px';
+    var h = navEl.offsetHeight;
+    document.body.style.paddingTop = h + 'px';
+    document.documentElement.style.setProperty('--nav-h', h + 'px');
   }
   requestAnimationFrame(syncBodyPadding);
   window.addEventListener('resize', syncBodyPadding, { passive: true });
@@ -678,13 +681,11 @@
     });
   });
 
-  function buildSequenceCard(entry, direction, labelText, isCraftTransition) {
+  function buildSequenceCard(entry, direction, labelText) {
     var href = root + 'pages/' + entry.folder + '/' + encodeURIComponent(entry.file);
     var arrow = direction === 'next' ? '→' : '←';
     var directionColor = entry.color;
-    var eyebrow = isCraftTransition
-      ? (direction === 'next' ? 'Next craft' : 'Previous craft')
-      : (direction === 'next' ? 'Up next' : 'Previous');
+    var eyebrow = direction === 'next' ? 'Up next' : 'Previous';
 
     return (
       '<a href="' + href + '" class="nav-sequence-card nav-sequence-card--' + direction + '">' +
@@ -713,13 +714,18 @@
         if (entry.folder === craftFolder && entry.file === currentFile) currentIdx = i;
       });
     }
+    var currentEntry = currentIdx >= 0 ? linearSeq[currentIdx] : null;
 
-    // The sequence banner is for lesson→lesson flow only. Home keeps its own
-    // hub-first CTAs, so it gets no banner (avoids bypassing the workshop hubs).
-    var previous = !isHome && currentIdx > 0 ? linearSeq[currentIdx - 1] : null;
-    var next = !isHome && currentIdx >= 0 && currentIdx < linearSeq.length - 1
-      ? linearSeq[currentIdx + 1]
-      : null;
+    // The sequence banner only steps within the current day — crossing into
+    // the next/previous day is the top nav's job (its Day tabs already do
+    // it), so doing it here too just gave a page two different ways to jump
+    // days. Home keeps its own hub-first CTAs, so it gets no banner.
+    var previous = currentEntry && currentIdx > 0 &&
+      linearSeq[currentIdx - 1].craftId === currentEntry.craftId
+      ? linearSeq[currentIdx - 1] : null;
+    var next = currentEntry && currentIdx < linearSeq.length - 1 &&
+      linearSeq[currentIdx + 1].craftId === currentEntry.craftId
+      ? linearSeq[currentIdx + 1] : null;
 
     function insert() {
       var footer = window.SDLCFooter && typeof window.SDLCFooter.ensure === 'function'
@@ -734,25 +740,11 @@
       banner.className = 'nav-next-banner';
 
       if (previous) {
-        bannerCards.push(
-          buildSequenceCard(
-            previous,
-            'prev',
-            previous.title,
-            linearSeq[currentIdx] && linearSeq[currentIdx].craftId !== previous.craftId
-          )
-        );
+        bannerCards.push(buildSequenceCard(previous, 'prev', previous.title));
       }
 
       if (next) {
-        bannerCards.push(
-          buildSequenceCard(
-            next,
-            'next',
-            next.title,
-            !isHome && linearSeq[currentIdx] && linearSeq[currentIdx].craftId !== next.craftId
-          )
-        );
+        bannerCards.push(buildSequenceCard(next, 'next', next.title));
       }
 
       banner.innerHTML = '<div class="' + gridClass + '">' + bannerCards.join('') + '</div>';
