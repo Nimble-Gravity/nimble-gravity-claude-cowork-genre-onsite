@@ -121,6 +121,10 @@ Notes for authors:
   class (`sl-dense` / `sl-dense-2`) that scales text down to fit the 1280×720 frame.
 - Add `class="section-dark"` to render a slide on the dark background.
 
+## Step-View Pagination
+
+`step-view.js` (root) turns any page's `.page-header` + `.section` sequence into one-screen-at-a-time navigation — no markup changes required, since it reads the same boundaries `slides-engine.js` already extracts from. Load it as the last shared-component script (after `nav.js` / `training-sidebar.js`), before the page's own content. Progressive enhancement: if the script fails to load, or a page has fewer than two `.page-header`/`.section` units, the page reads as plain continuous scroll — this is deliberate, not a bug to fix. A page's deep-link anchors (e.g. `page.html#canvas`) still work: `step-view.js` reads `location.hash` on load and opens that step directly rather than always defaulting to the first one.
+
 ## Authoring Rule
 
 - Before adding a new shared layout pattern, check whether it belongs in `shared.css` and should be documented here.
