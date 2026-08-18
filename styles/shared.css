@@ -3748,11 +3748,23 @@ section.hero .dev-chip {
 
 /* ── Step-view pagination (progressive enhancement) ─────────────────── */
 .step-hidden { display: none !important; }
+/* Sticky top offset = nav.js's own rendered height: nav-top (min-height:48px)
+   + nav-sub (height:36px, border-box so its 1px border-top is included)
+   + nav-wrapper's 1px border-bottom = 85px. z-index sits one below
+   nav-wrapper's z-index:1000 so the nav bar always stacks above it. */
 .step-bar{display:flex;align-items:center;justify-content:space-between;gap:16px;
   background:var(--white);border:1px solid var(--border);border-radius:12px;
-  padding:10px 18px;margin:0 0 20px;}
+  padding:10px 18px;margin:0 max(64px, calc((100% - 1280px) / 2)) 20px;
+  position:sticky;top:85px;z-index:999;}
 .step-btn{background:var(--tealL);color:var(--teal);border:none;border-radius:8px;
   padding:8px 16px;font-weight:600;font-size:14px;cursor:pointer;white-space:nowrap;}
 .step-btn:disabled{opacity:.35;cursor:default;}
 .step-count{color:var(--slate);font-weight:600;font-size:13.5px;text-align:center;flex:1;}
+@media(max-width:1024px){.step-bar{top:49px;}} /* nav.js hides .nav-sub at this breakpoint: nav-top (48px) + wrapper border (1px) */
 @media(max-width:768px){.step-bar{padding:8px 14px;gap:10px;}.step-count{font-size:12.5px;}}
+/* Print/PDF: show every step (matches the no-JS fallback), Prev/Next is meaningless on paper.
+   Same specificity as .step-hidden's !important, declared later, so this wins in print. */
+@media print {
+  .step-hidden { display: block !important; }
+  .step-bar { display: none !important; }
+}

@@ -289,10 +289,11 @@ answer"* and put it on the parking list. That is a better answer than a confiden
 especially.
 
 **[SAY] — 1. What's connected** *([§Connected](pages/training/17-governance-snapshot.html#connected))*:
-*"**Local folders — yes**, the ones you grant, and only those. **Microsoft 365 — not yet**; nothing you did
-this week depended on it. **Anything else — review first.** And one thing worth saying plainly: there are no
-per-file permissions. The folder grant **is** the control. That's why rule one all week was 'work only in the
-workshop folder'."*
+*"**Local folders — yes**, the ones you grant, and only those. **Microsoft 365 — read-only**; it's live at
+Gen Re — Claude can read mail, calendar, and SharePoint/OneDrive, but it can't send email or write anything
+back — and nothing you did this week depended on it. **Anything else — review first.** And one thing worth
+saying plainly: there are no per-file permissions. The folder grant **is** the control. That's why rule one
+all week was 'work only in the workshop folder'."*
 
 **[SAY] — 2. Roles at a glance** *([§Roles](pages/training/17-governance-snapshot.html#roles))*: *"What you
 decide as a member: which folders, which permission mode, which model. What only an administrator can turn on:

@@ -28,7 +28,8 @@ where this section and the 07-31 call disagree, the call is authoritative.
   the 07-27/07-31 "under IT Security review" read below) — Claude can read mail, calendar, and
   SharePoint/OneDrive, but cannot send email or write anything back through it. All materials
   still teach local-folder-first as the primary path; the connector is additional context, not
-  a dependency.
+  a dependency. This is our understanding as of 2026-08-17; if it turns out not to be live by
+  Day 1, the fallback is unaffected — every exercise still runs from the local workshop folder.
 - **Pre-work and homework are optional** and framed that way everywhere; key components are
   covered live in each session. (Chris: "I am not sure people will do that.")
 - **The site carries a "piloting scalable training materials" note** (homepage + Start Here)

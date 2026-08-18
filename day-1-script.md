@@ -148,8 +148,9 @@ week, and I'll be repeating it enough that you'll get bored of it."*
 isn't in Anthropic's centralized audit logs today, which is exactly why rules one and two exist. The full
 answer is Day 3, and I'll give it to you properly there."* Do not improvise governance depth on Day 1.
 
-**[NOTE]** M365 connector: *"It may or may not be live. Nothing in these three days depends on it — everything
-runs from the local folder."* That is the whole answer. Move.
+**[NOTE]** M365 connector: *"It's live and read-only — Claude can read mail, calendar, and SharePoint/OneDrive,
+but it can't send email or write anything back. Nothing in these three days depends on it — everything runs
+from the local folder."* That is the whole answer. Move.
 
 ---
 
@@ -438,8 +439,9 @@ the room. **[NOTE]** Ask the moderator to post it for the remote attendees too.
 - **Someone can't find Cowork in the left rail.** Licence setting. Pair them with a neighbour, flag it to
   Gen Re IT during the lab, and make sure they get a working seat before Day 2 — Days 2 and 3 both run on
   what's produced today.
-- **Asked "does it read my email?"** No. It reads the folder you handed it, and nothing else. The M365
-  connector is separate, may not be live, and nothing this week depends on it.
+- **Asked "does it read my email?"** No, not for this week's work — it reads the folder you handed it, and
+  nothing else. The M365 connector is separate: it's live and read-only (mail, calendar, SharePoint/OneDrive;
+  no sending, no writing back), and nothing this week depends on it.
 - **Lines worth keeping verbatim:** *"you cannot check a summary of a document you have never looked at"* ·
   *"it drafts, you check, you sign"* · *"a better first reader, not a signature"* · *"from rewrite this to
   check this."*

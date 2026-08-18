@@ -32,6 +32,8 @@
     var nextBtn = bar.querySelector('.step-next');
     var countEl = bar.querySelector('.step-count');
     var subStageLinks = document.querySelectorAll('.nav-sub-step[data-stage]');
+    var contentIdx = -1;
+    steps.forEach(function (s, i) { if (s.id === 'content') contentIdx = i; });
 
     function labelFor(el) {
       var h = el.querySelector('h1, h2');
@@ -48,16 +50,21 @@
       prevBtn.disabled = current === 0;
       nextBtn.disabled = current === steps.length - 1;
       if (subStageLinks.length) {
-        var stageHash = (el.id === 'prework' || el.id === 'content') ? '#' + el.id : '#content';
+        var stageHash = null;
+        if (el.id === 'prework' || el.id === 'content') {
+          stageHash = '#' + el.id;
+        } else if (contentIdx !== -1 && current > contentIdx) {
+          stageHash = '#content';
+        }
         subStageLinks.forEach(function (a) {
-          var on = a.getAttribute('data-stage') === stageHash;
+          var on = stageHash !== null && a.getAttribute('data-stage') === stageHash;
           a.classList.toggle('active', on);
           a.setAttribute('aria-current', on ? 'true' : '');
         });
       }
       if (isNavigation) {
         if (el.id) history.replaceState(null, '', '#' + el.id);
-        bar.scrollIntoView({ block: 'start' });
+        window.scrollTo(0, 0);
       }
     }
 
@@ -66,6 +73,12 @@
     });
     nextBtn.addEventListener('click', function () {
       if (current < steps.length - 1) { current++; render(true); }
+    });
+    window.addEventListener('hashchange', function () {
+      var hashId = location.hash.slice(1);
+      var idx = -1;
+      steps.forEach(function (s, i) { if (s.id === hashId) idx = i; });
+      if (idx !== -1) { current = idx; render(true); }
     });
 
     render(false);

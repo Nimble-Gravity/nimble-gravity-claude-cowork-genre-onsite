@@ -123,7 +123,9 @@ Notes for authors:
 
 ## Step-View Pagination
 
-`step-view.js` (root) turns any page's `.page-header` + `.section` sequence into one-screen-at-a-time navigation — no markup changes required, since it reads the same boundaries `slides-engine.js` already extracts from. Load it as the last shared-component script (after `nav.js` / `training-sidebar.js`), before the page's own content. Progressive enhancement: if the script fails to load, or a page has fewer than two `.page-header`/`.section` units, the page reads as plain continuous scroll — this is deliberate, not a bug to fix. A page's deep-link anchors (e.g. `page.html#canvas`) still work: `step-view.js` reads `location.hash` on load and opens that step directly rather than always defaulting to the first one.
+`step-view.js` (root) turns any page's `.page-header` + `.section` sequence into one-screen-at-a-time navigation — no markup changes required, since it reads the same boundaries `slides-engine.js` already extracts from. Load it after `nav.js` / `training-sidebar.js`, before the page's own content; its order relative to `interactive.js` doesn't matter (on pages that load both, `step-view.js` in fact comes first). Progressive enhancement: if the script fails to load, or a page has fewer than two `.page-header`/`.section` units, the page reads as plain continuous scroll — this is deliberate, not a bug to fix. A page's deep-link anchors (e.g. `page.html#canvas`) still work: `step-view.js` reads `location.hash` on load and opens that step directly rather than always defaulting to the first one, and it also listens for `hashchange` so an in-page nav-sub-row click updates the step without a reload.
+
+**Scope:** `step-view.js` is loaded only on the 8 lesson pages and 4 hub pages, not universally — reference/utility pages (FAQ, resources, my-progress, acceptable-use, why-cowork, cheat-sheet, and others) deliberately don't load it.
 
 ## Authoring Rule
 
