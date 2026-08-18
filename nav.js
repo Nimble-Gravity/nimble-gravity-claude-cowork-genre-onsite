@@ -636,8 +636,11 @@
   var lastScrollY = 0;
   var navVisible  = true;
 
-  function showNav() { if (!navVisible) { navEl.classList.remove('nav-hidden'); navVisible = true; } }
-  function hideNav() { if (navVisible)  { navEl.classList.add('nav-hidden');    navVisible = false; } }
+  // Elements pinned below the nav (.step-bar, .tsb) read this class to collapse
+  // their own top offset to 0 in sync, instead of leaving a gap where the
+  // hidden nav used to be.
+  function showNav() { if (!navVisible) { navEl.classList.remove('nav-hidden'); document.body.classList.remove('nav-collapsed'); navVisible = true; } }
+  function hideNav() { if (navVisible)  { navEl.classList.add('nav-hidden');    document.body.classList.add('nav-collapsed');    navVisible = false; } }
 
   window.addEventListener('scroll', function () {
     // Never hide while mobile menu is open
@@ -646,8 +649,11 @@
     if (y < 60) { showNav(); navEl.classList.remove('nav-scrolled'); }
     else {
       navEl.classList.add('nav-scrolled');
-      if (y > lastScrollY + 8) hideNav();
-      else if (y < lastScrollY - 8) showNav();
+      // Asymmetric on purpose: hiding needs a deliberate scroll-down (filters out
+      // trackpad/momentum jitter), showing responds to the slightest scroll-up
+      // so the nav is never more than a flick away.
+      if (y > lastScrollY + 32) hideNav();
+      else if (y < lastScrollY - 4) showNav();
     }
     lastScrollY = y;
   }, { passive: true });

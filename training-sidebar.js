@@ -47,7 +47,11 @@
     '.tsb{position:fixed;top:84px;left:0;width:' + SIDEBAR_WIDTH + 'px;bottom:0;' +
     'background:#fff;border-right:1px solid var(--border);' +
     'overflow-y:auto;overflow-x:hidden;z-index:900;' +
-    'display:flex;flex-direction:column;}' +
+    'display:flex;flex-direction:column;transition:top .3s ease;}' +
+    // nav.js adds body.nav-collapsed when it auto-hides the nav on scroll;
+    // collapse the offset in sync so no dead gap is left above the sidebar.
+    'body.nav-collapsed .tsb{top:0;}' +
+    '@media(prefers-reduced-motion:reduce){.tsb{transition:none;}}' +
 
     // Home link
     '.tsb-home{display:flex;align-items:center;gap:8px;padding:14px 16px 10px;' +
