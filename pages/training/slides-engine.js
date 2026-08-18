@@ -360,8 +360,10 @@
     var totalChars = slide.bullets.reduce(function (n, b) {
       return n + b.heading.length + b.body.length;
     }, slide.subtitle ? slide.subtitle.length : 0);
-    if (totalChars > 900)      cls += ' sl-dense-2';
-    else if (totalChars > 550) cls += ' sl-dense';
+    /* Thresholds tuned for the larger base type in slides-theme.css — bigger
+       glyphs overflow the fixed 1280×720 frame at a lower character count. */
+    if (totalChars > 780)      cls += ' sl-dense-2';
+    else if (totalChars > 470) cls += ' sl-dense';
     var sec = makeSection(cls);
     var html = '';
     if (slide.eyebrow)  html += '<div class="sl-eyebrow">' + slide.eyebrow + '</div>';

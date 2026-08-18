@@ -21,7 +21,7 @@
 /* ── Base reveal overrides ── */
 .reveal {
   font-family: 'Roboto', sans-serif;
-  font-size: 18px;
+  font-size: 19px;
   background: var(--navy);
   color: var(--white);
 }
@@ -80,7 +80,7 @@
 
 .sl-mod-name {
   font-family: 'Fraunces', serif;
-  font-size: 68px;
+  font-size: 74px;
   font-weight: 600;
   line-height: 1.1;
   color: var(--white);
@@ -88,7 +88,7 @@
 }
 
 .sl-mod-topics {
-  font-size: 17px;
+  font-size: 19px;
   color: rgba(255,255,255,.45);
   letter-spacing: .01em;
   margin-bottom: 44px;
@@ -126,7 +126,7 @@
 /* ── Section eyebrow ── */
 .sl-eyebrow {
   font-family: 'Roboto Mono', monospace;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: .18em;
   text-transform: uppercase;
@@ -137,22 +137,22 @@
 /* ── Content slide heading ── */
 .sl-title {
   font-family: 'Fraunces', serif;
-  font-size: 50px;
+  font-size: 58px;
   max-width: 900px;
   margin-bottom: 20px;
 }
 
 .sl-heading {
   font-family: 'Fraunces', serif;
-  font-size: 38px;
+  font-size: 44px;
   max-width: 860px;
   margin-bottom: 16px;
 }
 
 /* ── Subtitle / intro paragraph ── */
 .sl-subtitle {
-  font-size: 19px;
-  line-height: 1.7;
+  font-size: 22px;
+  line-height: 1.6;
   color: rgba(255,255,255,.6);
   max-width: 820px;
   margin: 0 0 28px;
@@ -170,8 +170,8 @@
 }
 
 .sl-bullets li {
-  font-size: 17px;
-  line-height: 1.55;
+  font-size: 20px;
+  line-height: 1.5;
   color: rgba(255,255,255,.7);
   padding: 10px 16px;
   background: rgba(255,255,255,.05);
@@ -198,16 +198,18 @@
 }
 
 /* Density steps — slides carry full, untruncated text; long ones scale
-   down instead of overflowing the 1280×720 frame. */
-.sl-dense .sl-heading { font-size: 32px; margin-bottom: 12px; }
-.sl-dense .sl-subtitle { font-size: 16px; margin-bottom: 18px; }
+   down instead of overflowing the 1280×720 frame. Floors raised along with
+   the base sizes above so even a dense slide stays readable from the back
+   of the room. */
+.sl-dense .sl-heading { font-size: 37px; margin-bottom: 12px; }
+.sl-dense .sl-subtitle { font-size: 18px; margin-bottom: 18px; }
 .sl-dense .sl-bullets { gap: 7px; }
-.sl-dense .sl-bullets li { font-size: 15px; line-height: 1.5; padding: 9px 14px; }
+.sl-dense .sl-bullets li { font-size: 17px; line-height: 1.45; padding: 9px 14px; }
 
-.sl-dense-2 .sl-heading { font-size: 28px; margin-bottom: 10px; }
-.sl-dense-2 .sl-subtitle { font-size: 15px; line-height: 1.55; margin-bottom: 14px; }
+.sl-dense-2 .sl-heading { font-size: 32px; margin-bottom: 10px; }
+.sl-dense-2 .sl-subtitle { font-size: 17px; line-height: 1.5; margin-bottom: 14px; }
 .sl-dense-2 .sl-bullets { gap: 6px; }
-.sl-dense-2 .sl-bullets li { font-size: 14px; line-height: 1.45; padding: 8px 12px; }
+.sl-dense-2 .sl-bullets li { font-size: 16px; line-height: 1.4; padding: 8px 12px; }
 
 /* Tip bullets get amber accent */
 .sl-tip {
@@ -231,7 +233,7 @@
 
 .sl-end h2 {
   font-family: 'Fraunces', serif;
-  font-size: 46px;
+  font-size: 52px;
   color: var(--white);
   margin: 16px 0 28px;
 }
