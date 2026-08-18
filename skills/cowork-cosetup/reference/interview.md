@@ -44,10 +44,12 @@ anything else. Confirm from the harvest, or ask. This drives which questions mat
   sentence feel; tone; jargon vs plain language and words they always use or avoid; format
   defaults (bullets vs prose, length, headings, openings, sign-offs); and how voice shifts by
   audience. Capture a short, real writing sample to anchor it.
-- AI do's and don'ts (ask directly): what the AI should ALWAYS do in their name (cite sources,
-  flag uncertainty, ask before sending, keep it tight) and NEVER do (invent figures, make the
-  decision, overclaim, be sycophantic), plus the AI "tells" to avoid — clichés and filler,
-  over-hedging, emoji, bullet overload, em-dash overuse.
+- AI do's and don'ts (ask directly): what the AI should ALWAYS do in their name — cite sources,
+  recompute any total or calculated figure from its line items before repeating it, check that
+  a fact or date mentioned more than once in a source agrees with itself, flag uncertainty, ask
+  before sending, keep it tight — and NEVER do (invent figures, make the decision, overclaim,
+  be sycophantic), plus the AI "tells" to avoid — clichés and filler, over-hedging, emoji,
+  bullet overload, em-dash overuse.
 - Standards: what "good" vs "rushed" looks like, and the review/approval steps they respect.
 - Durable facts: fiscal year, recurring deadlines, naming conventions, constraints.
 
