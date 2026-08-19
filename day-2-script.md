@@ -23,9 +23,10 @@ If you teach anatomy first, the rest of the day is a features tour.
    `day-2/` folder intact. Have the three documents open in Word *before* the session so you can bring them up
    without hunting.
 2. **Read the three `day-2/` documents yourself, properly.** You need to be able to answer questions about
-   Project Alpha without looking. `project-alpha-status.txt`, `vendor-update-email.txt`,
-   `open-items-list.txt` are the editable sources; participants open the `.docx`.
-3. **Know the planted disagreement cold** — see the [🪤 note](#the-trap) below. Do not give it away.
+   the Munich Re / Gen Re comparison without looking. `munich-re-q2-update.txt`, `berkshire-insurance-segment.txt`,
+   `leadership-request-note.txt` are the editable sources; participants open the `.docx`.
+3. **Know the blended-segment gap cold** — see the [🪤 note](#the-trap) below. It's real data, not a planted
+   error, so re-verify it hasn't changed if you're re-running this in a later quarter. Do not give it away.
 4. **Test the Skill Vault end to end at 1366×768**: open `escape-room/index.html` on the presenter machine and
    `escape-room/admin.html` on a second device (phone or tablet is fine — it is a table, it reads small).
    Confirm the leaderboard backend mode from the badge at the top of the admin view. See
@@ -101,10 +102,12 @@ order and you'll feel it rather than me explaining it."*
 **[SAY] — mode:** *"Hands **on**, all twenty-five minutes. I'll set it up and then I'm walking around."*
 
 ### (a) Frame the job · 0:10–0:13
-**[SAY]** *"Project Alpha is replacing a legacy treaty-layer pricing workbook with a supported platform. You
-are the programme manager and the steering group meets on Thursday. You have three documents: a status note,
-an email from the vendor, and an open-items list. You need a one-page status report by Friday. That is a real
-shape of work and most of you do a version of it."*
+**[SAY]** *"Munich Re just reported Q2 2026 results. Your chief actuary's office wants a one-page snapshot for
+Thursday's leadership check-in: how did Gen Re's reinsurance underwriting do this quarter, next to one of our
+biggest global peers? You have three documents: a Munich Re investor update, a Berkshire 10-Q excerpt covering
+the insurance segment, and the request note itself. You need a one-page comparison by Thursday. That is a real
+shape of work and most of you do a version of it — a real number, from a real source, that somebody above you
+is going to ask about."*
 
 **[SAY] — the habits, in one pass, before they start:** *"Four things while you work. Stay in **ask before
 acting** — the pause is where you get to look. **Interrupt early, not politely** — say 'stop, that's the wrong
@@ -126,24 +129,26 @@ the silence. Circulate; this is also your window to fix the broken personalizati
 [Lesson 1](pages/training/05-working-effectively.html#walk) into a fresh session — show the Copy button, show
 it twice — and read it out loud so the room hears what a well-shaped ask sounds like:
 
-> *Read the three documents in `day-2/` and draft a one-page status report for Project Alpha. Cover: where the
-> project stands, what moved this week, what is blocked and who owns it, and anything that needs a decision
-> from the steering group. For every figure and every claim, say which of the three documents it came from. If
-> the documents disagree with each other, say so rather than picking one. If something I asked for isn't in
-> them, tell me it isn't there — don't fill the gap.*
+> *Read the three documents in `day-2/` and draft a one-page competitive snapshot comparing Gen Re's
+> reinsurance underwriting performance this quarter against Munich Re. Cover underwriting profit and combined
+> ratio where the data actually supports it, and year-over-year change. For every figure, say which document
+> it came from. If a figure can't be cleanly isolated for Gen Re specifically, or the documents don't give you
+> enough to compare cleanly, say so rather than estimating or picking a number. If something isn't in the
+> sources, tell me it isn't there.*
 
 **[SAY] — point at the last three sentences:** *"Look at what the last three sentences are doing. Source every
-claim. Say so if the documents disagree. Tell me if it isn't there. **That is the checking, written into the
-ask.** Yesterday the cold demo failed because nobody put those sentences in. Notice that you had to remember
-to write them — hold on to that, it comes back in twenty minutes."*
+claim. Say so if you can't isolate something. Tell me if it isn't there. **That is the checking, written into
+the ask.** Yesterday the cold demo failed because nobody put those sentences in. Notice that you had to
+remember to write them — hold on to that, it comes back in twenty minutes."*
 
 **[THEY]** Run it. Watch which files it opens and approve them one at a time — you should see exactly three
 files in `day-2/` and nothing else.
 
 ### (d) Check the draft — claim by claim · 0:22–0:32
 **[SAY]** *"Now the actual work. Three documents open beside the draft. Go **claim by claim**, not paragraph
-by paragraph. Two things are worth hunting for: a number that doesn't appear in any source, and **a point
-where two of the documents disagree and the draft quietly picked a side.**"*
+by paragraph. Two things are worth hunting for: a number that doesn't appear in any source, and **a place
+where the draft hands you a figure as if it answered the question, when the source doesn't actually support
+that.**"*
 
 **[NOTE]** Do not say more than that. Let them find it.
 
@@ -151,25 +156,32 @@ where two of the documents disagree and the draft quietly picked a side.**"*
 numbers that matter most to whoever reads this and find each one in a source with your own eyes."*
 
 <a id="the-trap"></a>
-**[NOTE] 🪤 — the planted disagreement. Know it, don't leak it.**
-The **vendor email** says the UAT environment lands **Friday 21 August**. The **status note** and the
-**open-items list** both say **Monday 24 August**. That is planted, not a typo — two sources against one, so
-most drafts will quietly settle on 24 August and say nothing about it, even though the ask explicitly said to
-flag disagreement. **Nobody should "fix" it.** Do not correct it in the source files and do not give it away
-before people have read their own draft. When someone finds it, get them to say it to the room. When the room
-hasn't found it by 0:30, ask: *"Everybody — what date does your draft give for the UAT handover? Show of
-hands, 21st. Show of hands, 24th."* The split in the room is the lesson.
+**[NOTE] 🪤 — the trap is real, not planted. Know it cold, don't leak it.**
+The Berkshire excerpt reports **one blended P&C Reinsurance figure — $1.14B pre-tax underwriting earnings,
++8.9% YoY — covering NICO, General Re, and TransRe together.** General Re's own number is never broken out.
+This is genuinely how Berkshire's actual Q2 2026 10-Q reports it — not a planted error like an earlier version
+of this exercise used. Most drafts will quietly hand back "$1.14B, +8.9%" as if it were **Gen Re's**
+underwriting result. A good draft says plainly the source doesn't isolate Gen Re — this figure is blended.
+**Nobody should "fix" this by guessing an allocation.** When the room hasn't caught it by ~0:30, ask:
+*"Everybody — what did your draft give you for Gen Re's own combined ratio or underwriting profit, on its
+own? Show of hands — got a clean number. Show of hands — draft said it couldn't be isolated."* The split in
+the room is the lesson. **Bonus, if a sharp table catches it:** TransRe is named *inside Berkshire's own
+segment* in this excerpt — it isn't an outside competitor the way Munich Re is, it's grouped with Gen Re under
+the same reinsurance group. Worth a fifteen-second aside in debrief if someone raises it: *"Good catch — that's
+a real structural quirk in how this space reports. Not every name you'd expect on a 'competitor' list is
+actually independent."*
 
 ### (e) One correction, one re-run · 0:32–0:35
-**[THEY]** *"Correct exactly one thing and ask for the draft again. Pick the error that would have embarrassed
-you — a wrong owner, an unsourced figure, a blocked item written as if it were on track — and tell it what
-**right** looks like, not just that it was wrong."*
+**[THEY]** *"Correct exactly one thing and ask for the draft again. Most useful pick: if your draft handed you
+a Gen Re-only number, correct it and ask for the comparison redone with that gap stated explicitly."*
 
 **[SAY] — the bridge, and land it slowly:** *"Stop there. Look at what you just did. You knew to read the
-sources first. You knew to ask it to cite. You knew to check claim by claim. You knew a disagreement was worth
-flagging. **You did all of that from memory, and you'll have to do it from memory again next Friday, and the
-Friday after that.** The judgment was yours and it stays yours. The **procedure** — that's the part that's
-repeatable, and that's the part worth writing down."*
+sources first. You knew to ask it to cite. You knew to check claim by claim. You knew a gap in the data was
+worth flagging instead of filling. **You did all of that from memory, and you'll have to do it from memory
+again next quarter, and the quarter after that.** The judgment was yours and it stays yours. The **procedure**
+— that's the part that's repeatable, and that's the part worth writing down. Same lesson as any planted trap
+would teach — except this one is Thursday's governance conversation in miniature: you often can't see the
+whole picture, and the skill is knowing to say so."*
 
 ---
 
@@ -353,7 +365,7 @@ looks like, it's short enough to read, and a colleague can run it. Four things."
 ## Close · 1:50–2:00 (10 min) — Homework & preview
 
 **[SAY] — homework, and be specific:** *"One applied task before Thursday. Take the workflow you brought
-today — your real one, not Project Alpha — and write the half page: the steps, where the inputs live, and what
+today — your real one, not the Munich Re comparison — and write the half page: the steps, where the inputs live, and what
 good output looks like. Don't write the skill file. Write the half page. That's the hard part and it's the
 part we build from on Thursday."*
 
@@ -406,6 +418,8 @@ teams didn't get past Room 2. Both groups need a hand at the Day 3 open.
 - **Skill anatomy** = `pages/training/09-anatomy-of-a-skill.html`; the worked example is §`#example`.
 - **The vault** = `escape-room/` (rooms, codes and hint penalties in `escape-room/config/rooms.source.json`;
   logistics in `escape-room/README.md`).
-- **The planted date disagreement** is documented in `facilitator-guide.html#workshop-2` (🪤 card) and lives
-  in `assets/workshop-folder/day-2/`. If those source files are ever edited, the trap and this script both
-  need re-checking, and the zip has to be rebuilt.
+- **The blended-segment gap** is documented in `facilitator-guide.html#workshop-2` (🪤 card) and lives in
+  `assets/workshop-folder/day-2/`. Unlike the exercise's original planted date trap, this one is real Q2 2026
+  data — re-verify it against Berkshire's and Munich Re's most recent quarter before each cohort, the same way
+  `cowork-context.md`'s date-sensitive facts get re-verified. If the source files are ever edited (including a
+  quarterly refresh), the trap and this script both need re-checking, and the zip has to be rebuilt.
