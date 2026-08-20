@@ -40,6 +40,22 @@
     var contentIdx = -1;
     steps.forEach(function (s, i) { if (s.id === 'content') contentIdx = i; });
 
+    // Hub quick-jump: mirror nav.js's Pre-work/Workshop-content links (only
+    // present on hub pages) as pills inside the step bar, which — unlike
+    // nav.js's own .nav-sub row — has no display:none breakpoint, so this
+    // fast path survives below 1024px.
+    if (subStageLinks.length) {
+      subStageLinks.forEach(function (a) {
+        var pill = document.createElement('a');
+        pill.href = a.getAttribute('href');
+        pill.className = 'step-jump-pill';
+        pill.textContent = a.textContent.trim();
+        pill.setAttribute('data-stage', a.getAttribute('data-stage'));
+        crumbEl.appendChild(pill);
+      });
+    }
+    var jumpPills = crumbEl.querySelectorAll('.step-jump-pill');
+
     // Day name comes from nav.js's already-computed active craft label — no
     // second manifest to keep in sync. Lesson/hub title comes from this
     // page's own header. If either is missing (shouldn't happen on an
@@ -55,6 +71,26 @@
       return h ? h.textContent.trim() : '';
     }
 
+    function syncSubStage() {
+      var el = steps[current];
+      if (!subStageLinks.length) return;
+      var stageHash = null;
+      if (el.id === 'prework' || el.id === 'content') {
+        stageHash = '#' + el.id;
+      } else if (contentIdx !== -1 && current > contentIdx) {
+        stageHash = '#content';
+      }
+      subStageLinks.forEach(function (a) {
+        var on = stageHash !== null && a.getAttribute('data-stage') === stageHash;
+        a.classList.toggle('active', on);
+        a.setAttribute('aria-current', on ? 'true' : '');
+      });
+      jumpPills.forEach(function (a) {
+        var on = stageHash !== null && a.getAttribute('data-stage') === stageHash;
+        a.classList.toggle('active', on);
+      });
+    }
+
     function render(scrollToTop) {
       steps.forEach(function (el, i) {
         el.classList.toggle('step-hidden', i !== current);
@@ -64,19 +100,7 @@
       countEl.textContent = 'Step ' + (current + 1) + ' of ' + steps.length + (label ? ' — ' + label : '');
       prevBtn.disabled = current === 0;
       nextBtn.disabled = current === steps.length - 1;
-      if (subStageLinks.length) {
-        var stageHash = null;
-        if (el.id === 'prework' || el.id === 'content') {
-          stageHash = '#' + el.id;
-        } else if (contentIdx !== -1 && current > contentIdx) {
-          stageHash = '#content';
-        }
-        subStageLinks.forEach(function (a) {
-          var on = stageHash !== null && a.getAttribute('data-stage') === stageHash;
-          a.classList.toggle('active', on);
-          a.setAttribute('aria-current', on ? 'true' : '');
-        });
-      }
+      syncSubStage();
       if (scrollToTop) {
         window.scrollTo(0, 0);
       }

@@ -3769,6 +3769,11 @@ section.hero .dev-chip {
 .step-count{color:var(--slate);font-weight:600;font-size:13.5px;text-align:center;}
 @media(max-width:1024px){.step-bar{z-index:998;}} /* z-index dropped one below .nav-mobile-overlay's 999 at the hamburger breakpoint so the overlay always wins; top still comes from --nav-h */
 @media(max-width:768px){.step-bar{padding:8px 14px;gap:8px 10px;margin-left:24px;margin-right:24px;}.step-count{font-size:12.5px;}.step-crumb-text{max-width:150px;}} /* matches .section/.page-header's 24px gutter at this breakpoint, not the desktop 64px */
+.step-jump-pill{font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;
+  color:var(--teal);text-decoration:none;background:var(--tealL);border-radius:999px;
+  padding:3px 10px;white-space:nowrap;transition:background .15s,color .15s;}
+.step-jump-pill:hover{background:var(--teal);color:var(--white);}
+.step-jump-pill.active{background:var(--teal);color:var(--white);}
 /* nav.js adds body.nav-collapsed when it auto-hides the nav on scroll; collapse
    the offset in sync so no dead gap is left where the nav used to be. Higher
    specificity than the breakpoint rules above, so it wins at any width. */
