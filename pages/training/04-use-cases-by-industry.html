@@ -94,8 +94,13 @@
       <p>The skill flags any idea that depends on a data source that isn't connected in your session yet. That's it being honest, not it failing: the idea is real, it just isn't buildable <em>today</em>. Those rows are your "later" column — and whether that connector gets turned on is exactly the kind of question the <a href="17-governance-snapshot.html">governance snapshot</a> at the end of today answers.</p>
     </div>
   </div>
+</div>
 
-  <p class="sec-sub" style="margin-top:40px;">And here is the skill itself, in full — the same file the zip installs. Read the <strong>description</strong> in the frontmatter first: that's the only part Cowork sees before deciding whether the skill fires, which is why it's stuffed with the exact phrasings someone would actually type. Everything below it only loads once the description wins the match. This is the shape yours will grow into.</p>
+<!-- THE SKILL FILE -->
+<div class="section section--off" id="skill-file">
+  <div class="sec-eyebrow">02 — The skill, as written</div>
+  <h2 class="sec-title">The full <em>SKILL.md</em></h2>
+  <p class="sec-sub">The same file the zip installs, in full. Read the <strong>description</strong> in the frontmatter first: it's the only part Cowork sees before deciding whether the skill fires, which is why it's stuffed with the exact phrasings someone would actually type — everything below it only loads once the description wins the match. Ninety lines of monospace doesn't project, so the file lives here on the page rather than on a slide: scroll it, copy it, and hold your own first skill to its shape.</p>
 
   <div class="code-wrap" style="margin-top:20px;">
     <div class="code-topbar">
@@ -197,12 +202,12 @@ Use `scripts/build_deck.js` to generate the branded PowerPoint. It&#x27;s a temp
 - **Don&#x27;t ship the deck without the visual QA pass.** Overflowing text and cut-off table rows are the single most common failure mode of this workflow, precisely because the layouts are information-dense by design — the script auto-shrinks fonts on the detail slides as a safety net, but that&#x27;s not a substitute for actually looking at the rendered slides.</pre>
     </div>
   </div>
-  <p style="margin-top:14px;font-size:13px;color:var(--slate);">Scroll inside the window for the whole file — 90 lines, and the body still points one level deeper at <code>references/</code> and <code>scripts/</code>, which is the progressive-disclosure rule from Day 2 in action. <a href="../../skills/ng-brainstormer/">Browse the full folder →</a></p>
+  <p style="margin-top:14px;font-size:13px;color:var(--slate);">Even at this size the body still points one level deeper at <code>references/</code> and <code>scripts/</code> — the progressive-disclosure rule from Day 2 in action. <a href="../../skills/ng-brainstormer/">Browse the full folder →</a></p>
 </div>
 
 <!-- READING YOUR SLATE -->
 <div class="section section-dark" id="slate">
-  <div class="sec-eyebrow on-dark">02 — Reading your slate</div>
+  <div class="sec-eyebrow on-dark">03 — Reading your slate</div>
   <h2 class="sec-title on-dark">Ten ideas, ranked and <em>priced</em></h2>
   <p class="sec-sub on-dark">The ranking is 1 to 10 by how hard each would be to build and run reliably — not by how much it's worth. The spread is deliberate: some pure time-savers, some research and decision support, some output quality; some just for you, some your team could share, some the whole organisation could run. Two colour scales carry the judgement: <strong>gold</strong> for build complexity, <strong>green</strong> for the money. Four rows of the kind a reinsurance slate produces — invented cedent, invented numbers, real shapes:</p>
 
@@ -244,7 +249,7 @@ Use `scripts/build_deck.js` to generate the branded PowerPoint. It&#x27;s a temp
 
 <!-- FROM LIST TO FIRST BUILD -->
 <div class="section" id="start">
-  <div class="sec-eyebrow">03 — From list to first build</div>
+  <div class="sec-eyebrow">04 — From list to first build</div>
   <h2 class="sec-title">Picking where to <em>start</em></h2>
   <p class="sec-sub">In a few minutes I'll take one item from one of the room's slates and show you how to go from a slate row to a working skill, live on the projector. These four tests are how that item gets picked — and they're the same four you'll apply this afternoon in the Advanced block, or at your desk on Monday, when you pick your own first build. A row needs all four.</p>
 
