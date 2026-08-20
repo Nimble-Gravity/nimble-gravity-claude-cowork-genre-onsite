@@ -23,17 +23,32 @@
     var bar = document.createElement('div');
     bar.className = 'step-bar';
     bar.innerHTML =
-      '<button type="button" class="step-btn step-prev">← Back</button>' +
-      '<span class="step-count"></span>' +
-      '<button type="button" class="step-btn step-next">Next →</button>';
+      '<div class="step-crumb"><span class="step-crumb-text"></span></div>' +
+      '<div class="step-nav">' +
+        '<button type="button" class="step-btn step-prev">← Back</button>' +
+        '<span class="step-count"></span>' +
+        '<button type="button" class="step-btn step-next">Next →</button>' +
+      '</div>';
     steps[0].parentNode.insertBefore(bar, steps[0]);
 
     var prevBtn = bar.querySelector('.step-prev');
     var nextBtn = bar.querySelector('.step-next');
     var countEl = bar.querySelector('.step-count');
+    var crumbEl = bar.querySelector('.step-crumb');
+    var crumbTextEl = bar.querySelector('.step-crumb-text');
     var subStageLinks = document.querySelectorAll('.nav-sub-step[data-stage]');
     var contentIdx = -1;
     steps.forEach(function (s, i) { if (s.id === 'content') contentIdx = i; });
+
+    // Day name comes from nav.js's already-computed active craft label — no
+    // second manifest to keep in sync. Lesson/hub title comes from this
+    // page's own header. If either is missing (shouldn't happen on an
+    // in-scope page), the breadcrumb just shows whichever piece exists.
+    var activeCraftEl = document.querySelector('.nav-craft--active .nav-craft-name');
+    var dayLabel = activeCraftEl ? activeCraftEl.textContent.trim() : '';
+    var pageTitleEl = document.querySelector('.page-header h1');
+    var pageTitle = pageTitleEl ? pageTitleEl.textContent.trim() : '';
+    crumbTextEl.textContent = [dayLabel, pageTitle].filter(Boolean).join(' · ');
 
     function labelFor(el) {
       var h = el.querySelector('h1, h2');
