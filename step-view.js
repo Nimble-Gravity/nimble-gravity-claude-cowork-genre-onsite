@@ -40,7 +40,7 @@
       return h ? h.textContent.trim() : '';
     }
 
-    function render(isNavigation) {
+    function render(scrollToTop) {
       steps.forEach(function (el, i) {
         el.classList.toggle('step-hidden', i !== current);
       });
@@ -62,23 +62,39 @@
           a.setAttribute('aria-current', on ? 'true' : '');
         });
       }
-      if (isNavigation) {
-        if (el.id) history.replaceState(null, '', '#' + el.id);
+      if (scrollToTop) {
         window.scrollTo(0, 0);
       }
     }
 
+    // User-initiated navigation (button clicks, and later the jump pills /
+    // view-all exit added in Tasks 5-6): write a real history entry so the
+    // browser's own Back/Forward can step through it. hashchange (fired when
+    // Back/Forward already moved the URL) must NOT write history again here
+    // — that's what caused the original bug.
+    function goToStep(index) {
+      if (index < 0 || index >= steps.length) return;
+      current = index;
+      var el = steps[current];
+      if (el.id) history.pushState(null, '', '#' + el.id);
+      render(true);
+    }
+
     prevBtn.addEventListener('click', function () {
-      if (current > 0) { current--; render(true); }
+      goToStep(current - 1);
     });
     nextBtn.addEventListener('click', function () {
-      if (current < steps.length - 1) { current++; render(true); }
+      goToStep(current + 1);
     });
     window.addEventListener('hashchange', function () {
       var hashId = location.hash.slice(1);
       var idx = -1;
-      steps.forEach(function (s, i) { if (s.id === hashId) idx = i; });
-      if (idx !== -1) { current = idx; render(true); }
+      if (hashId === '') {
+        idx = 0;
+      } else {
+        steps.forEach(function (s, i) { if (s.id === hashId) idx = i; });
+      }
+      if (idx !== -1 && idx !== current) { current = idx; render(true); }
     });
 
     render(false);
