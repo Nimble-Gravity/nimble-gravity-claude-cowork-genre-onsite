@@ -97,10 +97,10 @@
 </div>
 
 <!-- THE SKILL FILE -->
-<div class="section section--off" id="skill-file">
-  <div class="sec-eyebrow">02 — The skill, as written</div>
-  <h2 class="sec-title">The full <em>SKILL.md</em></h2>
-  <p class="sec-sub">The same file the zip installs, in full. Read the <strong>description</strong> in the frontmatter first: it's the only part Cowork sees before deciding whether the skill fires, which is why it's stuffed with the exact phrasings someone would actually type — everything below it only loads once the description wins the match. Ninety lines of monospace doesn't project, so the file lives here on the page rather than on a slide: scroll it, copy it, and hold your own first skill to its shape.</p>
+<div class="section section-dark" id="skill-file">
+  <div class="sec-eyebrow on-dark">02 — The skill, as written</div>
+  <h2 class="sec-title on-dark">The full <em>SKILL.md</em></h2>
+  <p class="sec-sub on-dark">The same file the zip installs, in full — yesterday's rules at working size. Read the <strong>description</strong> in the frontmatter first: it's the only part Cowork sees before deciding whether the skill fires, which is why it's stuffed with the exact phrasings someone would actually type; everything below it only loads once the description wins the match. The body keeps every judgment call next to its reason, ends on a common-mistakes block, and still points one level deeper at <code>references/</code> and <code>scripts/</code> — progressive disclosure at ninety lines. <strong>The file itself lives on this page rather than on the slide</strong> — ninety lines of monospace does not project. Scroll it, copy it, and hold your own first skill to it.</p>
 
   <div class="code-wrap" style="margin-top:20px;">
     <div class="code-topbar">
@@ -110,7 +110,7 @@
       <span class="code-label">ng-brainstormer / SKILL.md</span>
       <button class="copy-btn" onclick="copyBlock('skill-brainstormer', this)">Copy</button>
     </div>
-    <div class="code-body" style="max-height:560px;overflow-y:auto;">
+    <div class="code-body">
 <pre id="skill-brainstormer">---
 name: ng-brainstormer
 description: Brainstorms a slate of candidate Claude Cowork skills tailored to a specific person&#x27;s role, then packages them into a branded, workshop-ready PowerPoint deck with napkin-math ROI, a validated total-ROI slide, and a recommended Claude model per skill. Use this whenever someone asks to &quot;brainstorm skill ideas,&quot; &quot;what Cowork skills should I build,&quot; &quot;help me find automation opportunities,&quot; wants a &quot;skill case deck,&quot; is prepping for a Cowork training or enablement workshop and needs a jumpstart artifact, or asks a Claude Cowork question like &quot;how could I use Claude to save time in my role&quot; — even if they don&#x27;t say &quot;skill&quot; or &quot;deck&quot; explicitly. Trigger this proactively whenever a CEM, Delivery Sponsor, or other Nimble Gravity role is trying to figure out where to start with Cowork.
@@ -202,7 +202,10 @@ Use `scripts/build_deck.js` to generate the branded PowerPoint. It&#x27;s a temp
 - **Don&#x27;t ship the deck without the visual QA pass.** Overflowing text and cut-off table rows are the single most common failure mode of this workflow, precisely because the layouts are information-dense by design — the script auto-shrinks fonts on the detail slides as a safety net, but that&#x27;s not a substitute for actually looking at the rendered slides.</pre>
     </div>
   </div>
-  <p style="margin-top:14px;font-size:13px;color:var(--slate);">Even at this size the body still points one level deeper at <code>references/</code> and <code>scripts/</code> — the progressive-disclosure rule from Day 2 in action. <a href="../../skills/ng-brainstormer/">Browse the full folder →</a></p>
+  <div style="margin-top:18px;display:flex;gap:12px;flex-wrap:wrap;align-items:center;">
+    <a href="../../assets/ng-brainstormer.skill" download class="copy-btn--outline" style="text-decoration:none;">Download ng-brainstormer.skill ↓</a>
+    <a href="../../skills/ng-brainstormer/" style="display:inline-flex;align-items:center;gap:8px;color:var(--mint-on-dark);text-decoration:none;padding:10px 4px;font-weight:600;font-size:14px;">Browse the skill folder →</a>
+  </div>
 </div>
 
 <!-- READING YOUR SLATE -->
