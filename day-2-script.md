@@ -370,17 +370,20 @@ good output looks like. Don't write the skill file. Write the half page. That's 
 part we build from on Thursday."*
 
 **[SAY] — the Day 3 pre-work, and flag it as the one that matters:** *"Second thing, and this one genuinely
-affects Thursday: **pre-fill the use-case canvas.** Five lines — the workflow, what triggers it, the documents
-it touches, what 'checked and correct' means, and how long it takes you today. Link is on the
-[Day 3 hub](pages/workshops/module-3-workshop.html) and the
-[pre-work page](pages/workshops/pre-work.html#day-3). We read them before Thursday and the room builds one of
-them live, so a canvas that isn't submitted can't be the one we build."*
+affects Thursday: **spend ten minutes on your own week.** No canvas, no form — Thursday's ideation is run by a
+skill that interviews you about your role, live in the room, and it's only as good as your answers. Jot rough
+notes: the recurring meetings, what you're accountable for, who you answer to, which tools and data you touch.
+And make sure the laptop you bring has Cowork actually working — you'll install and run a skill on it in the
+room. Details on the [Day 3 hub](pages/workshops/module-3-workshop.html) and the
+[pre-work page](pages/workshops/pre-work.html#day-3)."*
 
 **[SAY] — office hours:** *"Office hours are `[FILL IN]`. Bring the thing that didn't work."*
 
-**[SAY] — preview:** *"Thursday: you bring the use case, the room picks one, and we build it live. Then a
-short governance segment — what's connected, who can turn what on, and where the data goes — so you can answer
-the questions your team will ask you the moment you tell them what you did this week."*
+**[SAY] — preview:** *"Thursday: you install a skill that brainstorms your use cases for you — it interviews
+you and hands back ten ranked places to start, with the payoff arithmetic done, in a deck you can show your
+manager. Then I take one item from one of your lists and build it live. Then a short governance segment —
+what's connected, who can turn what on, and where the data goes — so you can answer the questions your team
+will ask you the moment you tell them what you did this week."*
 
 **[DO]** Feedback link in the chat, and say it out loud. Ask the moderator to post it for remote.
 

@@ -18,139 +18,147 @@
 <div class="page-header" id="intro">
   <div class="eyebrow"><a href="../workshops/module-3-workshop.html" style="color:inherit;text-decoration:underline;text-underline-offset:2px;">Day 3</a> · Lesson 1 of 2</div>
   <h1 class="title">Use-Case <em>Ideation</em></h1>
-  <p class="subtitle">You came in with a canvas — one piece of your own recurring work, written down in five lines. This morning the room reads them, picks one or two, and builds a working skill from them live. This lesson is how to read a canvas, what four filled-in ones look like, and what makes one buildable inside forty minutes.</p>
+  <p class="subtitle">This morning you don't brainstorm your use cases — you delegate the brainstorming. You'll install a skill called <strong>ng-brainstormer</strong>, sit a short interview about your actual week, and get back a ranked list of ten places to start, with the payoff arithmetic done and a recommended model for each, packaged as a deck. Then we take one item from one of those lists and start building it, live.</p>
   <div class="header-phase">
     <div class="header-phase-dot" style="background:var(--blueD)"></div>
     Use Cases + Governance · ~20 min
   </div>
 </div>
 
-<!-- THE CANVAS -->
-<div class="section" id="canvas">
-  <div class="sec-eyebrow">01 — The canvas</div>
-  <h2 class="sec-title">Five lines about one piece of <em>your</em> work</h2>
-  <p class="sec-sub">The canvas is deliberately short: five fields, fifteen minutes, nothing to learn. It isn't a business case and nobody is scoring it. Its only job is to carry enough detail that somebody who doesn't do your job could tell whether Cowork's draft came back right. If yours is thin in places, fill the gaps now, before we read them together.</p>
+<!-- THE BRAINSTORMER -->
+<div class="section" id="brainstormer">
+  <div class="sec-eyebrow">01 — The brainstormer</div>
+  <h2 class="sec-title">One skill that finds the other <em>ten</em></h2>
+  <p class="sec-sub">ng-brainstormer is a Cowork skill built for exactly this session. It interviews you about your role, then hands back a slate of ten candidate skills — each with a value type, an ownership scope, a difficulty score, napkin-math ROI, and a recommended Claude model — and builds the deck while you get on with something else. Five steps, and we do them together in the room.</p>
 
   <div class="step-list">
     <div class="step-card">
       <div class="step-num">1</div>
       <div>
-        <div class="step-do"><strong>The workflow.</strong> Name it in one line, the way you'd say it to a colleague.</div>
-        <div class="step-why">"The quarterly experience summary for a treaty" is a workflow. "Reporting" is a department. The narrower the line, the better the skill, because one that tries to cover four jobs does none of them well enough to trust.</div>
-        <div class="step-verify">Someone two desks away would know what you meant.</div>
+        <div class="step-do"><strong>Download the skill.</strong> Grab <code>ng-brainstormer.skill</code> from the <a href="../workshops/resources.html#start">resource library</a> — one file, and it's just a zip.</div>
+        <div class="step-why">Inside is a complete, shipping skill: the <code>SKILL.md</code> you learned to read yesterday, plus the scripts that build the deck and the reference notes it reasons from. Worth browsing later for that reason alone — this is what a finished one looks like.</div>
+        <div class="step-verify">The file is in your Downloads.</div>
       </div>
     </div>
     <div class="step-card">
       <div class="step-num">2</div>
       <div>
-        <div class="step-do"><strong>Its trigger.</strong> What starts it: an email lands, a date arrives, someone asks.</div>
-        <div class="step-why">The trigger is what tells Cowork when this applies, and it is the sentence that decides whether the skill fires on its own next month instead of sitting unused because nobody remembered it was there.</div>
-        <div class="step-verify">You can finish the sentence "I do this whenever…" without hedging.</div>
+        <div class="step-do"><strong>Install it.</strong> Unzip it and drop the <code>ng-brainstormer</code> folder into your Cowork skills folder — the same place yesterday's skills live.</div>
+        <div class="step-why">Yesterday you wrote a skill description and learned why the wording decides whether it ever fires. Today you're on the other side of one: this description triggers on the phrasings you'd actually type — "brainstorm skill ideas", "where should I start with Cowork".</div>
+        <div class="step-verify">Ask Cowork to "brainstorm Cowork skills for my role" and it announces the skill.</div>
       </div>
     </div>
     <div class="step-card">
       <div class="step-num">3</div>
       <div>
-        <div class="step-do"><strong>The documents it touches.</strong> Every source, and where each one lives.</div>
-        <div class="step-why">This is the field people leave vaguest and the one that decides whether the skill works. Cowork can't find what you didn't name, so it improvises — and an improvised source is exactly the sort of error that reads perfectly well on the page.</div>
-        <div class="step-verify">Each source has a folder, a mailbox, or a system named next to it.</div>
+        <div class="step-do"><strong>Sit the interview.</strong> Answer its questions about your actual week: the recurring meetings, what you're accountable for, who you answer to, which tools and data you touch.</div>
+        <div class="step-why">It brainstorms from your week, not your job title — "underwriter" and "claims manager" cover wildly different Tuesdays. The notes you jotted as pre-work are the answers; and if your <code>about-me/</code> folder from Day 1 is in reach, it reads that first and skips what it already knows.</div>
+        <div class="step-verify">It plays back a picture of your role you'd actually recognise.</div>
       </div>
     </div>
     <div class="step-card">
       <div class="step-num">4</div>
       <div>
-        <div class="step-do"><strong>What “checked and correct” means.</strong> The test you apply before you sign it.</div>
-        <div class="step-why">You already run this test, usually without writing it down: the totals tie, every figure traces to a source, nothing is asserted that the documents don't support. Written down, it becomes the thing the skill is built to satisfy and the thing you grade its output against.</div>
-        <div class="step-verify">It is a test someone else could run, not "it looks about right".</div>
+        <div class="step-do"><strong>Pick from the slate.</strong> It stops and shows you all ten in a table before going deeper. Choose the three to five that get the full treatment — workflow, data sources, ROI arithmetic, recommended model.</div>
+        <div class="step-why">The checkpoint is in the skill on purpose: a deck built on the wrong ten ideas is wasted effort no matter how polished it looks. Nothing is thrown away — every idea stays in the deck's summary table; your picks are the ones that get a page of their own.</div>
+        <div class="step-verify">You've told it which ones to flesh out.</div>
       </div>
     </div>
     <div class="step-card">
       <div class="step-num">5</div>
       <div>
-        <div class="step-do"><strong>Time it takes today.</strong> A number, not a feeling: minutes or hours per run.</div>
-        <div class="step-why">Two reasons. It tells the room which canvases are worth forty minutes of everyone's morning, and it is the only baseline you will have when somebody asks in three months whether any of this paid off.</div>
-        <div class="step-verify">You wrote down a number and how often the work recurs.</div>
+        <div class="step-do"><strong>Let it build the deck.</strong> Kick off the build and leave it running — it writes the data file, runs the build script, and checks its own rendering, without you watching.</div>
+        <div class="step-why">This is Day 1's lesson made physical: delegation means the work continues while you don't. The build runs through the guided build and the break, and your deck is done by the share-out.</div>
+        <div class="step-verify">A <code>.pptx</code> lands in your workshop folder.</div>
       </div>
     </div>
   </div>
 
   <div class="tip-trick" style="margin-top:32px;">
-    <div class="tip-trick-icon">✏️</div>
+    <div class="tip-trick-icon">🏛️</div>
     <div class="tip-trick-copy">
-      <div class="tip-trick-label">A thin canvas about real work beats a perfect one about none</div>
-      <p>Nobody is marking these. If you only half-filled yours, the two fields worth going back for are <strong>the documents</strong> and <strong>the check</strong> — those are the two the build actually depends on. The rest we can fill in together in the room, out loud, in about a minute each.</p>
+      <div class="tip-trick-label">Shapes that have already worked here</div>
+      <p>The slate won't be guessing. Gen Re's own pilot community has already put Claude on this kind of work: IFRS 18 impact analysis in about an hour rather than half a day, an expected-loss view pulled out of a 70-tab submission in minutes, claims-outlier segmentation, and a disability-income claim form redesigned in roughly four minutes. Some of it came back clean and some needed real correction, which is rather the point — every one a strong first draft that a person read, corrected, and signed.</p>
     </div>
   </div>
 
   <div class="tip-trick" style="margin-top:18px;">
-    <div class="tip-trick-icon">🏛️</div>
+    <div class="tip-trick-icon">🔌</div>
     <div class="tip-trick-copy">
-      <div class="tip-trick-label">Shapes that have already worked here</div>
-      <p>These aren't hypotheticals. Gen Re's own pilot community has already put Claude on this kind of work: IFRS 18 impact analysis in about an hour rather than half a day, an expected-loss view pulled out of a 70-tab submission in minutes, claims-outlier segmentation, and a disability-income claim form redesigned in roughly four minutes. Some of it came back clean and some of it needed real correction, which is rather the point — every one of them a strong first draft that a person read, corrected, and signed.</p>
+      <div class="tip-trick-label">When a row says "needs a connector you don't have"</div>
+      <p>The skill flags any idea that depends on a data source that isn't connected in your session yet. That's it being honest, not it failing: the idea is real, it just isn't buildable <em>today</em>. Those rows are your "later" column — and whether that connector gets turned on is exactly the kind of question the <a href="17-governance-snapshot.html">governance snapshot</a> at the end of today answers.</p>
     </div>
   </div>
 </div>
 
-<!-- WORKED CANVASES -->
-<div class="section section-dark" id="examples">
-  <div class="sec-eyebrow on-dark">02 — Four canvases, filled in</div>
-  <h2 class="sec-title on-dark">What a good one <em>looks like</em></h2>
-  <p class="sec-sub on-dark">Four worked examples, none of them carrying anything confidential — the cedent is invented and so are the numbers. Read them for shape rather than subject: recurring, document-heavy, and ending in something you could call right or wrong in a couple of minutes.</p>
+<!-- READING YOUR SLATE -->
+<div class="section section-dark" id="slate">
+  <div class="sec-eyebrow on-dark">02 — Reading your slate</div>
+  <h2 class="sec-title on-dark">Ten ideas, ranked and <em>priced</em></h2>
+  <p class="sec-sub on-dark">The ranking is 1 to 10 by how hard each would be to build and run reliably — not by how much it's worth. The spread is deliberate: some pure time-savers, some research and decision support, some output quality; some just for you, some your team could share, some the whole organisation could run. Two colour scales carry the judgement: <strong>gold</strong> for build complexity, <strong>green</strong> for the money. Four rows of the kind a reinsurance slate produces — invented cedent, invented numbers, real shapes:</p>
 
   <div class="dev-grid-2" style="margin-top:28px;" data-client-slot="industry-usecases-m2">
     <div class="dev-card">
-      <div class="dev-kicker">Canvas A</div>
+      <div class="dev-kicker">Rank 2 · Time savings · Individual</div>
+      <h3>Meeting notes to action items</h3>
+      <p style="color:rgba(255,255,255,.65);font-size:15px;line-height:1.65;"><strong>Fires when</strong> — a cedent review or committee ends. <strong>Touches</strong> — your raw notes, the agenda, the previous action list. <strong>Produces</strong> — decisions and actions with named owners, in the format you already circulate. <strong>Model</strong> — a fast, cheap one: it runs often and the judgement is light. <strong>ROI</strong> — time-savings arithmetic: forty minutes, three or four times a week, at a loaded rate.</p>
+      <div class="dev-quote">The classic rank-2: small, frequent, universally disliked — and the right place to start.</div>
+    </div>
+    <div class="dev-card">
+      <div class="dev-kicker">Rank 4 · Time savings · Individual → team</div>
+      <h3>Quarterly experience summary</h3>
+      <p style="color:rgba(255,255,255,.65);font-size:15px;line-height:1.65;"><strong>Fires when</strong> — quarter end; a natural <code>/schedule</code> candidate. <strong>Touches</strong> — the quarter's experience data, the pricing workbook output, last quarter's summary. <strong>Produces</strong> — this quarter's summary in the same sections and the same voice, movements called out. <strong>Model</strong> — mid-tier: synthesis in a house voice. <strong>ROI</strong> — most of a day, four times a year — and multiplied if the team adopts it.</p>
+      <div class="dev-quote">Scheduled work is the easiest ROI arithmetic there is — the cadence is already on the calendar.</div>
+    </div>
+    <div class="dev-card">
+      <div class="dev-kicker">Rank 5 · Output quality · Team</div>
+      <h3>A pack against a checklist</h3>
+      <p style="color:rgba(255,255,255,.65);font-size:15px;line-height:1.65;"><strong>Fires when</strong> — a renewal or quarterly reporting pack arrives. <strong>Touches</strong> — the new pack, the version it replaces, the team's standard checklist. <strong>Produces</strong> — a table: each point present, missing, or changed, with the page reference and the figure quoted. <strong>Model</strong> — mid-tier: careful reading, little invention. <strong>ROI</strong> — an hour or two per pack, across everyone on the team who reads them.</p>
+      <div class="dev-quote">Comparison work is where a tireless second reader earns its keep.</div>
+    </div>
+    <div class="dev-card">
+      <div class="dev-kicker">Rank 6 · Better decisions · Individual → team</div>
       <h3>Treaty-submission triage</h3>
-      <p style="color:rgba(255,255,255,.65);font-size:15px;line-height:1.65;"><strong>Trigger</strong> — a submission pack arrives from a cedent. <strong>Documents</strong> — the pack itself, the appetite note for that class, and last year's submission for the same account. <strong>Output</strong> — a two-page triage note: what's on offer, what's missing, what moved since last year, and the three questions to send back. <strong>Checked and correct</strong> — every figure traces to a page in the pack, and nothing missing is quietly filled in. <strong>Today</strong> — two to three hours per pack.</p>
+      <p style="color:rgba(255,255,255,.65);font-size:15px;line-height:1.65;"><strong>Fires when</strong> — a submission pack arrives from a cedent. <strong>Touches</strong> — the pack, the appetite note for that class, last year's submission for the account. <strong>Produces</strong> — a two-page triage note: what's on offer, what's missing, what moved, the three questions to send back. <strong>Model</strong> — top-tier: this is the judgement-heavy one, closest to what you're actually accountable for. <strong>ROI</strong> — directional expected value, assumptions shown, not a promise.</p>
       <div class="dev-quote">The output is a note you send back, not a decision you delegated.</div>
     </div>
-    <div class="dev-card">
-      <div class="dev-kicker">Canvas B</div>
-      <h3>Quarterly experience summary</h3>
-      <p style="color:rgba(255,255,255,.65);font-size:15px;line-height:1.65;"><strong>Trigger</strong> — quarter end. <strong>Documents</strong> — the quarter's experience data, the pricing workbook output (the <code>TreatyLayerPricer</code> quarterly run), and last quarter's summary. <strong>Output</strong> — this quarter's summary in the same sections and the same voice, with the movements called out. <strong>Checked and correct</strong> — the totals tie back to the workbook, every movement has a number behind it, and anything the data doesn't explain is flagged rather than narrated over. <strong>Today</strong> — most of a day, four times a year.</p>
-      <div class="dev-quote">The same shape every quarter is exactly what makes it worth writing down.</div>
-    </div>
-    <div class="dev-card">
-      <div class="dev-kicker">Canvas C</div>
-      <h3>Meeting notes to action items</h3>
-      <p style="color:rgba(255,255,255,.65);font-size:15px;line-height:1.65;"><strong>Trigger</strong> — the end of a cedent review or an internal committee. <strong>Documents</strong> — your raw notes, the agenda, and the previous meeting's action list. <strong>Output</strong> — decisions, actions with a named owner and a date, and anything left open, in the format you already circulate. <strong>Checked and correct</strong> — every action has an owner who was actually in the room, and no heading is padded with something nobody said. <strong>Today</strong> — forty minutes, usually the following morning.</p>
-      <div class="dev-quote">Small, frequent, and universally disliked — the classic first skill.</div>
-    </div>
-    <div class="dev-card">
-      <div class="dev-kicker">Canvas D</div>
-      <h3>A pack against a checklist</h3>
-      <p style="color:rgba(255,255,255,.65);font-size:15px;line-height:1.65;"><strong>Trigger</strong> — a renewal or quarterly reporting pack comes in and has to be read through. <strong>Documents</strong> — the new pack, the version it replaces, and your team's standard checklist of what a complete pack contains. <strong>Output</strong> — a table: each checklist point marked present, missing, or changed, with the page reference and the figure quoted. <strong>Checked and correct</strong> — every row cites the page it looked at, and a “changed” row says what it changed from. <strong>Today</strong> — an hour or two, and it's the one people rush.</p>
-      <div class="dev-quote">Comparison work is where a tireless second reader earns its keep.</div>
+  </div>
+
+  <div class="tip-trick tip-trick--dark" style="margin-top:32px;">
+    <div class="tip-trick-icon">🧮</div>
+    <div class="tip-trick-copy">
+      <div class="tip-trick-label">The ROI is napkin math, and it says so</div>
+      <p>Every estimate in the deck declares which of two things it is: a <strong>time-savings calculation</strong> (minutes saved × frequency × loaded rate, arithmetic shown) or a <strong>directional expected-value estimate</strong> (assumptions shown). The total slide sums only the ideas you picked for full treatment, so the headline can't drift from the pages behind it. Read it the way it's written — a ranking tool and a baseline, not an audited figure. The green scale is log-scaled for the same honest reason: a real slate spans a few thousand a year to a few hundred thousand, and on a linear scale everything but the outlier looks identical.</p>
     </div>
   </div>
 </div>
 
-<!-- SELECTION -->
-<div class="section" id="selection">
-  <div class="sec-eyebrow">03 — Picking the one we build</div>
-  <h2 class="sec-title">What makes a canvas <em>buildable</em> today</h2>
-  <p class="sec-sub">In a few minutes the room picks one or two canvases and we build a skill from them live, together, against a forty-minute clock. That clock rules out some genuinely good ideas, and being ruled out this morning says nothing about whether the work is worth handing over. Four tests, and a canvas needs all four.</p>
+<!-- FROM LIST TO FIRST BUILD -->
+<div class="section" id="start">
+  <div class="sec-eyebrow">03 — From list to first build</div>
+  <h2 class="sec-title">Picking where to <em>start</em></h2>
+  <p class="sec-sub">In a few minutes I'll take one item from one of the room's slates and show you how to go from a slate row to a working skill, live on the projector. These four tests are how that item gets picked — and they're the same four you'll apply this afternoon in the Advanced block, or at your desk on Monday, when you pick your own first build. A row needs all four.</p>
 
   <div class="bp-grid--light" style="margin-top:28px;">
     <div class="bp-item">
       <div class="bp-num">01</div>
       <div class="bp-title">Documents you could put in a folder right now</div>
-      <div class="bp-body">Not "I could probably export it" — files that exist, that you can open, that you could copy into one folder before the break. Anything that first needs a system extract, a new report, or somebody else's permission is a fine second project and a poor live build.</div>
+      <div class="bp-body">The slate names each idea's data sources — but "named" isn't "in hand". Not "I could probably export it": files that exist, that you can open, that you could copy into one folder before the break. Anything that first needs a system extract, a new report, or somebody else's permission is a fine second project and a poor first one.</div>
     </div>
     <div class="bp-item">
       <div class="bp-num">02</div>
       <div class="bp-title">An output you would recognise as right</div>
-      <div class="bp-body">A named deliverable with a shape: a two-page note, a table, a summary in your standard sections. If we can't say what lands at the end, we can't tell in the share-out whether it worked — and "it gave me some useful thoughts" is where sessions like this go to die.</div>
+      <div class="bp-body">Every slate row names its output format — a two-page note, a table, a summary in your standard sections. Hold it to that: if you can't say what lands at the end, you can't tell in the share-out whether it worked, and "it gave me some useful thoughts" is where sessions like this go to die.</div>
     </div>
     <div class="bp-item">
       <div class="bp-num">03</div>
       <div class="bp-title">Nothing confidential in it</div>
-      <div class="bp-body">The same rule as Days 1 and 2, and it doesn't relax because the work is real: follow Gen Re's own data-classification policy for what comes into this room. If your workflow is a strong one but its documents can't be here, bring the shape and we'll build against a stand-in — you point it at the real folder back at your desk.</div>
+      <div class="bp-body">The same rule as Days 1 and 2, and it doesn't relax because the work is real: follow Gen Re's own data-classification policy for what comes into this room. If your best row runs on documents that can't be here, keep the row — we build against a stand-in and you point it at the real folder back at your desk.</div>
     </div>
     <div class="bp-item">
       <div class="bp-num">04</div>
-      <div class="bp-title">Doable in forty minutes</div>
-      <div class="bp-body">One workflow, one output, three or four sources. A skill that has to make a judgement call halfway through — which of these two treatments applies here — is a second skill, not a first one. Start with the version that does the same thing every time.</div>
+      <div class="bp-title">Start at your 2s and 3s, not your 8s</div>
+      <div class="bp-body">The difficulty ranking exists precisely for this moment. A low-ranked row does the same thing every time with sources that already exist — buildable this morning. Your 8s and 9s need new data sources or judgement calls halfway through; they're why the deck goes home with you, not why we're here till lunch. The first skill you finish teaches you how to build the ambitious one.</div>
     </div>
   </div>
 </div>
@@ -159,7 +167,7 @@
 <div class="section" id="next">
   <div class="sec-eyebrow">Up next</div>
   <h2 class="sec-title">Lesson 2: Governance Snapshot</h2>
-  <p class="sec-sub">Whichever canvas the room picks, the rest aren't wasted — they are the backlog you take back to your team, and the ones you'll build yourself now you've watched one done properly. Ten minutes at the end of the day covers the other half of the question: what Cowork is allowed to reach at Gen Re, who decides that, and where your data goes.</p>
+  <p class="sec-sub">Whichever item gets built this morning, the other nine aren't wasted — they're your backlog, ranked, with the arithmetic already done, in a deck you can put in front of your manager on Monday. Ten minutes at the end of the day covers the other half of the question: what Cowork is allowed to reach at Gen Re, who decides that, and where your data goes.</p>
   <a href="17-governance-snapshot.html" style="display:inline-flex;align-items:center;gap:8px;background:var(--blueD);color:var(--white);text-decoration:none;padding:12px 24px;border-radius:8px;font-weight:600;font-size:15px;margin-top:8px;">Next Lesson →</a>
 </div>
 
