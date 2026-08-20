@@ -56,6 +56,42 @@
     }
     var jumpPills = crumbEl.querySelectorAll('.step-jump-pill');
 
+    var viewAllBtn = document.createElement('button');
+    viewAllBtn.type = 'button';
+    viewAllBtn.className = 'step-btn step-viewall';
+    viewAllBtn.textContent = 'View all';
+    bar.querySelector('.step-nav').appendChild(viewAllBtn);
+
+    var viewingAll = false;
+    var stepBeforeViewAll = 0;
+
+    function enterViewAll() {
+      viewingAll = true;
+      stepBeforeViewAll = current;
+      steps.forEach(function (el) { el.classList.remove('step-hidden'); });
+      prevBtn.disabled = true;
+      nextBtn.disabled = true;
+      countEl.textContent = 'Viewing all ' + steps.length + ' steps';
+      viewAllBtn.textContent = 'Back to step-by-step';
+    }
+
+    // restoreStep: true when the user clicked "Back to step-by-step" (return
+    // to wherever they were before View all); false when navigation (a
+    // button, a jump pill, or Back/Forward) is about to render its own step
+    // right after this call, so re-rendering here would be wasted work.
+    function exitViewAll(restoreStep) {
+      viewingAll = false;
+      viewAllBtn.textContent = 'View all';
+      if (restoreStep) {
+        current = stepBeforeViewAll;
+        render(false);
+      }
+    }
+
+    viewAllBtn.addEventListener('click', function () {
+      if (viewingAll) { exitViewAll(true); } else { enterViewAll(); }
+    });
+
     // Day name comes from nav.js's already-computed active craft label — no
     // second manifest to keep in sync. Lesson/hub title comes from this
     // page's own header. If either is missing (shouldn't happen on an
@@ -113,6 +149,7 @@
     // — that's what caused the original bug.
     function goToStep(index) {
       if (index < 0 || index >= steps.length) return;
+      if (viewingAll) exitViewAll(false);
       current = index;
       var el = steps[current];
       if (el.id) history.pushState(null, '', '#' + el.id);
@@ -133,7 +170,11 @@
       } else {
         steps.forEach(function (s, i) { if (s.id === hashId) idx = i; });
       }
-      if (idx !== -1 && idx !== current) { current = idx; render(true); }
+      if (idx !== -1) {
+        var wasViewingAll = viewingAll;
+        if (viewingAll) exitViewAll(false);
+        if (idx !== current || wasViewingAll) { current = idx; render(true); }
+      }
     });
 
     render(false);
