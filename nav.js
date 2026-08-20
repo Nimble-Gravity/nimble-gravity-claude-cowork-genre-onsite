@@ -559,6 +559,14 @@
     // Position overlay top flush with nav bottom
     overlay.style.top = navEl.offsetHeight + 'px';
 
+    // Land on the current page instead of always opening at the top of a
+    // long list — the overlay is the only navigation surface left below the
+    // 1024px breakpoint, so orientation matters most here.
+    var activeLink = overlay.querySelector('.nav-overlay-page-link.active, .nav-overlay-home.active');
+    if (activeLink) {
+      activeLink.scrollIntoView({ block: 'center' });
+    }
+
     // Scroll lock
     scrollLockY = window.scrollY;
     document.body.style.overflow = 'hidden';
