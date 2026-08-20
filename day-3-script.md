@@ -130,7 +130,7 @@ drop the `ng-brainstormer` folder into the Cowork skills folder. Drive from the 
 
 **[SAY] — the frame for what they're installing:** *"Yesterday you wrote a skill description and learned why
 the wording decides whether it ever fires. Right now you're on the other side of one — this is a finished,
-shipping skill, and by the end of the morning you'll have watched it interview you, hand you a ranked list of
+shipping skill, and by the end of the block you'll have watched it interview you, hand you a ranked list of
 ten places to start, and build you a deck while you weren't looking."*
 
 **[DO]** Everyone verifies the same way: ask Cowork to *"brainstorm Cowork skills for my role"* and confirm it
@@ -161,11 +161,11 @@ deck is done by the share-out."*
 **[DO] — pick the demo item, out loud, at ~0:28.** Ask two or three volunteers to read a row from their
 slate. Hold each against the four tests from
 [Lesson 1 §From list to first build](pages/training/04-use-cases-by-industry.html#start): *"Buildable this
-morning means four things: **documents you could put in a folder right now**; **an output you'd recognise as
+afternoon means four things: **documents you could put in a folder right now**; **an output you'd recognise as
 right**; **nothing confidential in it**; and a **low difficulty score — a 2 or 3, not an 8.**"* Then commit to
 one. You are buying a commitment, not consensus.
 
-**[SAY] — the honest filter:** *"A row we don't build this morning isn't a worse idea, it's a bigger one —
+**[SAY] — the honest filter:** *"A row we don't build this afternoon isn't a worse idea, it's a bigger one —
 and unlike every other workshop you've sat in, the ideas we're not doing go home with you ranked and priced."*
 
 **[DO]** With the item chosen, capture the half page on the projector, in the room's words — this is the same
@@ -285,7 +285,7 @@ often the Block B invitees turning up early, and they are precisely the people w
 ## Debrief · 1:30–1:50 (20 min — cut to 15 if the block is at 120)
 
 **[SAY] — mode:** *"Hands off. Screens down — after one thing: open the deck. The build you kicked off at
-half past finished while you were on your break. That's the other deliverable of the morning — your ten,
+half past finished while you were on your break. That's the other deliverable of the block — your ten,
 ranked and priced, in a deck your manager can read. The total slide is napkin math and says so on the page:
 treat it as a ranking and a baseline, not an audit."*
 
