@@ -3746,44 +3746,33 @@ section.hero .dev-chip {
 .step-verify::before{content:"Verify: ";font-weight:700;}
 @media(max-width:768px){.step-card{grid-template-columns:32px 1fr;padding:14px;}}
 
-/* ── Step-view pagination (progressive enhancement) ─────────────────── */
-.step-hidden { display: none !important; }
+/* ── Wayfinding breadcrumb bar ───────────────────────────────────────
+   Purely informational — day/lesson orientation, plus on hub pages a
+   quick-jump to Pre-work/Workshop content. Pages are full continuous
+   scroll; nothing here hides or paginates page content. */
 /* Sticky top offset tracks nav.js's own rendered height via --nav-h (set in
    nav.js's syncBodyPadding) — the nav is one row on lesson pages and two
    rows (with the sub-row) on hub pages, and also collapses on mobile, so a
    fixed pixel value can't track it. z-index sits one below nav-wrapper's
-   z-index:1000 so the nav bar always stacks above it. Wraps onto two lines
-   below ~768px instead of hiding anything — the breadcrumb (day/lesson/step)
-   is the one wayfinding element guaranteed visible at every width. */
+   z-index:1000 so the nav bar always stacks above it. */
 .step-bar{display:flex;align-items:center;flex-wrap:wrap;gap:10px 16px;
   background:var(--white);border:1px solid var(--border);border-radius:12px;
   padding:10px 18px;margin:0 max(64px, calc((100% - 1280px) / 2)) 20px;
   position:sticky;top:var(--nav-h,85px);z-index:999;transition:top .3s ease;}
-.step-crumb{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin-right:auto;min-width:0;}
+.step-crumb{display:flex;align-items:center;flex-wrap:wrap;gap:8px;min-width:0;}
 .step-crumb-text{font-size:13px;font-weight:600;color:var(--slate);
   white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-.step-nav{display:flex;align-items:center;flex-wrap:wrap;justify-content:flex-end;gap:16px;}
-.step-btn{background:var(--tealL);color:var(--teal);border:none;border-radius:8px;
-  padding:8px 16px;font-weight:600;font-size:14px;cursor:pointer;white-space:nowrap;}
-.step-btn:disabled{opacity:.35;cursor:default;}
-.step-count{color:var(--slate);font-weight:600;font-size:13.5px;text-align:center;}
 @media(max-width:1024px){.step-bar{z-index:998;}} /* z-index dropped one below .nav-mobile-overlay's 999 at the hamburger breakpoint so the overlay always wins; top still comes from --nav-h */
-@media(max-width:768px){.step-bar{padding:8px 14px;gap:8px 10px;margin-left:24px;margin-right:24px;}.step-count{font-size:12.5px;}.step-crumb-text{max-width:150px;}} /* matches .section/.page-header's 24px gutter at this breakpoint, not the desktop 64px */
+@media(max-width:768px){.step-bar{padding:8px 14px;gap:8px 10px;margin-left:24px;margin-right:24px;}.step-crumb-text{max-width:150px;}} /* matches .section/.page-header's 24px gutter at this breakpoint, not the desktop 64px */
 .step-jump-pill{font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;
   color:var(--teal);text-decoration:none;background:var(--tealL);border-radius:999px;
   padding:3px 10px;white-space:nowrap;transition:background .15s,color .15s;}
 .step-jump-pill:hover{background:var(--teal);color:var(--white);}
-.step-jump-pill.active{background:var(--teal);color:var(--white);}
-.step-viewall{background:none;color:var(--teal);text-decoration:underline;
-  text-underline-offset:2px;padding:8px 4px;}
 /* nav.js adds body.nav-collapsed when it auto-hides the nav on scroll; collapse
    the offset in sync so no dead gap is left where the nav used to be. Higher
    specificity than the breakpoint rules above, so it wins at any width. */
 body.nav-collapsed .step-bar{top:0;}
 @media(prefers-reduced-motion:reduce){.step-bar{transition:none;}}
-/* Print/PDF: show every step (matches the no-JS fallback), Prev/Next is meaningless on paper.
-   Same specificity as .step-hidden's !important, declared later, so this wins in print. */
 @media print {
-  .step-hidden { display: block !important; }
   .step-bar { display: none !important; }
 }

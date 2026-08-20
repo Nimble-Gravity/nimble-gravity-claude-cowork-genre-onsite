@@ -121,9 +121,11 @@ Notes for authors:
   class (`sl-dense` / `sl-dense-2`) that scales text down to fit the 1280×720 frame.
 - Add `class="section-dark"` to render a slide on the dark background.
 
-## Step-View Pagination
+## Wayfinding Breadcrumb Bar
 
-`step-view.js` (root) turns any page's `.page-header` + `.section` sequence into one-screen-at-a-time navigation — no markup changes required, since it reads the same boundaries `slides-engine.js` already extracts from. Load it after `nav.js` / `training-sidebar.js`, before the page's own content; its order relative to `interactive.js` doesn't matter (on pages that load both, `step-view.js` in fact comes first). Progressive enhancement: if the script fails to load, or a page has fewer than two `.page-header`/`.section` units, the page reads as plain continuous scroll — this is deliberate, not a bug to fix. A page's deep-link anchors (e.g. `page.html#canvas`) still work: `step-view.js` reads `location.hash` on load and opens that step directly rather than always defaulting to the first one, and it also listens for `hashchange` so an in-page nav-sub-row click updates the step without a reload.
+`step-view.js` (root) injects a sticky "you are here" bar (`.step-bar` / `.step-crumb` / `.step-crumb-text`) directly above the page's `.page-header`, reading the day label from `nav.js`'s already-rendered `.nav-craft--active .nav-craft-name` and the lesson/hub title from the page's own `<h1>` — no second manifest to keep in sync. On hub pages it also mirrors the top nav's Pre-work/Workshop-content links as `.step-jump-pill`s, since `nav.js`'s own `.nav-sub` row is hidden below the 1024px breakpoint and this bar isn't. It never hides or paginates page content — every page is full continuous scroll. Load it after `nav.js` / `training-sidebar.js`, before the page's own content; its order relative to `interactive.js` doesn't matter.
+
+(This script used to paginate pages one section at a time, matching `slides-engine.js`'s `.page-header`/`.section` boundaries — removed after the first live cohort found the click-through pacing more friction than help. The breadcrumb/quick-jump pieces were worth keeping; the pagination wasn't.)
 
 **Scope:** `step-view.js` is loaded only on the 8 lesson pages and 4 hub pages, not universally — reference/utility pages (FAQ, resources, my-progress, acceptable-use, why-cowork, cheat-sheet, and others) deliberately don't load it.
 
