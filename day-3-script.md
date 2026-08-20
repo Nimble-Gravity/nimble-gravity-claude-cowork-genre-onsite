@@ -123,12 +123,10 @@ you faster. It's that it helps you **check** things — and today we're making t
 piece of your work."*
 
 ### The download · ~8 min
-**[DO]** Put the download link on the projector —
-[`ng-brainstormer.skill` on the resource library](pages/workshops/resources.html#start) — and walk the room
-through the install together, at the pace of the slowest machine: download the zip, unzip it, drop the
-`ng-brainstormer` folder into the Cowork skills folder. The steps are
-[Lesson 1 §The brainstormer](pages/training/04-use-cases-by-industry.html#brainstormer); drive from the
-lesson, not from memory.
+**[DO]** Open [Lesson 1 §The brainstormer](pages/training/04-use-cases-by-industry.html#brainstormer) on the
+projector — the **download button is at the top of the section**, no detour via the resource library — and
+walk the room through the install together, at the pace of the slowest machine: download the zip, unzip it,
+drop the `ng-brainstormer` folder into the Cowork skills folder. Drive from the lesson, not from memory.
 
 **[SAY] — the frame for what they're installing:** *"Yesterday you wrote a skill description and learned why
 the wording decides whether it ever fires. Right now you're on the other side of one — this is a finished,
